@@ -1,0 +1,227 @@
+
+<html>
+
+<head>
+
+@@default-style
+@@font-style
+
+</head>
+
+<body>
+
+<!-- <div id='top-picture'>
+
+<div id='picture-offset'>
+
+
+-->
+
+<div id='top-offset'>
+
+
+@@top-links-banner
+
+
+<!-- </div> <!-- picture offset -->
+
+
+</div> <!-- top offset -->
+
+
+<div id='main-page-title-div'>
+
+<div class='center-wrap top-offset-5vh'>
+
+<h1 class='main-page-title'>
+Multi-Paradigm Semantic Modeling Engine 
+(<span class='acronym'>MSME</span>)
+</h1>
+
+</div>
+
+</div>
+
+
+<div id='main-page-body-div'>
+<p>
+#^(MSME)# is a semantic modeling engine which reconciles the differences between 
+modeling paradigms found in fields like Natural Language Processing (#(NLP)#), 
+formal Ontology, and programming language type systems.  #^(MSME)#  also 
+anticipates the needs of front-end and application developers, who are responsible for 
+packaging analytic capabilities into visual and interactive components where 
+users configure, refine, and manage analytic results.  
+These two priorities --- application integration and multi-paradigm 
+reconciliation --- are interrelated, considering how human concepts 
+are modeled simultaneously in Natural Language semantics, in formal Ontologies, 
+and in programming language types.  As such, a single concept 
+can engender multiple formal types, which in turn generates inter-type 
+associations that facilitate the engineeering of 
+software systems --- the conversion of 
+operational requirements into implemented 
+capabilities.  Software systems are a boundary between human users, 
+who are disposed to process information visually and linguistically, 
+and complex physical artifacts (often with a large space of controllable 
+states), whether these be sensors and devices on the Internet of Things; 
+robots and other remotely-controled machines; special-purpose 
+machines as may be found in a hospital, factory, battlefield, or 
+in ambient locales like the interior of a building, car, bus, 
+train, or train station; or simultations of physical structures 
+designed for scientific research or for computer-aided engineering.
+</p>
+
+<p>
+Semantic models can be crucial for 
+technologies to succeed: models are guidelines that improve 
+applications' robustness and correctness, simultaneously 
+codifying, first, developers' and stakeholders' expectations, and, second, 
+anticipating concepts which end users will bring to bear <i>as</i> users.  
+Over a period of several decades, various distinct disciplines and 
+many tools and projects have arose, 
+all of which in some manner concerned with 
+wedding conceptual semantics (in the sense of users' ideas 
+<i>a priori</i> to and infuencing their engagement with technology) 
+with formal semantics (in the sense of 
+logically or computationally tractable representations of 
+types, sets, data spaces, and multi-valued relations).  Unfortunately, 
+these disciplines do not precisely overlap, 
+making it hard to integrate disparate semantic models into coherent, 
+multi-paradigm information systems.  Different modeling structures are 
+best suited for different domains, and these differences can inhibit 
+interoperability.  Moreover, many important topic areas have 
+diverse parts which, from modelers' perspectives, point to diverse 
+semantic paradigms.  Precision medicine, for example, depends on 
+integrating genomic, personal history, and medical outcome data, 
+each of which has its own representational and query-resolution practices.  
+The potential of precision medicine lies in part with emerging 
+technologies, like *[Semantic Data Lakes]*, that can 
+at least in part reconcile these differences.
+</p>
+
+<p>
+The primary goal of #(MSME)# is to provide run-time data representations 
+that are sensitive to cross-disiplinary needs: that enable developers 
+to program functions and classes which can be reused across multiple 
+semantic paradigms, or help reconcile and bridge multiple domains.  
+To support these goals, #(MSME)# provides code grouped into three 
+underlying components: 
+
+</p>
+<ul>
+<li>
+A run-time, #(Qt)#-based Semantic Graph engine.  This tools allows data networks 
+to be implemented based on the principles of the Semantic Web and 
+Resource Description Format (#(RDF)#), though without some #(RDF)# restrictions.  
+For example, there is no requirement that values within a graph (within 
+*[triples]*, or pairs of graph-nodes linked by an annotated graph-edge) 
+have a unique identifier that can be located from the World Wide Web.  
+The #(MSME)# graph run-time uses operator overloading so that graphs 
+can be conveniently modified directly from #(C++)# code.  Nodes are 
+also associated with values drawn from a predetermined list of 
+recognized types; therefore, an #(MSME)# graph model can be designed 
+specifically for each distinct project, defining a list of relevant 
+data types and of relevant kinds of connections or *[edges]* 
+that can be asserted between values with those types.  #^(MSME)# 
+functions support creating nodes from values, obtaining the 
+value wrapped by a node, adding nodes to graphs, asserting links 
+between nodes, and selecting nodes based on graph contexts.  
+These are similar to the graph-manipulation capabilities 
+provided by the #(SPARQL)# query language, but expressed 
+directly in application code rather than via separate query strings.  
+When it is necessary to interoperate with conventional #(SPARQL)# 
+and #(RDF)#-based data stores, the #(MSME)# graph engine can be 
+compiled with #(RDF)# support (particularly #[Redland]#, the 
+leading #(C++)# Semantic Web library), and #(MSME)# graphs 
+initialized based on the results of #(SPARQL)# queries 
+(so that this engine can be used as for a #(SPARQL)# 
+processing model).
+</li>
+
+
+<li>
+A #[Dependency-Grammar]#-based parser library.  The #(MSME)# parser 
+is an innovative, powerful, and very flexible approach to parser/compiler 
+design, using #(MSME)# graphs as a target representation.  #^(MSME)# Parser 
+allows for rapid development of complex, context-sensitive formal 
+language grammars using Regular Expressions, #(C++)# lambda 
+functions, as well as flags and context assertions that can 
+turn grammar rules on or off.  #^(MSME)# Parser adopts the 
+theory that formal grammars describe element-to-element 
+relations that can be asserted within an input stream, and 
+grammar rules define contexts which in turn define when 
+the relations do in fact apply.  For example, grammars parse 
+computer code according to relations from the semantic 
+domain of Process Algebra: different kinds of token-to-token 
+relations often correspond to different kinds of inter-process 
+relations (such as the result of one computation being passed as a 
+parameter to a subsequent computation).  #^(MSME)# interprets 
+grammatical relations as more fundamental than hierarchical 
+or phrase structures: in this sense #(MSME)# is based on 
+#[Dependency Grammar]# as found in Natural Language Processing 
+and Cognitive Linguistics, and is significantly different 
+than most (e.g., #(BNF)#) grammars used in Computer Science.  
+#^(MSME)# adapts Dependency theories to the problem of parsing formal 
+languages.  The result is a tool that can enable 
+application developers to design Domain Specific Languages, 
+Query Languages, and even Scripting Languages which more 
+subtle and intuitive than languages designed with competing tools.
+</li>
+
+
+<li>
+A collection of template classes to support *[Application Semantic 
+Kernel]* (#(ASK)#) models (see the page on #(ASK)# 
+<a href='/web/main-info-pages/ask.html'>here</a>).  #(ASK)# models 
+are kernel representations of the semantics of a concept 
+incorporated into computational domains, and implemented 
+directly in code that can be compiled and used in multiple 
+applications.  These models summarize both conceptual details 
+and computational protocols, and demonstrate as well 
+as implement the kernel protocols that are common to 
+how a data type will be used in multiple applications.  
+This kernel can then be extended by different applications 
+or within different points in a data-sharing network.  
+Each of these components can extend the kernel according 
+to their specific role: providing #(GUI)#- or web-based 
+views for users; persistence to a database; data sharing, 
+data aggregation; or data analytics.  In general, #(ASK)# 
+can be used in consort with #(MSME)# graphs: data types 
+represented by #(ASK)# models will then be among the 
+types recognized by a graph, and relations between 
+values of these types represented by graph edges.  
+#^(ASK)# models will typically include the most 
+pertinent, ubiquitous, or internal structures that 
+are semantically fundamental to each type, whereas 
+#(MSME)# graphs can assert relations that are 
+more incidental or orthogonal to types' semantics, 
+including relations between instances of different 
+types.  #^(ASK)# models emphasize detail and verifiability, 
+ensuring that data integrity and protocols are upheld, 
+whereas #(MSME)# graphs can be more free-form and 
+unregulated.  For many projects it may be useful 
+to combine these two modeling styles.
+</li>
+
+</ul>
+
+<p>
+#^(MSME)# and #(ASK)# jointly provide sophisticated data modeling 
+and data sharing capabilities for #(NDP)# applications.  
+These components will often need to be combined with 
+#(GUI)# front-ends for those application layers which 
+interact directly with users; with cloud components 
+to manage data sharing by providing network points that 
+understand these semantic models and can adapt them for 
+various network protocols; or with federations of components 
+implementing a Model-View-Controller system to integrate 
+back-end and front-end, #(GUI)# and cloud requirements.  
+An overview of #(MVC)# archicture in the #(NDP)# context 
+can be read <a href='/web/main-info-pages/learn-more.html'>here</a>.
+</p>
+
+
+</div> <!-- main page div -->
+</body>
+</html>
+
+

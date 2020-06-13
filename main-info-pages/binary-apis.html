@@ -1,0 +1,240 @@
+
+<html>
+
+<head>
+
+@@default-style
+@@font-style
+
+</head>
+
+<body>
+
+<!-- <div id='top-picture'>
+
+<div id='picture-offset'>
+
+
+-->
+
+<div id='top-offset'>
+
+
+@@top-links-banner
+
+
+<!-- </div> <!-- picture offset -->
+
+
+</div> <!-- top offset -->
+
+
+<div id='main-page-title-div'>
+
+<div class='center-wrap top-offset-5vh'>
+
+<h1 class='main-page-title'>
+Binary APIs with the Native-Driven Platform
+</h1>
+
+</div>
+
+</div>
+
+
+<div id='main-page-body-div'>
+
+<p>
+The term *[Application Programming Interface]* (#(API)#) refers both to 
+how applications access local code libraries and to how they access 
+information and services available over a network (such as the World 
+Wide Web).  In the former sense, #(API)#s are generally *[binary]* in 
+that they assume binary representations of data structures are 
+passed directly to library functions.  On the other hand, web 
+#(API)#s are generally textual (rather than binary) because the 
+requests (to specify which information or service is desired) and 
+the responses (the matching data, or info on the service rendered) 
+are *[serialized]* into textual representations.  The preferred 
+representations of web #(API)#s are human-readable but also 
+follow strict rules so they can be understood, without confusion, 
+by computer programs --- the most common examples being 
+#(XML)# (Extensible Markup Language), #(JSON)# (JavaScript Object Notation), 
+and #(RDF)# (Resource Description Framework).  The advantage of 
+textual representations is that a person (as well as a computer) 
+can understand the data being conveyed, directly from the serialized text.  One 
+disadvantage, however, is that human-readable encodings 
+can be much longer than the equivalent data in computer 
+memory.  Reducing the amount of data that needs to be sent 
+over a network can save energy, and, in places with limited 
+internet connectivity, can be essential for data sharing 
+networks to work properly.  In addition, a second disadvantage is 
+that more code needs to be programmed to work with textual representations.  
+Needing to translate data back and forth between binary form and 
+textual serializations can make software harder to develop 
+and hard to adapt to evolving data models.
+</p>
+
+<p>
+As an alternative or supplement to textual #(API)#s, #(NDP)# uses 
+a *[binary]* system for data sharing which works on the assumption 
+that a core semantic model (or *[Semantic Kernel]*) can be 
+shared by different components on a network, allowing them to 
+exchange data in a concise binary representation.  This is 
+facilitated by the #(NDP)# *[Application Semantic Kernel]* (#(ASK)#) 
+framework, which is discussed in greater detail <a href='/web/main-info-pages/ask.html'>here</a>.  
+This also relies on cross-platform #(Qt)# libraries which are 
+mature and well-established on many computing environments.  
+#^(Qt)# is first and foremost a front-end, application-development 
+framework, but in addition to its #(GUI)# classes, #(Qt)# 
+provides sophisticated networking and data collections libraries 
+which can be used both for building data structures and for 
+sending them via network protocols like #(TCP)# and #(HTTP)#.  
+#^(Qt)# provides *[container]* classes modeling lists, vectors, 
+stacks, queues, key-value maps, and so forth, as well as a 
+robust and internationalized string-manipulation and Regular-Expression 
+(textual pattern-matching) framework.  Applications with #(Qt)#-based front-ends 
+will typically use these string and collections classes for underlying data models, 
+or at least will find it straightforward to convert structures from 
+other formats (like the #(C++)# Standard Library).  Once data is 
+in a #(Qt)#-based format, it requires only several lines of code 
+to convert the data into a binary stream, prepared to be 
+sent over a network, and then to convert it back to a useful 
+run-time format.  This process can be further simplified by 
+using a consistent encoding for binary streams, such as 
+the #(NDP)# version of a base32-encoding (see 
+<a href='/web/extra-info-pages/base32.html'>here</a>).
+</p>
+
+<p>
+Using binary streams to push and then pull data relies upon all 
+relevant network points having the code needed 
+for the *[push]* and *[pull]* operations to be 
+consistent.  That is, it relies on code being properly shared 
+across the network, as well as data.  Implementing 
+a Binary #(API)# therefore requires both code sharing 
+<i>and</i> data sharing, but assuming the code can 
+remain consistent and up-to-date (for example, via 
+code-sharing platforms like #(Github)#), many of the 
+difficulties of data-sharing become factored out to the 
+code-sharing aspects of the system.  The components 
+specific to data sharing become both easier and less costly 
+to maintain and also more energy-efficient and cost-effective 
+once deployed.  
+</p>
+
+<p>
+Binary #(API)#s are primarily intended to serve native-compiled front-ends 
+or native-compiled network points that can install binary libraries.  
+As with any #(API)#, an end-user does not usually see binary #(API)# results 
+directly; instead, an application requests information on users' behalf 
+and processes the data sent via the #(API)# in response, converting it to a 
+visual-interactive form.  #(API)# data is often wrapped in web pages, 
+for users to access within a web browser.  Browser-based access, however, 
+can be suboptimal for complex or highly interactive data.  
+Browsers do not have the full range of User Interface functionality 
+available to native applications, and relying on JavaScript to 
+provide interactive features makes web applications subject to 
+environmental restrictions through no fault of their own.  For example, 
+JavaScript errors on other web pages (seen on other browser tabs) can 
+slow the browser's JavaScript engine, making all open pages inoperable.  
+For many kinds of data, the best User Experience #(UX)# is achieved 
+through stand-alone, native-compiled applications that run 
+entirely in their own windows, outside of browsers and their  
+ecosystem, and not needing continuous internet connectivity.  
+While these applications can work with conventional web #(API)#s by 
+converting #(XML)# or #(JSON)# code to in-memory data structures, 
+it is more effective for native applications to receive data 
+which is already in binary form, linking in the same data model 
+libraries which are used by the #(API)# provider to ensure 
+data integrity and interoperability.
+</p>
+
+<p>
+This is precisely the architecture supported by the #(NDP)# Binary #(API)# framework, 
+through a combination of data modeling, semantic modeling, and networking 
+classes.  #^(NDP)# components can be user-facing front-ends which access 
+#(API)#s so as to generate specific User Interface components: for example, 
+each #(API)# can be associated with a single dialog box (a separate window that 
+can be closed, minimized, and activated in isolation from other application 
+windows, often activated from a context menu in a larger window).  
+Alternatively binary #(API)# clients can be cloud services that convert the 
+binary data into web-friendly formats for use by web clients.  
+When used in a native application, #(GUI)#-based binary #(API)# clients 
+can be packaged as isolated, reusable libraries that provide a consistent 
+data and visual model for multiple applications.  These components 
+are then front-end components with their own data model that can 
+send and receive data to their own cloud-based services, and can be 
+plugged in to larger native applications with little extra coding 
+ln the application developer's part.  Custom 
+dialogs are discussed further <a href='/web/main-info-pages/custom-dialogs.html'>here</a>.  
+In general, such components group together related pieces of information that are 
+specific to a given topic or task but are not usually unified in the same 
+conventient form in pre-existing applications.  For example, researchers emphasizing 
+a particular topic --- or who have developed innovative techniques and methods 
+--- can bundle their data structures into domain-specific visual and netwoking 
+units.  Consider a specialist in refugee health adding refugee-related support 
+to medical software; or reusable components specific to maternal health 
+provided for both medical and educational software; or data aggregates 
+specific to new treatment modalities which need to be integrated into 
+medical records.  An appliction which can integrate these domain-specific 
+visual and data models in a flexible, modular fashion, will be more 
+adaptable and more usable in evolving environments.  The Native Driven Platform 
+overall is specifically built to support these modular, evolving programming paradigms.
+</p>
+
+<p>
+The effective combination of data-sharing and code-sharing is not limited 
+to binary serialization; the same principles can be used with formats such as 
+#(XML)#, where the #(API)# provider also provides libraries to convert 
+#(XML)# streams into runtime objects.  For example, #(Qt)# provides #(XML)# 
+and #[XQuery]# libraries, and the #(Qt) Meta-Object System #(MOC)# simplifies 
+the translation of #[XQuery]# results into #(Qt)# objects, since 
+classes and functions can be identified by name, that is, by identifiers 
+obtained from #(XML)# data.  The #(MOC)# provides #(C++)# reflection 
+capabilities, at least for classes and functions specifically annotated 
+so as to be accessible via reflection.  #^(XML)# Document Types can 
+accordingly be designed to anticipate this usage, if the data types which 
+they serialize are part of #(Qt)# applications.  In the simplest case, 
+a part of a document serializing a single typed value --- which can themselves be 
+complex data structures, even if they are one single instance of a complex 
+data type --- can be annotated with a class name, wherein the associated 
+#(Qt)#-compatible class has a constructor that initializes values from 
+#(XQuery)# results.  An alternative solution is to transform #(XML)# data, via 
+#(XQuery)#, into scripts which initialize values via #(Qt)# callbacks --- 
+#(NDP)# provides an illustration of this tactic based on the #(Clasp)# 
+scripting language, which is a dialect of #(Lisp)# developed by 
+Christian Shafmeister at Temple University.  For some projects 
+the best solution may be a combination of several forms of #(API)# access: 
+binary streams, #(Qt)#-specific #(XML)# documents, and general #(XML)# documents 
+for different clients, depending on the code available in clients' environment.
+</p>
+
+<p>
+#^(NDP)# also gives developers latitude in how #(API)# requests are encoded.  
+It is certainly possible to use #(URL)# parameters or #(REST)#-style 
+(Representational State Transfer) *[representational]* #(URL)# to encode 
+request details, but it is equally possible to encode and/or encrypt requests 
+in raw #(HTTP)# data.  Since #(NDP)# provides low-level #(HTTP)# access, 
+programmers are not limited to standardized web protocols (such as 
+standardized #(HTTP)# methods like #[get]#, #[post]#, and #[put]#), 
+or standardized request-body encodings (such as those available for #(HTML)# forms).  
+Since many #(NDP)# clients are native-compiled front-ends, they can 
+assemble #(HTTP)# requests internally, and can post arbitrary data (including 
+binary serializations) in the request body.  Accordingly, the requests themselves 
+can be instances of data types with their own semantic models, 
+or *[Semantic Kernel]*; the design of the semantically rich data types and 
+of the *[Request Objects]* that obtain information from these types 
+can go hand-in-hand.  While developers are free to use more traditional 
+#(REST)# models (which work best with relatively simple and linear 
+data complexes), they can design specialized Request Objects for 
+more complex data, or may combine multiple request styles.  
+Developers, in short, can <a href='/web/main-info-pages/learn-more.html'>shape the platform to the 
+data</a>, rather than shaping the data to the platform.  
+</p>
+
+
+</div> <!-- main page div -->
+ 
+</body>
+</html>
+ 

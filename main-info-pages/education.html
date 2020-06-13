@@ -1,0 +1,528 @@
+
+<html>
+
+<head>
+
+@@default-style
+@@font-style
+
+</head>
+
+<body>
+
+<!-- <div id='top-picture'>
+
+<div id='picture-offset'>
+
+
+-->
+
+<div id='top-offset'>
+
+
+@@top-links-banner
+
+
+<!-- </div> <!-- picture offset -->
+
+
+</div> <!-- top offset -->
+
+
+<div id='main-page-title-div'>
+
+<div class='center-wrap top-offset-5vh'>
+
+<h1 class='main-page-title'>
+Education
+</h1>
+
+</div>
+
+</div>
+
+
+<div id='main-page-body-div'>
+
+<p>
+Educational software is a field with many commercial and Open-Source alternatives, but a 
+significant lack of solutions which meet the most important criteria for 
+native cross-platform development and extensibility (these are discussed in more detail 
+<a href="/web/main-info-pages/learn-more.html#criteria">here</a>).  Educational software is 
+identified by several categories which reflect overlapping but partially distinct foci:
+
+<ul>
+<li>
+Course Management Systems (#(CMS)#):  Used by teachers to create curricula and teaching 
+materials and create documents to distribute to their class, as well as managing student 
+information and grades.
+</li>
+
+<li>
+Learning Management System (#(LMS)#):  Used by students as well as teachers; teachers 
+create or reuse lessons and teaching materials that are accessed by students in electronic 
+form.  Sometimes students also create their own content, or use the software to 
+work with materials directly (completing a quiz digitally, for example).
+</li>
+
+<li>
+eLearning, Virtual Learning Environment, Computer Aided Learning, or 
+Online Learning Platform (#(OLP)#):  Used by students to study materials, potentially 
+independent from any organized course or school environment.  The idea is here that 
+educational software can provide a full and integrated learning experience which 
+can, in principle, be used in isolation, although it may also be used 
+to accompany a formal course.
+</li>
+
+<li>
+Computer Aided Instruction:  In addition to providing software-based learning tools, 
+these kinds of projects take advantage of technological capabilities 
+related to subjects of instruction.  For example, a course related to 
+learning music using software components to compose and create sheet music; 
+courses for learning mathematics and physics can use computer resource to 
+solve equations and show complex curves and graphics; courses related to 
+architecture and engineer can use Computer Aided Modeling and 
+Computer Generated Imagery, and so forth.  In general, Computer Aided Instruction 
+software adapts software in use for certain fields, fields where computer 
+tools aready have significant utility, and adds pedagogical features to such tools.
+</li>
+
+<li>
+School Management System:  Used by teachers and school administrators to 
+maintain data related to students, courses, and grades.  In this case 
+the emphasis is not only pedagogical but also institutional, keeping 
+track of personal information and integrating with generic business applications.
+</li>
+
+</ul>
+
+</p>
+
+<p class='continue'>
+There are several standardized protocols for sharing and modeling data in an educational 
+setting, such as #(SCORM)# (Sharable Content Object Reference
+Model) and #(LTI)# (Learning Tools Interoperability).  Nevertheless, 
+the educational sector has seen less efforts to centralize designs and 
+prioritize interoperability, in comparison to fields such as finance and health care.  
+</p>
+
+<p>
+Existing #(CMS)# (and related educational) platforms are 
+limited and/or experimental.  Most platforms
+are web-based and don't offer the user-friendly look and feel or the
+capabilities of desktop software.  The native-driven offerings are
+platform-specific (mostly based on either Microsoft.Net or Java).
+There are a few projects used by a small group of schools --- for
+example, #(SWAD)# (Shared Workspace at a Distance) is used at several
+Spanish universities and is written in C, so it qualifies as native
+cross-platform.  But a robust Native-Driven environment for 
+education should be more general and have a wider set of 
+features for developers.  A Native #(CMS)# can either offer a 
+distinct native platform or can extend existing 
+web-based options, like Fedena or Moodle, by 
+providing customized views onto #(CMS)# pages with an 
+embedded web viewer --- or some combination of the two.  
+</p>
+
+<p>
+One distinguishing feature of education-related software --- 
+using #(CMS)# as a convenient moniker for computer-supported 
+learning and course tools in general --- is a large set of users.  
+In most use-cases, at least one teacher and all students in a 
+class will be able to create and edit some of the course 
+content.  Examples of students creating (or *[adding]*) content 
+may include students uploading assignments, taking online 
+tests, or asking questions to the class.  In some cases 
+students may create material collaboratively: perhaps via 
+*[wiki]*-style group-edited pages, or social-media style 
+responses to each other's questions and comments.  
+As much as it is technologically feasible, a robust #(CMS)# can 
+include many features of collaborative social networks.  On the 
+other hand, students' access to other course materials  
+needs to be restricted.  In addition to students and teachers, other 
+users who may be given partial access to course materials 
+could include parents, tutors, librarians, and school administrators.  
+</p>
+
+<p>
+Meanwhile, #(CMS)# systems can work with diverse kinds of course content.  
+Students may upload papers in #(PDF)# format, take quizzes with 
+customized formats, or post questions on #(HTML)#-based web pages.  
+Some reading assignments might be in the form of #(PDF)# files, whereas 
+assignments and a syllabus might be conventional web pages.  
+Other administrative content might include digital versions of registration 
+forms, report cards, and tests or papers which have been graded or evaluated.  
+Managing different sorts of content is a familiar goal of 
+Content Management Systems in general, but #(CMS)# (educational) software 
+has an added complication in that content formats may need to be 
+customized for different course materials.  Each test, for example, 
+may need to have its own format (as an alternative to trying to 
+compose tests in #(HTML)# or #(PDF)# forms, which can limit 
+their layout options and/or interactivity).  
+</p>
+
+
+<p>
+In order to sort out this variety of user-types and content-formats, #(CMS)# 
+systems need detailed models both on the server-side and on the front-end.  
+The following two sections will address some specific requirements of each side.
+</p>
+
+
+<h2>#(CMS)# and Server-Side Development</h2>
+
+<p>
+The rise of cloud computing and *[Platform as a Service]* (#(PaaS)#) means 
+an ever-expanding range of options for web hosting (in a broad sense 
+of hosting any web service or application, such as content for a single 
+course in a school setting).  In addition, hosting is increasingly 
+cost-effective.  Some relatively new Cloud Hosting options 
+allow web sites to be hosted free of charge.  Moreover, 
+despite being cost-effective some such options give developers full 
+control over content and technology; we are moving past a time 
+when choosing free or low-cost hosting meant exercises some control 
+over content, such as including embedded or popup ads, or limiting the kind of programming a site can support behind the scenes.  All this 
+augurs well for schools who would like to deploy #(CMS)# solutions 
+in a cost-effective manner.
+</p>
+
+<p>
+The caveat to these exciting recent possibilities, however, is the 
+technological complexity involved in truly low-cost and customizable 
+solutions.  In general, cloud-hosting options like Docker images 
+require a modest level of skill to create and maintain, and 
+this increases the more that an organization seeks to customize 
+their platform.  In some educational settings, such technological 
+challenges can be a benefit: a class studying a computer-related 
+field might create a cloud platform to host a course-specific 
+#(CMS)#, with the steps involved covering a range of computer-related 
+subject areas: #(HTTP)# specifications, user and group management on 
+embedded or virtual Linux systems, #(CSS3)#, version control, 
+and the varieties of *[as a Service]* cloud components 
+(Software as a Service, Container as a Service, #(PaaS)#, and so forth).  
+Computer Science classes (or individual students) can also take on the task of 
+developing #(CMS)# solutions for other classes (a variation on 
+this possibility would be college-level students providing #(CMS)# 
+solutions as a service to K-12 schools, as both a contribution 
+to local communities and a learning experience).  
+</p>
+
+<p>
+Although conventional web development frameworks can be 
+utilized for #(CMS)#, a more interesting discussion concerns 
+building components (such as Docker images) specifically 
+for educational software.  Repeatedly used cloud solutions 
+--- sometimes called *[cartridges]* --- package up popular 
+web development technologies and may them accessible for 
+cloud environments.  Web frameworks like #[Ruby on Rails]#, 
+#[Django]#, #[Node.js]#, and many others, are natural 
+candidates for cartridges --- usually cloud providers will 
+give users the option of selecting one of these pre-existing 
+cartridges to create an initial web site as a starting-point.  
+An education-related, #(CMS)# cartridges would ideally work in a 
+similar fashion, allowing teachers or other #(CMS)# developers 
+to quickly initiate a service and see some initial content in a 
+web browser (perhaps a message stating the name and times 
+of their course) to which they can then add more specific 
+content (a syllabus, reading materials, assignments, and so on). 
+</p>
+
+<p>
+There are several technical choices involved in developing 
+*[cartridges]* which would work in this fashion.  One question is 
+how content will be distributed between a filesystem and a database: 
+what kinds of content will be saved as individual files and 
+what kinds as database entries?  The code for creating, editing, 
+and reading content, and authenticating any use of content, 
+differs according to whether the content is file-based or in a 
+databases, can vary in some technical details across Cloud Hosting 
+providers.  Another question is how to model the diversity of 
+users.  Many cloud components using a technology like Docker 
+are based on a virtual Operating System, most often Ubuntu, and 
+as such the foundational layer of a hosted platform is a 
+self-contained Unix-like environment.  These underlying Unix 
+capabilities can be harnessed to manage user permissions 
+and identities for anyone who can access the #(CMS)#, by 
+analogy to students logging in to accounts in a computer lab.  
+Alternatively, users can be managed primarily at the 
+application level, with requests to access content accompanied 
+by user authentication componts.  Combinations of these options 
+are also feasible: for example, having different #(OS)# users 
+for different <i>kinds</i> of application users (students, 
+teachers, tutors, parents, administrators).
+</p>
+
+<p>
+Because of the diversity of users and forms of content, and the 
+range of technical options that are possible for managing them, 
+#(CMS)# solutions are probably best viewed as a distinct 
+technology rather than merely one special form of web 
+application.  In particular, it is important to consider 
+the basic units of Software Development Engineering 
+(#(SDE)#) --- in other words, the basic elements that 
+have to be created and managed in order for a software 
+product to be deployed --- as specific to courses and 
+education, as opposed to #(SDE)# units specific to 
+web applications.  What are the *[elementary]* units 
+--- the building blocks of engineered solutions --- 
+varies between domains.  The elementary #(SDE)# units 
+for web applications include web pages in the form 
+of #(HTML)# files (or files in templating formats 
+that are used to generate #(HTML)#), image files, 
+styling (such as #(CSS)# files), databases, and 
+software components that manage web requests and responses 
+(for example, the models, views, and controllers 
+in #(MVC)# systems, as discussed 
+<a href='/web/main-info-pages/learn-more.html#mvc'>here</a>).  
+By contrast, the elementary #(SDE)# units for 
+#(CMS)# include class readings, student papers, 
+assignments, syllabi, registration and grade information 
+and data sets, students' online questions and class 
+discussions, and tests and quizzes --- both in raw form to be 
+distributed to students and in completed form 
+if they are digitally completed by students and 
+submitted via a web portal.  A #(CMS)# system should 
+have specific server-side features for handling each 
+of these kinds of content, both for receiving them 
+as submitted content via an #(HTTP)# request, for 
+storing them as files or as database entries, and 
+for showing them as responses to #(HTTP)# requests.  
+The #(CMS)# code base should be clearly organized around 
+these various kinds of content.
+</p>
+
+<p>
+This is one reason why strong typing, with its transparent 
+organization of functionality into modular units expressly 
+associated with distinct kinds of content, is especially 
+important for #(CMS)# cloud solutions.  Ideally, server-side 
+code should be based on strongly typed programming languages 
+which are Operating-System neutral, like #[Java]# and #[C++]#.  
+This also has the residual benefit of working well with 
+front-end code, which can be implemented in the same 
+language.  Another feature of #(CMS)# systems is that 
+many datatypes are equally important for server-side back-ends 
+and client-side front-ends.  Most of the content-types 
+like tests, papers, readings, assignments, and report-cards 
+have a natural representation that is equally appropriate 
+for client and server, and it makes sense for the server-side 
+and front-end components to use the same code libraries 
+to model these types.
+</p>
+
+
+<h2>#(CMS)# and Front-End Development</h2>
+
+<p>
+Assuming a robust server-side #(CMS)# system has accordingly 
+been developed, the next question is how best for students 
+and other users to access the site.  Most current #(CMS)# 
+systems work like web applications from the user's point of 
+view, so they are accessed within a web browser and according 
+to web conventions.  In particular, this means that 
+the various kinds of #(CMS)#-specific content --- tests, 
+readings, assignments, report cards --- have to be 
+rendered as ordinary web pages (or perhaps #(PDF)# files in 
+some cases).  This tends to collapse the distinction 
+between the types: a student visits one page to see a 
+quiz they have to complete (or have completed, or see the grade), 
+they visit another page to see the upcoming reading assignment, 
+another page to see online class discussions, another page 
+to see the dates and upcoming schedule for the class.  
+The basic operations of visiting a #(URL)# --- or following links 
+to access the pages desired --- do not reflect the 
+diversity of content and operational norms appropriate for 
+different aspects of a #(CMS)#.  Students also need to know 
+how to reach different kinds of content from a single entry 
+point, because there will typically be one *[home]* page for 
+any given course.  Since most students will reach most content 
+by following links from this home page, the overall #(CMS)# 
+has to be carefully organized to ensure students will 
+find the content they need.  Moreover, since students reach 
+content by following links and switching between pages, 
+the general web environment does not offer many opportunities 
+for juxtaposing multiple pages: viewing different kinds of content 
+side-by-side.
+</p>
+
+<p>
+Native front end components can make #(CMS)# platforms much 
+more user-friendly.  Native components can offer a level 
+of interactivity which is particularly important for #(CMS)#.  
+For example, while reading a course syllabus or a particular 
+session's assignment, they may want to open the associated 
+reading materials to preview alongside the schedule.  
+For tests or assignments that have already occurred, they 
+may want to check back on their grades or teachers' comments.  
+For upcoming tests or assignments, they may want to view 
+details such as locations where tests will be administered, 
+or requirements for assigned term papers.  Students may 
+also want to see an overview of their progress through the 
+course: to see how their grades have changed over time, for example.  
+In general, users' interactions with #(CMS)# software 
+will take the form of a *[branching-detail]* structure, 
+rather than a *[surf-and-network]* structure.  Students 
+will not usually be *[surfing]* from page to page, 
+but rather will view different elements at different 
+levels of detail side-by-side, such as a syllabus giving 
+an overview of the course and a separate dialog box 
+with more information about a specific class-session.
+Similar comments apply to teachers and other kinds of users apart 
+from students.  
+</p>
+
+<p>
+At the global scale, in sum, #(CMS)# systems are highly interactive: 
+they have a detailed operational model which combines 
+a diversity of content-types with a diversity of 
+user actions associated with these types.  An 
+*[Operational-Semantic Model]* can be defined as a Semantic 
+Model which includes a representation not only 
+of data fields and concepts associated with a kind 
+of application content, but also the actions which 
+users expect to perform and tasks which they bring 
+to bear on their interactions with the software.  
+People user applications not only to learn information, 
+but also to do things (not only in a virtual sense but 
+concretely as well): students do things like 
+submit papers before a deadline; teachers do things 
+like post grades and reviews of papers and tests.  
+#^(CMS)# systems model and facilitate a wide range 
+of tasks and operations: reading, reviewing, submitting, 
+and even creating documents like academic papers; 
+taking or marking tests online; learning grades or 
+studying grades in context (students seeing how 
+their grades have changes, or teachers looking 
+at the statistical distributions of grades); 
+creating or finding course-related content like 
+schedules and syllabi.  Moreover, many #(CMS)# 
+systems may have computer-generated content which 
+is useful for pedagogical purposes: simulations 
+of physical, numerical, or cultural phenomena or objects 
+can enhance teaching in many subject areas, from 
+physical sciences and mathematics to music and 
+architecture.  Rather than predefining the range of 
+content and presentations which are supported by a 
+system, it is better to allow content styles to 
+evolve naturally out of subject areas: teaching 
+history raises the idea of creating visual 
+displays like timelines; architecture and 
+civil engineering raises the idea of matching design 
+sheets to photographs or computer-generated imagery; 
+mathematics raises the idea of using dynamic #(CGI)# 
+to illustrate principles like fluid dynamics, Partial 
+Differential Equations, solution-spaces, stochastic 
+processes, fractals, iterative processes, etc.
+</p>
+
+<p>
+When presenting content in a pedagogical setting, 
+it is easy to find opportunities for making 
+content more interactive: we are especially attuned 
+to the idea that for teaching materials we are 
+not only <i>showing</i> content, but 
+also <i>exploring</i> content.  When <i>showing</i> 
+a picture of a painting, for example, an art 
+instrutor may want to emphasize and enlarge 
+a specific part of the composition --- or even 
+temporarily visually alter the image to call 
+attention to some detail of artistic technique, such 
+as computationally highlighting brushstrokes.  
+When considering artistic compositions involving 
+repeated patterns --- in archicture or decorative 
+arts --- an instructor may want to annotate the 
+image showing lines of symmetry, directions of 
+repetition, atomic pattern units, or recurrent 
+observables (like the orientation of shapes around an 
+intersection point with an angle or symmetry that 
+recurs throughout a composition).  When studying 
+history, it can be useful to plot events and 
+episodes in different domains --- military, economic, 
+geopolitical, sociocultural --- via juxtaposed 
+timelines.  With its opportunity for dynamic 
+and interactive change, a digital platform offers 
+many possibilities for innovative teaching materials; 
+we do not need to consider digital pedagogy merely an 
+onscreen reproduction of books, charts, or posters.
+</p>
+
+<p>
+To take full advantage of these pedagogical opportunities, 
+#(CMS)# software has to employ sophisticated and interactive 
+graphics front-ends.  Complex graphics can be represented 
+on a web page by converting them to an image format or to 
+#(SVG)# or #(PDF)#, but these formats have limited 
+options for interactions.  #^(SVG)# has useful 
+dynamic capabilities --- consider maps on which users 
+can dynamically overlay their choice of representations 
+such as driving directions, public transportation routes, or 
+locations of interest --- but the range of dynamic 
+operations are still limited to a few kinds which are 
+predefined as part of the most common #(SVG)# use cases, 
+such as maps and diagrams.  Multimedia content, such as 
+#(3D)# scenes rendered via #(WebGL)#, are another 
+example of interactive web content, but again there are 
+significant limitations; for example, there are few 
+dynamic and interactive possibilities for joining graphical 
+data to textual or structural data.
+</p>
+
+<p>
+In general, pedagogical materials require a kind of interactivity 
+which is not well served by web technology.  #^(CMS)# content 
+is not interactive in the sense of maps, videos, or 
+Virtual Reality; rather, #(CMS)# is interactive in the sense 
+of informative presentations which can be dynamically explored 
+to reveal different layers of detail.  For example, a timeline 
+display for a history lesson can be productively interactive 
+if it briefly identifies historical events or periods and 
+allows each to be studied at greater length.  From a front-end 
+development point of view, this suggests a protocol 
+for opening and closing secondary displays based on cues 
+originating at discrete points on the time-line.  Similar examples 
+can be given with respect to other kinds of presentation 
+materials for other subject areas.  In general, the kinds 
+of interactivity most appropriate for pedagogical 
+content is sufficiently diverse that no single 
+format --- whether web pages or #(SVG)# files or 
+#[OpenGL]# scenes --- can effectively serve as a 
+*[standard]* for composing teaching materials.  
+In other words, designing interactive educational content 
+does not really fit the model of designing web pages or 
+#(SVG)# images, where a single file in a markup language 
+fully encapsulates the completed material.  The most 
+visual and interactive pedagogical content will often 
+be separately designed software components, fully 
+customized for the subject area and teaching styles 
+which an educator considers best suited for the 
+content and level of instruction.
+</p>
+
+<p>
+It is also true that sharing and reuse of successful teaching 
+materials is especially important in the context of a 
+#(CMS)#.  This is not only a matter of sharing data, 
+but also of teachers being able to take advantage of 
+existing pedagogical content by analogy to how 
+they use existing textbooks and lesson plans.  In conjunction 
+with the points made in the last paragraph --- 
+that many teaching materials need to be designed as 
+distinct software components, rather than distributed 
+as single web (or other) files --- this suggests 
+that a #(CMS)# framework needs to support code sharing 
+and distributed code discovery.  A prototypical 
+digitized lesson, for example, will not be a single 
+file that can be sent between applications; it will 
+instead be a distinct software component that has 
+to be built and incorporated into other #(CMS)# 
+applications.  This places special priority 
+on modular design and other *[core principles]* 
+of native Software Development Engineering 
+as reviewed <a href='learn-more.html#criteria'>here</a>.
+</p>
+
+</div> <!-- main page div -->
+</body>
+</html>
+
+

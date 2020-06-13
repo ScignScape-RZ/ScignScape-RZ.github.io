@@ -1,0 +1,257 @@
+
+<html>
+
+<head>
+
+@@default-style
+@@font-style
+
+</head>
+
+<body>
+
+<!-- <div id='top-picture'>
+
+<div id='picture-offset'>
+
+
+-->
+
+<div id='top-offset'>
+
+
+@@top-links-banner
+
+
+<!-- </div> <!-- picture offset -->
+
+
+</div> <!-- top offset -->
+
+
+<div id='main-page-title-div'>
+
+<div class='center-wrap top-offset-5vh'>
+
+<h1 class='main-page-title'>
+CyberSecurity
+</h1>
+
+</div>
+
+</div>
+
+
+<div id='main-page-body-div'>
+
+<p>
+#^(NDP)# provides several features which can help programmers develop 
+native applications that are more secure and more respectful of 
+users' privacy than their web-based equivalents.  Security remains 
+something which developers need to take seriously; whatever 
+platform and libraries are being used, developers need to keep 
+security principles in mind while during the planning stage 
+and periodically review code to ensure that best practices remain 
+enforced.  The role of a platform is to facilitate developers' 
+adopting designs and protocols that are most likely to remain secure 
+--- to discourage attempts at creating malware which would 
+inappropriately access data and to add as many roadblocks 
+as possible to prevent potential malware from achieving its objective.  
+Accordingly, #(NDP)# applications have security-related features such as:
+</p>
+
+<ul>
+
+<div class='main-image-wrapper'>
+<img src='/pics/sq.jpg' class='main-image' alt='loading...'/>
+</div>
+
+<li>
+Eliminate Browser-Specific Vulnerabilities: Cookies, Cross-Site Scripting (#(XSS)#), 
+saved passwords, spoofing, and phishing are all attack vectors which are 
+targeted by many forms or malware because they are so ubiquitous.  
+Because they are isolated from any browser and use quite different methods 
+of user and data management, native applications are not susceptible to 
+the kind of attacks can be generically launched against content on the Web.
+</li>
+
+<li>
+State-of-the-Art Cryptography Support: Based on native-compiled code, 
+#(NDP)# applications can directly use advanced cryptographic 
+libraries, including those that leverage mathematical structures such as 
+Quaternions or Elliptical Curves.
+</li>
+
+<div class='main-image-wrapper'>
+<img src='/pics/js-err.png' class='large-image' alt='loading...'/>
+</div>
+
+<li>
+By embedding third-party scripts and content, web developers relinquish control 
+over User Experience.  Poor #(UX)# due to third-party content reflects poorly on 
+the originating site.  Moreover, this external content often interrupts the 
+flow of the primary page content and, in particular, causes content to 
+suddenly change position.  JavaScript errors are very common in third-party and 
+commercial content (as can be seen by monitoring JavaScript from an embedded web page).
+Aside from severely degrading user experience, 
+these flaws can open security holes because they increase the likelihood of 
+users will click on a link or button without intending to.
+</li>
+
+<li>
+When a Native Application does choose to show web pages, using an embedded 
+web browser, it can isolated the web pages to prevent unauthorized usage.  
+This ensures that concurrent downloads of ads and other extra content will not 
+disrupt users or interfere with the rest of the application; that layout does not 
+change, except in response to user actions; and that web content is isolated and embedded 
+in Native elements: no more frozen pages or *[jumps]*.
+</li>
+
+<li>
+Native applications can connect to a cloud service (such as #(NDP)# Cloud) which 
+is specialized for native clients and can adopt extra security measures, such 
+as using nonstandard #(HTTP)# methods and protocols.  Since they are 
+not standardized, and can be custom-designed for each project, they are less 
+subject to malware which tends to be targeted at the most popular protocols, 
+since a larger set of potential targets increases the likelihood of malware 
+finding a source it can breach.  
+</li>
+
+<li>
+#(NDP)# supports more fine-grained, type-theoretic
+data models where security protocols can be optimized for each data
+type.  Because layout, style, and basic information is often
+precompiled into applications on the client side, the specific data
+shared between server and client is more focused and data-driven,
+which makes it easier to design and audit for extra security.  Also,
+developers have greater control over the code which initiates data
+exchange on the client as well as the server side.  Applications can
+easily be designed such that every package of data sent between server
+and client has a specific data type and rigorously tested security
+protocols.  In other words, advanced security features can be built in
+to every piece of data communicated between server and client, not
+just a fraction of the total data sent
+</li>
+
+
+<li>
+#(NDP)#'s commitment to merging Object-Oriented and Functional paradigms 
+(for programming in general and semantic models in particular) 
+have security benefits as well.  One of the technical challenges for cybersecurity is that the most
+secure code tends to be driven by functional-type languages, like
+Haskell, but any #(GUI)# framework needs to work with a type system very
+different from pure-functional.  So a security is advanced, at a theoretical 
+and systematic level, by adapting functional type theory as much as possible in a 
+#(GUI)#-based environment.  #(NDP)# is receptive to the needs of 
+both front-end developers and data modeling experts.  
+</li>
+
+<li>
+#^(NDP)# supports a variety of server-side runtime environments
+(for example, running servers as standalone #(Qt)# applications, as
+local Docker images, and then as Docker images deployed on the cloud), 
+which allows developers to choose the environment that
+best allows them to focus most directly on security --- and also to
+create specialized native client-side components specifically designed
+to simulate and test different user-side environments.
+</li>
+
+<li>
+Operations involving sensitive data can be organized and isolated into 
+separate dialog windows subject to extra testing and layers of 
+authentication.  Because such dialog boxes are build specifically around 
+a well-defined, targeted data model, and are precompiled as part of the native
+application, they need only in order to share a small amount of data 
+(for any single transaction) which can be well
+encrypted.  By contrast, if a transaction is completed via a web
+page in a browser, the server would send an entire page, not just
+the specific financial data.  There's a greater risk for spyware to 
+gain access to that page --- in particular, the unencrypted version 
+of information inserted into the page would be more broadly 
+visible on the user's computer than if the final *[weaving]* of 
+decrypted content is performed solely in a native-compiled #(GUI)# class.  
+In the latter procedure, there is no distinct file, no text stream, 
+which reveals the secret data.  Browser-based transactions also 
+have a greater risk of being *[spoofed]*, because people will rarely study 
+web #(URL)#s (which tend to have a lot of extra data
+attached) carefully enough to confirm that they
+come from the proper domain.
+</li>
+
+<li>
+Dialogs for financial transactions (and other transactions 
+involving sensitive content) can be
+designed so that they only work with one specific kind of data --- 
+a transfer between bank accounts, a credit card purchase, a 
+transaction history list, etc.  Each
+dialog is associated with a specific data type that they represent
+--- a funds transfer dialog is a visualization of a funds transfer
+operation, for example.  Because developers and auditors know from the 
+outset that those are the precise and only data types shown and managed by each dialog, they
+can design and test security protocols narrowly crafted for these
+types.  Because the funds transfer dialog only sends and receives data
+which fits into the *[funds transfer]* type, developers can build
+security features focused exclusively on encrypting funds transfer
+information.  Compare this to a web application where every
+kind of financial operation is expressed via generic web pages.  In
+that case, testing and auditing data security is more elusive because
+one generic kind of content (web pages) are used to display many
+different kinds of sensitive data, and many different scenarios have
+to be tested all together.  Once the design and protocols for the
+funds transfer dialog and data model are audited and deemed secure,
+that component can be carried over into different applications or new
+versions of the current application.  The data types can be used both
+client-side and server-side --- you don't have to write different code
+for different languages.  The security of the whole application is
+built up from individual components, whose security can be 
+tested and reviewed in isolation.  This guarantees that the best
+security practices are adapted for each kind of operation, and,
+accordingly, that the overall application is as secure as possible.
+</li>
+
+<li>
+Since they use a precompiled layout and only request transaction-specific 
+data from the Web, Native Applications can often have an architecture 
+similar to *[single-page]* web applications, that progressively 
+rewrite a single web page via #(DOM)# (Document Object Model) manipulation 
+(rather than receiving an entirely new page).  Each application has one single web
+page and all operations are conducted via JavaScript and secondary
+network requests, like #(AJAX)# (Asynchronous JavaScript and XML).  
+However, these kinds of web applications depend heavily on
+JavaScript, and because JavaScript is not a strongly-typed language
+you lose the extra security benefits of focusing policies,
+protocols, and testing on individual data types.  Moreover, while 
+JavaScript code can launch an #(AJAX)# request it is the browser which
+actually constructs the #(HTTP)# or #(HTTPS)# data sent over the network, 
+so you are still working within the limitations and vulnerabilities of the 
+browser --- and there have been some high-profile #(AJAX)# hacks resulting 
+in the theft of large amounts of sensitive records.  
+By contrast, #(NDP)# will create requests similar to #(AJAX)# 
+(using #(C++)# rather than JavaScript), but developers have complete control over the
+request itself, over the specific HTTP data that is sent, the handlers
+that receive a response from the server, the kinds of encryption used,
+and so forth.  So asynchronous #(XML)# requests in #(NDP)# are more
+secure than their counterparts in web pages.
+</li>
+
+<li>
+#^(NDP)# is primarily designed for use with #(NoSQL)# database engines rather than 
+#(SQL)#, and designed for database access directly from #(C++)# code rather than 
+via a Query Language.  This mitigates the risk of #(SQL)# injection attacks 
+(or their equivalent for other query forms).  Trying to elude injections by 
+prescreening and *[escaping]* user-supplied content is considered to be a 
+poor defense against sophisticated injection hacks.  Solely using 
+precompiled queries is a better strategy, but not one which is widely 
+adopted in the development community.  #^(NDP)# essentially promoted 
+a model where all database access is via precompiled queries, implemented 
+directly in  #(C++)# (therefore without involving any separate query compiler).  
+</li>
+
+</ul>
+
+
+</div> <!-- main page div -->
+</body>
+</html>
+
+

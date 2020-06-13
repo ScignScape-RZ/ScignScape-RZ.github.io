@@ -1,0 +1,265 @@
+
+
+<html>
+
+<head>
+
+@@default-style
+@@font-style
+
+
+<style>
+ul {padding-bottom:10px}
+</style>
+
+
+</head>
+
+<body>
+
+<!-- <div id='top-picture'>
+
+<div id='picture-offset'>
+
+
+-->
+
+<div id='top-offset'>
+
+
+@@top-links-banner
+
+
+<!-- </div> <!-- picture offset -->
+
+
+</div> <!-- top offset -->
+
+
+<div id='main-page-title-div'>
+
+<div class='center-wrap top-offset-5vh'>
+
+<h1 class='main-page-title'>
+#^(NDP)# Base32 Encoding
+</h1>
+
+</div>
+
+</div>
+
+
+<div id='main-page-body-div'>
+<p>
+This page will review the benefits of the #(NDP)# base32 encoding 
+scheme.  Computer software employs number systems with several 
+different arithmetic bases, such as base2 (binary), base8 (octal), 
+base16 (hexadecimal), and base64.  With the exception of base30 
+(which can simplify some applications in Geographic Information Systems), 
+most useful bases are multiples of 2, which gives numbers a convenient 
+partition into binary digits (bits) and 8-bit aggregates (bytes).  
+The smaller bases (octal and hexadecimal) are most often used when 
+numbers have a meaningful internal binary structure, i.e., they 
+tend to encode aggregate data structures.  For example, permission 
+codes in Unix-like systems aggregate different access flags for different 
+categories of users, a systems which is most convenient when expressed 
+in groups of digits in the range 0-7 (in other words, in base8).  
+Or, computer colors are most commonly described in groups of 3 bytes 
+(one each for red, green, and blue), which is conveniently 
+expressed by 6-digit hexadecimal numbers.  
+The preferred choice of number systems for these kinds of codes 
+ensures that correct values will have a consistent length, can be 
+easily partitioned into individual meaningful units, and in general are 
+easier to read and remember.  These considerations apply to smaller 
+bases like 8 and 16.  By contrast, larger bases like 32 and 64 
+are most often used to encode relatively large quantities of 
+data into streams that can be shared between applications or sent over a network.
+</p>
+
+<p>
+Internally, computers represent numbers in the binary number system, 
+but data sharing usually requires converting numbers into character streams, which 
+restricts number systems to those whose individual digits map 
+to characters that are universally and unambiguously recognized.  
+The most popular large-base system for data transfer is 
+arguably base64, which employs letters, numbers, and a few 
+extra symbols to represent 64 different digital characters.  
+#^(NDP)# applications instead use base32, which is similar 
+in principle but can be more convenient, as will be outlined on this page.  
+Base32 text streams can be about 20% longer than their base64 
+equivalents, but this difference is rarely significant 
+(partly because expressing data structures in binary encoded form 
+in either base can be <i>much</i> more efficient than transmitting 
+the same content in a nonbinary form like #(XML)#).  To present 
+the benefits of base32 in #(NDP)# it is useful first to outline 
+the version of base32 encoding used by #(NDP)#.  Note 
+first that <i>encoding</i> is different from <i>encryption</i>: 
+an encoded data stream transmits blocks of data over a network, 
+but does not prevent public access to that data.  On the 
+other hand, a base32 or base64 stream can then be <i>encrypted</i>, 
+yielding a different stream that is 
+(assuming the encryption is strong enough) accessible only to authorized 
+parties.  Setting up encryption against encoded streams is operationally 
+simpler than encrypting data which is not also encoded, because the 
+source and target of an encryption process have the same structure; 
+the encryption is therefore mathematically an *[endomorphism]* between 
+points in one single space of structures, rather than a mapping between 
+different kinds of structures.  
+</p>
+
+<h2>Base32 in #(NDP)#</h2>
+<p>
+#^(NDP)#'s version of base32 is different in a few details from 
+other base32 systems, primarily motivated by the general 
+principle that #(NDP)# components are integrated with #(Qt)#.  
+In particular, #(NDP)#'s version of base32 agrees with the 
+#(Qt)# encoding for nondecimal numbers in general, 
+which are founded on the principles that apply to Hexadecimal.  
+Specifically, #(NDP)# base32 streams have the following properties: 
+</p>
+
+<ul>
+
+<li>
+Digits are in the range 0-9 and A-V (0 being the smallest and V the 
+largest).  This is simpler than the competing convention which 
+makes *[A]* the smallest value (equal to the number 0).
+</li>
+
+<li>
+Letters are case-insensitive: #[A]# and #[a]# are the same value.
+</li>
+
+<li>
+The letters and symbols *[w]*, *[x]*, *[y]*, *[z]*, and the dash or underscore, 
+denote the end of the relevant character stream and also encode the length 
+of byte-padding needed to decode the associated content.
+</li>
+
+<li>
+Each base32 digit represents the equivalent of 5 bits.  8 base32 digits 
+represent a 40-bit or 5-byte numeric value, in *[Big Endian]* order 
+(see the discussion on endianness to follow).  In general, 
+#(NDP)# breaks data streams into 5-byte units, so every encoded 
+message can be read as partitioned into groups of 8 characters.
+</li>
+
+<li>
+The last group in a stream may contain less than 8 characters.  
+Which character demarcates the end of the stream then 
+indicates to the decoding algorithm whether extra zero-valued 
+bytes need to be added to the final 40-bit value.
+</li>
+
+</ul>
+
+<p class='continue'>
+When encoding arbitrary data (passed to the algorithm as sequences of bytes), 
+#(NDP)# treats each 5-byte chunk as distinct numbers.  Since computers 
+do not have a 5-byte integer type, these chunks are actually typed as 
+8-byte unsigned integers during the encoding process, though only the 
+lower 5 bytes are preserved in the encoded stream.  The algorithm at 
+this point needs to distinguish whether it is running on a 
+big-endian or little-endian Operating System.
+</p>
+
+<p>
+The <i>endianness</i> of an #(OS)# refers essentially to whether sequences of 
+bytes, in a single multi-byte number, should be read left-to-right or 
+right-to-left.  Our familiar decimal number system is *[big-endian]* 
+because the *[big end]* of the number (the digits with the largest 
+absolute value) are at the start of the number: in 1234, the *[1]* 
+represents 1000, the largest part of the represented value.  
+Some computers, however, place the *[big end]* at the 
+largest memory address --- effectively to the right, as if the 
+decimal 1234 were instead written 4321.  While computers provide 
+mathematical functions to convert between these two formats, 
+there is one complication: zero-valued bytes on one or another 
+side of a number can be ingnored, but which side is thus 
+irrelevant flips between the two systems.  Given the *[little-endian]* 
+number 43210, for example, the conversion would yield the 
+big-endian 01234, which is the same as 1234; so the distinction between 
+43210 and 4321 is lost (these examples use decimal, whereas in 
+practice the issue would concern 8-bit bytes rather than decimal digits, but 
+the decimal numbers illustrate the problem).  To address this issue, 
+when switching between endianness it is necessary to indicate 
+the length in bytes of the original number 
+--- which explains the use of different symbols to represent 
+the end of a base32 #(NDP)# stream.
+</p>
+
+<h2>Benefits of this scheme</h2>
+<p>
+There are several reasons why the scheme just summarized can be 
+preferable to other base32 and base64 schemes, or other alternatives: 
+
+</p>
+
+<ul>
+
+<li>
+The #(NDP)# schema uses only alphanumeric characters (plus the dash as an 
+optional substitute for the underscore, which in turn is classified 
+as alphanumeric).  This means that encoded streams can be 
+embedded in many different settings: #(XML)# attributes, #(URL)# parameters 
+or bodies, file names, raw #(HTTP)# data, web cookies, etc.  
+</li>
+
+<li>
+The encoding is case-insensitive, so it is usable in contexts where 
+no distinction is made between upper-case and lower-case letters.
+</li>
+
+<li>
+This scheme is a direct extension of Hexadecimal encoding.  As such, 
+it can be integrated with library that convert numbers to character 
+streams in multiple bases including decimal and Hexadecimal.
+</li>
+
+<li>
+This scheme can work directly with full-featured #(Qt)# classes, like 
+#[QString]#, #[QByteArray]#, and #[QDataStream]#.  This makes encoding 
+arbitrary data structures straightforward, because it takes little 
+or no code to implement functions writing data of any given type 
+into a QDataStream, which in turn yields a QByteArray that can 
+be directy passed into the encoding algorithm.  
+</li>
+
+<li>
+Because streams with this encoding use no non-alphanumeric symbols, 
+there is no conflict with common #(ASCII)# symbols (parentheses, 
+brackets, braces, arithmetic operators except for the dash, etc.) 
+which applications can then use for other purposes.  Arrays 
+of streams can be encoded as comma-separated lists 
+(although list-structures can also be encoded directly into streams).  
+Extra symbols can also be used to compress streams still further 
+by substituting runs of characters.  Applications are 
+free to add their own extensions to the basic encoding and can 
+use the most basic non-aphanumeric symbols to do so.
+</li>
+
+</ul>
+
+
+<p>
+Because of these benefits, the base32 scheme is easier to work with and 
+requires less code, at the application level, to support encoding and 
+sharing of data streams than comparable base32 or base64 alternatives.  
+This makes it particularly useful for transmitting data modeled 
+according to the #(ASK)# system (an #(NDP)# component discussed 
+<a href='/web/main-info-pages/ask.html'>here</a>).  #(ASK)# types will typically have a 
+function for encoding to (and decoding from) QByteArray, which 
+in turn can be rendered as base32 streams according to the scheme 
+outlined here.  The result is alphanumeric text that encapsulates an 
+#(ASK)# instance into a compact *[message]* that can (perhaps 
+with an intermediate encryption layer) be embedded in many 
+sorts of messages and convey #(ASK)# values across a network, 
+and between peer-to-peer applications.  
+</p>
+
+
+</div> <!-- main page div -->
+</body>
+</html>
+
+

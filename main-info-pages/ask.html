@@ -1,0 +1,351 @@
+
+<html>
+
+<head>
+
+@@default-style
+@@font-style
+
+
+</head>
+
+<body>
+
+<!-- <div id='top-picture'>
+
+<div id='picture-offset'>
+
+
+-->
+
+<div id='top-offset'>
+
+
+@@top-links-banner
+
+
+<!-- </div> <!-- picture offset -->
+
+
+</div> <!-- top offset -->
+
+
+<div id='main-page-title-div'>
+
+<div class='center-wrap top-offset-5vh'>
+
+<h1 class='main-page-title'>
+Application Semantic Kernel 
+(#(ASK)#)
+</h1>
+
+</div>
+
+</div>
+
+
+<div id='main-page-body-div'>
+<p>&ldquo;Application Semantic Kernel&rdquo; (#(ASK)#) refers to data models built for 
+Native-Driven Platform (#(NDP)#) applications.  #^(ASK)# is an alternative 
+to data serialization formats like #(XML)# and #(JSON)# as well as 
+to data modeling languages such as Unified Modeling Language (#(UML)#) and 
+Web Ontology Language (#(OWL)#).  #^(ASK)# helps developers implement 
+data-sharing networks without the time and expense of designing robust #(XML)# or 
+#(JSON)# #(API)#s, and with greater regard for data security, integrity, and 
+data management protocols.
+</p>
+
+<h2>Networking Benefits</h2>
+
+<p>
+Via #(ASK)#, the Native-Driven Platform introduces the 
+concept of a #{Binary API}#, combining the security and flexibility of peer-to-peer 
+file sharing with the application-oriented structural integrity of web #(API)#s.  
+In most use-cases, #(ASK)#s are designed to be deployed to all points in a 
+network, which each have the ability to both send and receive instances of 
+data models.  Such network points are *[Peers]* in the sense that they have 
+similar operational capabilities and employ the same data representation formats.  
+#^(ASK)# models are generally implemented in binary-compiled code, particularly 
+#(C++)# code that can be integrated with #(Qt)# applications.  #^(ASK)# models can 
+therefore take advantage of #(Qt)# facilities to encode and decode data structures 
+into binary streams.  #^(NDP)# also provides algorithms to convert these binary streams 
+into base32-encoded character streams that are convenient to encrypt and/or 
+send over the internet (for a detailed look at the #(NDP)# encoding system, 
+see <a href='/web/extra-info-pages/base32.html'>here</a>).  By sharing 
+#(ASK)# models across a network, applications acquire data-sharing 
+capabilities without needing to implement any additional code or 
+#(API)#s.  A feature called #(NDP)#-cloud provides intermediate #(ASK)# storage 
+so as to streamline the design of a data-sharing architecture --- specifically, 
+to allow network points to share data with multiple recipients, or to 
+specify recipients with an identifier that is not dependent on their actual 
+web address.  Encoded #(ASK)# data can be sent in many additional ways, 
+however, such as embedded in #(XML)# or #(JSON)# files, web cookies, 
+or even enveloped inside emails.
+</p>
+
+<p>
+#^(ASK)# data sharing is effective because the basic #(ASK)# functionality has no 
+external dependecies, outside of the non-#(GUI)# #(Qt)# libraries.  A single 
+#(ASK)# model typically describes a single datatype or a group of closely 
+interrelated datatypes.  These models can be publicized within an 
+*[.aska]* archive, which is a zipped folder including #(C++)# and 
+#[Readme]# files along with a #(Qt)# project file.  By design, 
+each #(ASK)# model should be easy to compile on different computers and 
+environments, yielding a reusable code library.  
+Each #(ASK)# library is self-contained, cross-platform, native-compiled, and 
+has few dependencies; as such, it is not difficult for multiple computers to 
+install #(ASK)# binaries and incorporate them into visual front-ends and into 
+scripting languages.  Each #(ASK)# models a kind of data structure, and 
+compiles any single instance of its kind into a compact, encoded, and 
+encryptable message, called a #{k-block}#, which can be sent over a network either 
+on its own or embedded in other documents.  This data sharing eliminates 
+the need to translate information into database-specific formats, like 
+Standardized Query Language (#(SQL)#), or web-specific formats, like #(XML)# 
+and #(JSON)#.  Such translations are time-consuming, costly, and can create security 
+risks --- for example, many cases of stolen web data are traced to #(SQL)# injection attacks.  
+Because their semantics are already synchronized over the network, 
+each #{k-block}# only needs to carry information about its single instance.  Compared 
+to #(XML)# or #(JSON)#, which combine instance-specific and model-specific 
+structures in a single document, #{k-blocks}# can therefore reduce 
+network traffic volume needed for type-instances by factors of 
+90% or more --- which is important in environments with limited internet bandwidth.  
+In addition, #(ASK)# networks can bridge a variety of kinds of access points: 
+native-compiled applications can access the network directly, via binary 
+#(ASK)# libraries, whereas web clients can be served by cloud-hosted adapters 
+that are both #(ASK)# clients and web servers, translating #(ASK)#-modeled 
+objects into web-friendly content.  The #(NDP)# Cloud framework provides a 
+fully customizable #(C++)# #(HTTP)# server and Docker image that 
+recognizes #(ASK)# and #(Qt)# components and can serve both web and native 
+clients, providing developers deep-level access to network requests and 
+the option of running and testing web servers inside the #(Qt)# ecosystem.
+The option of writing low-level networking code allows developers to 
+implement advanced data management and security protocols, for 
+example using non-standard #(HTTP)# methods and request-body 
+encodings.  Non-standard protocols can potentially be more secure because 
+they are less likely to be targeted by or vulnerable to malware.  
+</p>
+
+
+<p>
+The #(ASK)# framework is flexible and customizable, so it can be used for a variety 
+of data-sharing needs and preferences.  Some data sharing networks are *[closed]* or 
+*[private]*, meaning that only authenticated components may join and access the 
+network.  #^(ASK)# supports private networks by allowing customized authentication 
+on the cloud, and also by allowing the semantic models themselves to include models 
+for acess permissions and security/integrity protocols (see *[Semantic Benefits]* below 
+and also the discussion of #[CyberSecurity]# features <a href='/web/main-info-pages/security.html'
+>here</a>).  Other data sharing networks are *[open]*, meaning that multiple parties 
+may participate without explicit permission or review from a centralized monitor.  
+Open networks usually rely on a generic data representation formats like #(XML)# or 
+#(JSON)# since parsers for these formats are available for every conceivable computing 
+environment.  The downside of these formats however are that client components need 
+to manually implement routines to convert parsed #(XML)# or #(JSON)# into usable 
+data structures, whether for internal use within an application or to show visually 
+to users.  This adds a burden on potential clients, particularly whenever 
+the data models are relatively complex, involve data collections (rather than just 
+key/value pairs), or where models may be changed over time.  Data collections 
+add complexity because collections typically include only some unique identifier 
+for their component parts, so that clients need to obtain and parse data associated with 
+those extra identifiers.  Model evolution adds complexity because clients need to 
+be re-implemented whenever a data model changes (for the main data structure or 
+for any of its parts).  Managing #(API)#s clients therefore involves 
+adding and maintaining extra parsing and versioning functions alongside the 
+basic functionality for converting #(JSON)# or #(XML)# code into usable data structures.
+</p>
+
+<p>
+#^(ASK)# networks can often be easier for public data networks because an #(ASK)# library 
+can be distributed by familiar code-sharing technologies, such as #[Git]# repositories 
+or within #[Docker]# containers.  The libraries implement all of the versioning and 
+data-collections management internally, sparing clients from having to write a lot of new code.  
+Because #(ASK)# models protocol as well as conceptual semantics, #(ASK)# models 
+also provide more detailed information to clients concerning the security, integrity, 
+access, and data management policies which may be required by a public network.  
+These policies describe the conditions according to which functions in the #(ASK)# kernels 
+may be called and according to which data values which are part of #(ASK)# data structures 
+may be read or modified.  #^(ASK)# libraries will automatically notify programmers when 
+the protocols are being violated, either by compile-time errors or by run-time exceptions.  
+Since they work well with #(Qt)#, #(ASK)# libraries can easily be used within 
+native-compiled applications and associated with specific #(GUI)# components: in principle, 
+for each #(ASK)# datatype there should be a #(Qt)# window (such as a dialog box, a 
+*[wizard]*, or a *[widget]*) that represents the same information visually and interactively 
+for end-users.  This allows an enterprise 
+to identify pertinent information for a single task or project and 
+package it into a single, relatively small window that can float above 
+or alongside other windows and graphics.  Because of strongly-typed 
+associations between visual, database, and network data aggregates, 
+what the user sees in a window is directly convertable to a #{k-block}# 
+that can be sent to other users or stored in a 
+database for future reference, locally or on the cloud.  The benefits of 
+this multi-purpose, cross-platform modeling are discussed further in the next section.
+</p>
+
+
+<h2>Semantic Benefits</h2>
+<p>
+An #(ASK)# model is intended not only to carry information from place to place, but 
+to add conceptual and operational insight into models' intended use.  
+Although sometimes computer data represents technical information which is 
+only internally meaningful for a software component or an Operating System, 
+often computer data instead represents real-world, human concepts that 
+are incorporated into software to provide information and capabilities that 
+people need.  The modern computer, in essence, is a gateway bridging human and 
+mechanical worlds.  Data models therefore have to be designed with sensitivity not only 
+to computers' internal representations but also to human language and concepts.  
+For example, a person&lsquo;s age is typically stated in years, but for toddlers many
+people cite an age in weeks or months.  If someone
+enters a child&lsquo;s age as, say, *[six months]*, it would be disorienting to see this subsequently 
+reported as *[zero years]*.  This shows how provisional assumptions about type representations 
+can be too simplistic, resulting in degraded User Experience.  It also shows the benefits
+of a rich type system: if ages like *[six months]* are recognized, then functions for comparing
+and serializing ages need to be implemented accordingly. A type system logically organizes the
+functions needed for a type to work properly, which becomes logistically important as types acquire
+greater complexity (in the form of special flags and values) to adapt to human concepts.
+</p>
+
+<p>
+Many everyday concepts reveal surprising levels of complexity.  Personal names, for example, 
+reveal different patterns across different cultures, depending on the order of family and 
+given names, and compound as opposed to middle names.  For another example, postal addresses 
+show a lot of variation --- certainly from country to country, but even in the United 
+States, for example, localities can have their own conventions: in some cities it is 
+common to give locations by cross-street, whereas elsewhere one mostly uses street numbers.  
+Since different data encodings can represent these details in different ways, 
+encodings can be incompatible even for basic concepts like name, age, and address, 
+which limits how readily code can be reused for, say, different #(API)#s.  
+Meanwhile, code libraries will often use generic types like numbers and strings to 
+represent the corresponding human concepts, relying on presentation and serialization 
+code to convert the generic data into human-friendly formats.  This results 
+in still further burdens for client libraries, who end up having to maintain 
+*[glue code]* which rewrites information back and forth between formats 
+for in-memory values, for values shown to users in #(GUI)#s, and for 
+values sent over a network.  By allowing for more fine-grained 
+type-theoretic data models, #(ASK)# can either eliminate this *[glue code]* or 
+package it into reusable classes shared as part of #(ASK)# libraries.
+</p>
+
+<p>
+Associated with many kinds of information there is a wide range of conceptual detail 
+which is implicitly understood by people, and which needs to be recognized by 
+software that people find intuitive and convenient.  These details can include:
+
+</p>
+<ul>
+<li>
+What are proper or available units of measurement?  (For example, Farenheit or Celcius; miles or kilometers)
+</li>
+<li>
+What are reasonable or unreasonable ranges?  (For example, 200 years is not a reasonable value 
+for someone's age)
+</li>
+<li>
+What are proper or available scales of measurement?  (For example, ages are often given in months for toddlers, 
+and in years otherwise)
+</li>
+<li>
+What are unique identifiers?  (For example, a system may be designed so that each email-address 
+is unique to a single user, and can be used to identify them)
+</li>
+<li>
+When should values have an enumerated list of alternatives or when should they be 
+open-ended?  (For example, a collection of restaurant reviews may choose to identify the 
+kind of cuisine served by using a fixed list --- Chinese, French, Brazilian, and so forth --- 
+or may allow open-ended labels; or some combination)
+</li>
+<li>
+When are refinements best modeled as subtypes and when are they best modeled as field values?  
+(For example, varieties like <i>Steakhouse</i>, <i>Cafe</i>, or <i>Wine Bar</i> may be 
+represented as subtypes of a generic Restaurant type, or the generic type may be 
+modeled with a data field with <i>Steakhouse</i>, etc., as field values).
+</li>
+
+<li>
+In a complex data structure, which parts are always valid and which parts may be not used?  
+(For example, a collection of restaurant reviews whose ratings include assessment 
+of a wine list should only incorporate that evaluation for restaurants which serve wine).
+</li>
+</ul>
+
+<p class='continue'>
+These modeling decisions influence the details on how code working with each model is 
+implemented, but they also influence the design of visual front-ends to a data model, 
+of analytic and evaluative methods comparing and rating instances, and 
+the design of #(API)#s (for example, how queries can be constructed to narrow down a 
+collection of instances).  It is important for modeling decisions to be 
+represented formally and explicitly, because the same model will often be 
+used in different ways and by different programmers: one team of developers 
+may focus on supporting #(API)#s and queries (for example, allowing users or other 
+applications to filter a list of restaurants based on users' preferences), whereas 
+another may focus on ratings and comparisons (deciding how to weight different 
+data points when compiling basic information or user reviews into evaluative 
+rankings for restaurants, say).
+</p>
+
+<p>
+Many of these semantic nuances are represented, on the *[Semantic Web]*, by 
+<i>ontologies</i> that formalize human conceptualizations and expectations 
+in familiar domains.  Translating ontologies to application-level code 
+can be challenging, however, as much so or more than translating #(XML)# 
+document-type specifications or database schema.  On the other hand, 
+strong programming type systems can provide semantic specification equally 
+expressive as formal ontologies and more readily integrated into 
+application functions and protocols.  An #(ASK)# model, in particular, 
+provides both a semantic specification of a conceptual domain and an 
+application-ready implementation of that specification.  By leveraging 
+modern #(C++)# constructs (#(C++11)# and #(C++14)#), #(ASK)# models can 
+employ a variety of coding paradigms, including Object-Oriented, 
+Capability-Oriented, Functional, Logical, and Constriaint-Oriented programming 
+(these options are covered in more detail in the description of the 
+Multi-Paradigm Semantic Modeling Engine, or #(MSME)#, <a href='/web/main-info-pages/msme.html'
+>here</a>).  An #(ASK)# model includes code as well as data, using implemented 
+functions to enable and guide the development of further functionality 
+extending the kernel model and adapting it to host applications.  
+Accordingly, a priority for #(ASK)# is the semantic modeling of 
+function-call structures: how functions pass their own capabilities 
+to those of functions they call; how to describe the full range of 
+effects which can be triggered by a function; how to classify 
+functional interactions in multithreaded and concurrent environments; 
+and how to theorize function types and functions as values instantiating these types.
+</p>
+
+<p>
+#^(ASK)# offers a variety of <i>protocol</i> oriented modeling 
+capabilities, which can be important when security and data integrity are 
+involved.  A <i>conceptual</i> model represents human expectations and paradigms, 
+but application developers also need to consider how to manage data which appears 
+to violate those paradigms.  What should be done with missing or 
+nonsensical data?  How should units of information be classified in terms 
+of who has access to read or modify them, and how should the strength of 
+algorithms to guard against inappropriate access be quantified?  
+#^(ASK)# provides some tools (partly in the form of generic #(C++)# types) 
+tightening function-type granularity behaviorally: functions should be considered 
+of the same type only when they exhibit similar behaviors, particularly with 
+respect to their side-effects.  #^(ASK)# models therefore provide a set 
+of *[kernel]* functions for accessing parts of their associated data structure; 
+the signature of these functions serves to document intended data management 
+protocols.  For example, data collections which are included as sub-structures 
+can be accessed by passing functions as values to a kernel 
+iterator function, which offer more fine-grained control of functional behavior 
+than using #(STL)# (Standard Template Library) style iterators.  #^(ASK)# models 
+can also screen for different levels of permission as a parameter required 
+for a function to be called, or for a particular functional side effect to be 
+enacted.  In general, #(ASK)# recognizes several kinds of protocol semantics, 
+including security protocols (related to authentication and user verification), 
+integrity protocols (related to data ranges, scales of measurement, and optional 
+or mandatory information), and operational protocols (related to converting 
+data into different formats and conditions necessary for functions to be called).  
+These protocols are enforced through a combination of compile-time and run-time 
+errors or exceptions.  The automated enforcement of protocols makes it 
+easier for developers to document through test suites or static analysis 
+that their use of data agrees with legal, contractual, or community norms.  
+As such, protocol models can be shared and consistent across multiple network points.
+</p>
+
+
+
+</div> <!-- main page div -->
+
+</body>
+
+</html>
+
