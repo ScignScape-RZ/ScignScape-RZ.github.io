@@ -1,0 +1,651 @@
+
+<html>
+
+<head>
+
+
+<!-- situation where the stylsheets are being loaded properly ...
+-->
+
+<style>
+
+div.main-image-wrapper {text-align:center}
+
+img.large-image {width:500px;} 
+
+img.main-image {width:300px;} 
+
+img.li-image {width:200px;float:left;padding-right:25px;padding-top:10px;} 
+
+
+.tterm {font-family:Aldrich;color:rgb(90, 10, 20);font-size:90%}
+.acronym { font-size:88% }
+.acronym-cap { font-size:94% }
+
+#main-page-body-div { border: ridge rgb(254, 157, 4) 20px; padding:40px; padding-left:48px; 
+                      border-top: ridge rgb(254, 157, 4) 2px; 
+
+  margin-top:4vh; margin-left:12vh; margin-right:15vh;  margin-bottom:30vh; } 
+
+#main-page-body-div p { font-size:14pt; font-family:Podkova}
+
+#main-page-body-div p:not(.continue) {text-indent:3em;} 
+
+#main-page-body-div a { font-size:13pt; font-family:Podkova; letter-spacing:0px;}
+
+#main-page-body-div li { font-size:12pt; font-family: Quattrocento; 
+  margin-top:35px; font-weight:700}
+
+  
+a b {position:relative;left:4px;padding-left:4px;}
+
+#logo{height:50px;margin-left:10px;margin-top:-1px;margin-bottom:-15px;}
+
+div#top-container-first-row
+{
+ background:rgb(6,36,30); 
+}
+
+span.top-banner-label-group
+{
+ border-top:ridge rgb(179, 0, 0) 3px; margin-left:2px; margin-right:45px;
+}
+
+
+span.top-banner-label
+{
+ margin-left:5px;  padding-left:2px;padding-right:2px;
+ color:rgb(25,22,25);font-family:Quattrocento;font-weight:900;font-variant:small-caps;
+ position:relative;top:-2px;  border-bottom:solid rgb(255, 149, 102) 2px;  
+ border-top:solid rgb(255, 129, 102) 2px;  
+}
+
+span.top-banner-label span
+{
+ padding-left:7px;padding-right:4px;
+ background:rgb(255, 159, 102);
+ border-top:solid rgb(25, 139, 102) 1px; border-bottom:solid rgb(25, 139, 102) 1px;
+}
+
+span.top-banner-segments
+{
+ margin-left:10px;
+}
+
+
+span.top-banner-link
+{
+ background:rgb(40,40,43);color:white;
+ font-family:Podkova;font-weight:800;position:relative;top:-3px;
+ border-bottom: solid rgb(90,90,90) 1px;
+}
+
+span.top-banner-link a
+{
+ background:rgb(40,40,43);color:white;
+ margin-left:5px;margin-right:20px;padding-left:10px;padding-right:10px;
+}
+
+
+span.top-banner-link:hover
+{
+ background:rgb(66, 206, 244);color:rgb(20,20,43);
+}
+
+span.top-banner-link a:hover
+{
+ background:rgb(25, 206, 244);color:rgb(20,20,43);
+}
+
+
+
+
+
+.center-wrap { text-align:center; }
+
+.top-offset-5vh { position:relative;top:5vh; }
+
+div#top-offset { position:relative;top:5vh; }
+
+hl.main-page-title { }
+
+
+
+
+#top-picture {background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRXk4HqTXQiPoab7TkJfF7qpznSSy7I0n66aWYloHAAnDZvsthB");
+#no-repeat center center fixed;
+background-size: 100% 100%;
+height:150vh
+}
+
+#picture-offset { position:relative;top:5vh; }
+
+#text-opacity {background-color:rgba(255,255,255,0.2);
+padding-top:10px;
+padding-bottom:50px;
+}
+
+
+div.top{
+ padding-top:5vh;
+ display:inline-block;
+ text-align:right;width:21%;
+ border-left:ridge rgb(230,230,230) 3px; 
+ border-right:ridge rgb(230,230,230) 3px; 
+ margin:0;
+ padding-bottom:0px;
+ margin-left:0;
+ margin-right:0;
+ padding-left:0;
+ padding-right:2%;
+ font-size:14pt;
+ font-family:Aldrich;
+ font-weight:600;
+ }
+ 
+ div.top span{background:rgba(255,255,255,0.6);padding:20px;padding-top:2px;font-size:12pt;line-height: 2.5em;}
+ 
+ 
+#top-1{background:rgba(210,210,230,0.45);} 
+#top-2{background:rgba(230,210,210,0.45);position:relative;left:-1%;} 
+#top-3{background:rgba(210,230,210,0.45);position:relative;left:-2%;} 
+#top-4{background:rgba(235,210,235,0.45);position:relative;left:-3%;width:25%} 
+
+ 
+#top-offset{line-height:200%;margin:0%;padding:0%;background:"rgba(200,200,200,0.4);"}
+
+#top-container-first-row{width:100%; overflow: hidden;background:rgba(200,200,200,0.4);
+margin:0;padding-bottom:0; padding-top:4px;
+border-top:double rgb(97,122,165) 3px;
+border-bottom:ridge rgb(230,230,230) 3px; 
+}
+
+#top-background {background:rgb(97,122,165);position:absolute;top:-5vh;height:5vh;z-index:-1;width:100%}
+
+#top-container-first-row span.home-wrapper{font-size:8pt;font-weight:900;position:relative;left:-6px;background:white;}
+
+#top-container-second-row{margin-top:1px;width:100%; 
+margin:0;padding-bottom:0;
+overflow: hidden;background:rgba(200,200,200,0.4)}
+ 
+#mmui{margin-top:2vh;position:relative;text-align:center;
+font-weight:900; font-family:Nova Square;
+   letter-spacing: 2px; 
+   font-size:22pt;
+   } 
+
+
+#mmui span {border-bottom:groove rgba(100,100,50,0.5) 5px; color:rgb(66, 44, 5);
+ background:rgb(245,245,245);
+padding-bottom:5px; padding-left:10px;padding-right:10px;}
+
+button {cursor:pointer}
+   
+#overview-list {position:relative; 
+ text-align:left;left:50%;}
+
+
+#overview-list  ul {
+  list-style: inside square;
+  padding-left:0;
+  margin-left:0;
+}
+
+#overview-list  li {background:rgba(245,245,245,0.8);padding-left:10px; }
+#overview-list  li span {font-family:courier;font-size:12pt;font-weight:900; }
+
+
+#overview {position:relative;left:50%;text-align:left;
+ margin-top:1vh;font-family:times;font-size:18pt;}
+ 
+ #overview a {background:rgba(235,235,225, 0.7); border:inset rgb(255, 159, 102) 3px; 
+  font-family:Quattrocento; border-radius:16px; padding-top:4px;padding-bottom:2px;}
+
+#photo-credit span{background-color:rgba(160,0,0,0.8);color:white}
+#photo-credit a{background-color:rgba(255,255,255,0.8)}
+ 
+.raise-button{ position:relative;top:-4px;left:2px; }  
+ 
+</style>
+
+
+<meta http-equiv = "X-UA-Compatible" content = "IE=8,chrome=1">
+
+
+
+
+<link rel = "stylesheet" href = "/sr__css/default-style.css" type = "text/css">
+
+
+<!--[if IE]><link rel = "stylesheet" href = "/sr__css/default-style-ie.css" type = "text/css">
+<![endif]-->
+<!--[if !IE]><!-->
+<!--<![endif]--></link>
+<!--[if IE]></link>
+<![endif]-->
+
+</meta>
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Aldrich" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nova+Square" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Podkova" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quattrocento" />
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script" />
+ 
+
+
+</head>
+
+<body>
+
+<!-- <div id='top-picture'>
+
+<div id='picture-offset'>
+
+
+-->
+
+<div id='top-offset'>
+
+
+
+<div id='top-background'> 
+</div> 
+
+<div id='top-container-first-row'>
+
+<a href='/web/index.html'>
+<img id='logo' src='/pics/logo.png'/>
+</a>
+
+<span class='home-wrapper'><a href='/web/index.html'>
+(HOME)</a></span>
+
+
+<span class='top-banner-segments'>
+
+<span class='top-banner-label-group'>
+
+<span class='top-banner-label'>
+<span>
+Features:
+</span>
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/gen/hypergraph-database.html'
+onclick="window.open('/web/main-info-pages/gen/hypergraph-database.html','_self'"
+>
+Hypergraph Database
+</a> 
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/gen/binary-apis.html'
+onclick="window.open('/web/main-info-pages/gen/binary-apis.html','_self');"
+>
+Binary APIs
+</a>
+</span>
+
+</span>
+
+
+<span class='top-banner-label-group'>
+<span class='top-banner-label'>
+<span>
+Info:
+</span>
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/resources.html'
+onclick="window.open('/web/main-info-pages/gen/resources.html','_self');"
+>
+Resources and Articles
+</a>
+</span>
+
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/contact.html'
+onclick="window.open('/web/main-info-pages/gen/contact.html','_self');"
+>
+Contact
+</a>
+</span>
+
+</span>
+
+</span>
+
+</div>
+
+
+
+<!-- </div> <!-- picture offset -->
+
+
+</div> <!-- top offset -->
+
+
+<div id='main-page-title-div'>
+
+<div class='center-wrap top-offset-5vh'>
+
+<h1 class='main-page-title'>
+Application Semantic Kernel 
+(<span class='acronym'>ASK</span>)
+</h1>
+
+</div>
+
+</div>
+
+
+<div id='main-page-body-div'>
+<p>&ldquo;Application Semantic Kernel&rdquo; (<span class='acronym'>ASK</span>) refers to data models built for 
+Native-Driven Platform (<span class='acronym'>NDP</span>) applications.  <span class='acronym-cap'>ASK</span> is an alternative 
+to data serialization formats like <span class='acronym'>XML</span> and <span class='acronym'>JSON</span> as well as 
+to data modeling languages such as Unified Modeling Language (<span class='acronym'>UML</span>) and 
+Web Ontology Language (<span class='acronym'>OWL</span>).  <span class='acronym-cap'>ASK</span> helps developers implement 
+data-sharing networks without the time and expense of designing robust <span class='acronym'>XML</span> or 
+<span class='acronym'>JSON</span> <span class='acronym'>API</span>s, and with greater regard for data security, integrity, and 
+data management protocols.
+</p>
+
+<h2>Networking Benefits</h2>
+
+<p>
+Via <span class='acronym'>ASK</span>, the Native-Driven Platform introduces the 
+concept of a <span class='tterm'>Binary API</span>, combining the security and flexibility of peer-to-peer 
+file sharing with the application-oriented structural integrity of web <span class='acronym'>API</span>s.  
+In most use-cases, <span class='acronym'>ASK</span>s are designed to be deployed to all points in a 
+network, which each have the ability to both send and receive instances of 
+data models.  Such network points are <span class='xquote'>&ldquo;Peers&rdquo;</span> in the sense that they have 
+similar operational capabilities and employ the same data representation formats.  
+<span class='acronym-cap'>ASK</span> models are generally implemented in binary-compiled code, particularly 
+<span class='acronym'>C++</span> code that can be integrated with <span class='acronym'>Qt</span> applications.  <span class='acronym-cap'>ASK</span> models can 
+therefore take advantage of <span class='acronym'>Qt</span> facilities to encode and decode data structures 
+into binary streams.  <span class='acronym-cap'>NDP</span> also provides algorithms to convert these binary streams 
+into base32-encoded character streams that are convenient to encrypt and/or 
+send over the internet (for a detailed look at the <span class='acronym'>NDP</span> encoding system, 
+see <a href='/web/extra-info-pages/base32.html'>here</a>).  By sharing 
+<span class='acronym'>ASK</span> models across a network, applications acquire data-sharing 
+capabilities without needing to implement any additional code or 
+<span class='acronym'>API</span>s.  A feature called <span class='acronym'>NDP</span>-cloud provides intermediate <span class='acronym'>ASK</span> storage 
+so as to streamline the design of a data-sharing architecture &mdash; specifically, 
+to allow network points to share data with multiple recipients, or to 
+specify recipients with an identifier that is not dependent on their actual 
+web address.  Encoded <span class='acronym'>ASK</span> data can be sent in many additional ways, 
+however, such as embedded in <span class='acronym'>XML</span> or <span class='acronym'>JSON</span> files, web cookies, 
+or even enveloped inside emails.
+</p>
+
+<p>
+<span class='acronym-cap'>ASK</span> data sharing is effective because the basic <span class='acronym'>ASK</span> functionality has no 
+external dependecies, outside of the non-<span class='acronym'>GUI</span> <span class='acronym'>Qt</span> libraries.  A single 
+<span class='acronym'>ASK</span> model typically describes a single datatype or a group of closely 
+interrelated datatypes.  These models can be publicized within an 
+<span class='xquote'>&ldquo;.aska&rdquo;</span> archive, which is a zipped folder including <span class='acronym'>C++</span> and 
+<span class='tlink'>Readme</span> files along with a <span class='acronym'>Qt</span> project file.  By design, 
+each <span class='acronym'>ASK</span> model should be easy to compile on different computers and 
+environments, yielding a reusable code library.  
+Each <span class='acronym'>ASK</span> library is self-contained, cross-platform, native-compiled, and 
+has few dependencies; as such, it is not difficult for multiple computers to 
+install <span class='acronym'>ASK</span> binaries and incorporate them into visual front-ends and into 
+scripting languages.  Each <span class='acronym'>ASK</span> models a kind of data structure, and 
+compiles any single instance of its kind into a compact, encoded, and 
+encryptable message, called a <span class='tterm'>k-block</span>, which can be sent over a network either 
+on its own or embedded in other documents.  This data sharing eliminates 
+the need to translate information into database-specific formats, like 
+Standardized Query Language (<span class='acronym'>SQL</span>), or web-specific formats, like <span class='acronym'>XML</span> 
+and <span class='acronym'>JSON</span>.  Such translations are time-consuming, costly, and can create security 
+risks &mdash; for example, many cases of stolen web data are traced to <span class='acronym'>SQL</span> injection attacks.  
+Because their semantics are already synchronized over the network, 
+each <span class='tterm'>k-block</span> only needs to carry information about its single instance.  Compared 
+to <span class='acronym'>XML</span> or <span class='acronym'>JSON</span>, which combine instance-specific and model-specific 
+structures in a single document, <span class='tterm'>k-blocks</span> can therefore reduce 
+network traffic volume needed for type-instances by factors of 
+90% or more &mdash; which is important in environments with limited internet bandwidth.  
+In addition, <span class='acronym'>ASK</span> networks can bridge a variety of kinds of access points: 
+native-compiled applications can access the network directly, via binary 
+<span class='acronym'>ASK</span> libraries, whereas web clients can be served by cloud-hosted adapters 
+that are both <span class='acronym'>ASK</span> clients and web servers, translating <span class='acronym'>ASK</span>-modeled 
+objects into web-friendly content.  The <span class='acronym'>NDP</span> Cloud framework provides a 
+fully customizable <span class='acronym'>C++</span> <span class='acronym'>HTTP</span> server and Docker image that 
+recognizes <span class='acronym'>ASK</span> and <span class='acronym'>Qt</span> components and can serve both web and native 
+clients, providing developers deep-level access to network requests and 
+the option of running and testing web servers inside the <span class='acronym'>Qt</span> ecosystem.
+The option of writing low-level networking code allows developers to 
+implement advanced data management and security protocols, for 
+example using non-standard <span class='acronym'>HTTP</span> methods and request-body 
+encodings.  Non-standard protocols can potentially be more secure because 
+they are less likely to be targeted by or vulnerable to malware.  
+</p>
+
+
+<p>
+The <span class='acronym'>ASK</span> framework is flexible and customizable, so it can be used for a variety 
+of data-sharing needs and preferences.  Some data sharing networks are <span class='xquote'>&ldquo;closed&rdquo;</span> or 
+<span class='xquote'>&ldquo;private&rdquo;</span>, meaning that only authenticated components may join and access the 
+network.  <span class='acronym-cap'>ASK</span> supports private networks by allowing customized authentication 
+on the cloud, and also by allowing the semantic models themselves to include models 
+for acess permissions and security/integrity protocols (see <span class='xquote'>&ldquo;Semantic Benefits&rdquo;</span> below 
+and also the discussion of <span class='tlink'>CyberSecurity</span> features <a href='/web/main-info-pages/security.html'
+>here</a>).  Other data sharing networks are <span class='xquote'>&ldquo;open&rdquo;</span>, meaning that multiple parties 
+may participate without explicit permission or review from a centralized monitor.  
+Open networks usually rely on a generic data representation formats like <span class='acronym'>XML</span> or 
+<span class='acronym'>JSON</span> since parsers for these formats are available for every conceivable computing 
+environment.  The downside of these formats however are that client components need 
+to manually implement routines to convert parsed <span class='acronym'>XML</span> or <span class='acronym'>JSON</span> into usable 
+data structures, whether for internal use within an application or to show visually 
+to users.  This adds a burden on potential clients, particularly whenever 
+the data models are relatively complex, involve data collections (rather than just 
+key/value pairs), or where models may be changed over time.  Data collections 
+add complexity because collections typically include only some unique identifier 
+for their component parts, so that clients need to obtain and parse data associated with 
+those extra identifiers.  Model evolution adds complexity because clients need to 
+be re-implemented whenever a data model changes (for the main data structure or 
+for any of its parts).  Managing <span class='acronym'>API</span>s clients therefore involves 
+adding and maintaining extra parsing and versioning functions alongside the 
+basic functionality for converting <span class='acronym'>JSON</span> or <span class='acronym'>XML</span> code into usable data structures.
+</p>
+
+<p>
+<span class='acronym-cap'>ASK</span> networks can often be easier for public data networks because an <span class='acronym'>ASK</span> library 
+can be distributed by familiar code-sharing technologies, such as <span class='tlink'>Git</span> repositories 
+or within <span class='tlink'>Docker</span> containers.  The libraries implement all of the versioning and 
+data-collections management internally, sparing clients from having to write a lot of new code.  
+Because <span class='acronym'>ASK</span> models protocol as well as conceptual semantics, <span class='acronym'>ASK</span> models 
+also provide more detailed information to clients concerning the security, integrity, 
+access, and data management policies which may be required by a public network.  
+These policies describe the conditions according to which functions in the <span class='acronym'>ASK</span> kernels 
+may be called and according to which data values which are part of <span class='acronym'>ASK</span> data structures 
+may be read or modified.  <span class='acronym-cap'>ASK</span> libraries will automatically notify programmers when 
+the protocols are being violated, either by compile-time errors or by run-time exceptions.  
+Since they work well with <span class='acronym'>Qt</span>, <span class='acronym'>ASK</span> libraries can easily be used within 
+native-compiled applications and associated with specific <span class='acronym'>GUI</span> components: in principle, 
+for each <span class='acronym'>ASK</span> datatype there should be a <span class='acronym'>Qt</span> window (such as a dialog box, a 
+<span class='xquote'>&ldquo;wizard&rdquo;</span>, or a <span class='xquote'>&ldquo;widget&rdquo;</span>) that represents the same information visually and interactively 
+for end-users.  This allows an enterprise 
+to identify pertinent information for a single task or project and 
+package it into a single, relatively small window that can float above 
+or alongside other windows and graphics.  Because of strongly-typed 
+associations between visual, database, and network data aggregates, 
+what the user sees in a window is directly convertable to a <span class='tterm'>k-block</span> 
+that can be sent to other users or stored in a 
+database for future reference, locally or on the cloud.  The benefits of 
+this multi-purpose, cross-platform modeling are discussed further in the next section.
+</p>
+
+
+<h2>Semantic Benefits</h2>
+<p>
+An <span class='acronym'>ASK</span> model is intended not only to carry information from place to place, but 
+to add conceptual and operational insight into models' intended use.  
+Although sometimes computer data represents technical information which is 
+only internally meaningful for a software component or an Operating System, 
+often computer data instead represents real-world, human concepts that 
+are incorporated into software to provide information and capabilities that 
+people need.  The modern computer, in essence, is a gateway bridging human and 
+mechanical worlds.  Data models therefore have to be designed with sensitivity not only 
+to computers' internal representations but also to human language and concepts.  
+For example, a person&lsquo;s age is typically stated in years, but for toddlers many
+people cite an age in weeks or months.  If someone
+enters a child&lsquo;s age as, say, <span class='xquote'>&ldquo;six months&rdquo;</span>, it would be disorienting to see this subsequently 
+reported as <span class='xquote'>&ldquo;zero years&rdquo;</span>.  This shows how provisional assumptions about type representations 
+can be too simplistic, resulting in degraded User Experience.  It also shows the benefits
+of a rich type system: if ages like <span class='xquote'>&ldquo;six months&rdquo;</span> are recognized, then functions for comparing
+and serializing ages need to be implemented accordingly. A type system logically organizes the
+functions needed for a type to work properly, which becomes logistically important as types acquire
+greater complexity (in the form of special flags and values) to adapt to human concepts.
+</p>
+
+<p>
+Many everyday concepts reveal surprising levels of complexity.  Personal names, for example, 
+reveal different patterns across different cultures, depending on the order of family and 
+given names, and compound as opposed to middle names.  For another example, postal addresses 
+show a lot of variation &mdash; certainly from country to country, but even in the United 
+States, for example, localities can have their own conventions: in some cities it is 
+common to give locations by cross-street, whereas elsewhere one mostly uses street numbers.  
+Since different data encodings can represent these details in different ways, 
+encodings can be incompatible even for basic concepts like name, age, and address, 
+which limits how readily code can be reused for, say, different <span class='acronym'>API</span>s.  
+Meanwhile, code libraries will often use generic types like numbers and strings to 
+represent the corresponding human concepts, relying on presentation and serialization 
+code to convert the generic data into human-friendly formats.  This results 
+in still further burdens for client libraries, who end up having to maintain 
+<span class='xquote'>&ldquo;glue code&rdquo;</span> which rewrites information back and forth between formats 
+for in-memory values, for values shown to users in <span class='acronym'>GUI</span>s, and for 
+values sent over a network.  By allowing for more fine-grained 
+type-theoretic data models, <span class='acronym'>ASK</span> can either eliminate this <span class='xquote'>&ldquo;glue code&rdquo;</span> or 
+package it into reusable classes shared as part of <span class='acronym'>ASK</span> libraries.
+</p>
+
+<p>
+Associated with many kinds of information there is a wide range of conceptual detail 
+which is implicitly understood by people, and which needs to be recognized by 
+software that people find intuitive and convenient.  These details can include:
+
+</p>
+<ul>
+<li>
+What are proper or available units of measurement?  (For example, Farenheit or Celcius; miles or kilometers)
+</li>
+<li>
+What are reasonable or unreasonable ranges?  (For example, 200 years is not a reasonable value 
+for someone's age)
+</li>
+<li>
+What are proper or available scales of measurement?  (For example, ages are often given in months for toddlers, 
+and in years otherwise)
+</li>
+<li>
+What are unique identifiers?  (For example, a system may be designed so that each email-address 
+is unique to a single user, and can be used to identify them)
+</li>
+<li>
+When should values have an enumerated list of alternatives or when should they be 
+open-ended?  (For example, a collection of restaurant reviews may choose to identify the 
+kind of cuisine served by using a fixed list &mdash; Chinese, French, Brazilian, and so forth &mdash; 
+or may allow open-ended labels; or some combination)
+</li>
+<li>
+When are refinements best modeled as subtypes and when are they best modeled as field values?  
+(For example, varieties like <i>Steakhouse</i>, <i>Cafe</i>, or <i>Wine Bar</i> may be 
+represented as subtypes of a generic Restaurant type, or the generic type may be 
+modeled with a data field with <i>Steakhouse</i>, etc., as field values).
+</li>
+
+<li>
+In a complex data structure, which parts are always valid and which parts may be not used?  
+(For example, a collection of restaurant reviews whose ratings include assessment 
+of a wine list should only incorporate that evaluation for restaurants which serve wine).
+</li>
+</ul>
+
+<p class='continue'>
+These modeling decisions influence the details on how code working with each model is 
+implemented, but they also influence the design of visual front-ends to a data model, 
+of analytic and evaluative methods comparing and rating instances, and 
+the design of <span class='acronym'>API</span>s (for example, how queries can be constructed to narrow down a 
+collection of instances).  It is important for modeling decisions to be 
+represented formally and explicitly, because the same model will often be 
+used in different ways and by different programmers: one team of developers 
+may focus on supporting <span class='acronym'>API</span>s and queries (for example, allowing users or other 
+applications to filter a list of restaurants based on users' preferences), whereas 
+another may focus on ratings and comparisons (deciding how to weight different 
+data points when compiling basic information or user reviews into evaluative 
+rankings for restaurants, say).
+</p>
+
+<p>
+Many of these semantic nuances are represented, on the <span class='xquote'>&ldquo;Semantic Web&rdquo;</span>, by 
+<i>ontologies</i> that formalize human conceptualizations and expectations 
+in familiar domains.  Translating ontologies to application-level code 
+can be challenging, however, as much so or more than translating <span class='acronym'>XML</span> 
+document-type specifications or database schema.  On the other hand, 
+strong programming type systems can provide semantic specification equally 
+expressive as formal ontologies and more readily integrated into 
+application functions and protocols.  An <span class='acronym'>ASK</span> model, in particular, 
+provides both a semantic specification of a conceptual domain and an 
+application-ready implementation of that specification.  By leveraging 
+modern <span class='acronym'>C++</span> constructs (<span class='acronym'>C++11</span> and <span class='acronym'>C++14</span>), <span class='acronym'>ASK</span> models can 
+employ a variety of coding paradigms, including Object-Oriented, 
+Capability-Oriented, Functional, Logical, and Constriaint-Oriented programming 
+(these options are covered in more detail in the description of the 
+Multi-Paradigm Semantic Modeling Engine, or <span class='acronym'>MSME</span>, <a href='/web/main-info-pages/msme.html'
+>here</a>).  An <span class='acronym'>ASK</span> model includes code as well as data, using implemented 
+functions to enable and guide the development of further functionality 
+extending the kernel model and adapting it to host applications.  
+Accordingly, a priority for <span class='acronym'>ASK</span> is the semantic modeling of 
+function-call structures: how functions pass their own capabilities 
+to those of functions they call; how to describe the full range of 
+effects which can be triggered by a function; how to classify 
+functional interactions in multithreaded and concurrent environments; 
+and how to theorize function types and functions as values instantiating these types.
+</p>
+
+<p>
+<span class='acronym-cap'>ASK</span> offers a variety of <i>protocol</i> oriented modeling 
+capabilities, which can be important when security and data integrity are 
+involved.  A <i>conceptual</i> model represents human expectations and paradigms, 
+but application developers also need to consider how to manage data which appears 
+to violate those paradigms.  What should be done with missing or 
+nonsensical data?  How should units of information be classified in terms 
+of who has access to read or modify them, and how should the strength of 
+algorithms to guard against inappropriate access be quantified?  
+<span class='acronym-cap'>ASK</span> provides some tools (partly in the form of generic <span class='acronym'>C++</span> types) 
+tightening function-type granularity behaviorally: functions should be considered 
+of the same type only when they exhibit similar behaviors, particularly with 
+respect to their side-effects.  <span class='acronym-cap'>ASK</span> models therefore provide a set 
+of <span class='xquote'>&ldquo;kernel&rdquo;</span> functions for accessing parts of their associated data structure; 
+the signature of these functions serves to document intended data management 
+protocols.  For example, data collections which are included as sub-structures 
+can be accessed by passing functions as values to a kernel 
+iterator function, which offer more fine-grained control of functional behavior 
+than using <span class='acronym'>STL</span> (Standard Template Library) style iterators.  <span class='acronym-cap'>ASK</span> models 
+can also screen for different levels of permission as a parameter required 
+for a function to be called, or for a particular functional side effect to be 
+enacted.  In general, <span class='acronym'>ASK</span> recognizes several kinds of protocol semantics, 
+including security protocols (related to authentication and user verification), 
+integrity protocols (related to data ranges, scales of measurement, and optional 
+or mandatory information), and operational protocols (related to converting 
+data into different formats and conditions necessary for functions to be called).  
+These protocols are enforced through a combination of compile-time and run-time 
+errors or exceptions.  The automated enforcement of protocols makes it 
+easier for developers to document through test suites or static analysis 
+that their use of data agrees with legal, contractual, or community norms.  
+As such, protocol models can be shared and consistent across multiple network points.
+</p>
+
+
+
+</div> <!-- main page div -->
+
+</body>
+
+</html>
+

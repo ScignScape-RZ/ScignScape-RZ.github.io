@@ -1,0 +1,131 @@
+
+<form class='default-form' action='/form/ptn-recommendation' enctype="multipart/form-data" method='post' novalidate>
+
+<fieldset>
+<legend><em>Reference Info</em></legend>
+<div class='form-input-holder'>
+<!--[if IE]>
+<label for='sender-email' style='width:430px;display:inline-block'>
+<![endif]-->
+<!--[if !IE]> <!-- -->
+<label for='sender-email'>
+<!-- <![endif]-->
+<b>If you'd like, please share your email or other contact info:</b></label>
+<!--[if IE]>
+<input name='sender-email' type='text' required 
+ style='display:inline-block;width:250px'>
+<![endif]-->
+<!--[if !IE]> <!-- -->
+<input name='sender-email' type='text' required>
+<!-- <![endif]-->
+</div>
+
+<div class='form-input-holder'>
+
+<!--[if IE]>
+<label for='recommendation-link' style='width:430px;display:inline-block'>
+<![endif]-->
+<!--[if !IE]> <!-- -->
+<label for='recommendation-link'>
+<!-- <![endif]-->
+<b>Recommendation Name, URL, or Web Link:</b></label>
+<!--[if IE]>
+<input name='recommendation-link' required  style='display:inline-block;width:250px'></input>
+<![endif]--> 
+<!--[if !IE]> <!-- --> 
+<input name='recommendation-link' required ></input>
+<!-- <![endif]-->
+
+</div>
+</fieldset>
+
+<fieldset>
+<legend><em>Description</em></legend>
+<label for='description'><b>Please provide a description 
+(and/or reference to help visitors find the recommended resource):</b></label>
+<br>
+<textarea name='description'></textarea>
+</fieldset>
+
+
+<fieldset>
+<legend><em>Message</em></legend>
+<label for='message'><b>You may include a message or explanation (not made public)</b>
+</label>
+<br>
+<textarea name='message'></textarea>
+</fieldset>
+
+<fieldset>
+<legend><em>Quick Checks</em></legend>
+<b>Please check boxes which help to summarize the resource.</b>  
+<br>
+&nbsp;(whichever apply; e.g. this resource is or has ...)
+<br>
+<table style='margin-top:3px'>
+
+<tr>
+<td><label>Code Library
+<input type='checkbox' class='ckbox' name='summary-flag' value='code-library'>
+</input></label>
+</td>
+
+<td><label>Github
+<input type='checkbox' class='ckbox'  name='summary-flag' value='github'>
+</input></label>
+</td>
+
+<td><label>Docker Image
+<input type='checkbox' name='summary-flag' value='docker'>
+</input></label>
+</td>
+
+<td><label>Binary/Executable
+<input type='checkbox' name='summary-flag' value='binary'>
+</input></label>
+</td>
+</tr><tr>
+<td colspan='2'>
+</td>
+<td class='solo'><span><label>Other repository
+<input type='checkbox' name='summary-flag' value='other-repository'>
+</input></label></span>
+</td>
+</tr>
+
+<tr>
+<td><label>Web Site
+<input type='checkbox' name='summary-flag' value='web-site'>
+</input></label>
+</td>
+
+<td><label>API
+<input type='checkbox' name='summary-flag' value='API'>
+</input></label>
+</td>
+
+<td><label>Other Data Source
+<input type='checkbox' name='summary-flag' value='other-data-source'>
+</input></label>
+</td>
+
+<td><label>Online Aggregator
+<input type='checkbox' name='summary-flag' value='online-aggregator'>
+</input></label>
+</td></tr><tr>
+<td colspan='2'>
+</td>
+<td class='solo'><label>Other publication
+<input type='checkbox' name='summary-flag' value='other-publication'>
+</input></label>
+</td>
+</tr>
+</table>
+</fieldset>
+
+<div class='align-center'>
+<input type='submit'></input>
+</div>
+
+
+</form>

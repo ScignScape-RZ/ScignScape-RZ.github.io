@@ -1,0 +1,557 @@
+
+<html>
+
+<head>
+
+
+<!-- situation where the stylsheets are being loaded properly ...
+-->
+
+<style>
+
+div.main-image-wrapper {text-align:center}
+
+img.large-image {width:500px;} 
+
+img.main-image {width:300px;} 
+
+img.li-image {width:200px;float:left;padding-right:25px;padding-top:10px;} 
+
+
+.tterm {font-family:Aldrich;color:rgb(90, 10, 20);font-size:90%}
+.acronym { font-size:88% }
+.acronym-cap { font-size:94% }
+
+#main-page-body-div { border: ridge rgb(254, 157, 4) 20px; padding:40px; padding-left:48px; 
+                      border-top: ridge rgb(254, 157, 4) 2px; 
+
+  margin-top:4vh; margin-left:12vh; margin-right:15vh;  margin-bottom:30vh; } 
+
+#main-page-body-div p { font-size:14pt; font-family:Podkova}
+
+#main-page-body-div p:not(.continue) {text-indent:3em;} 
+
+#main-page-body-div a { font-size:13pt; font-family:Podkova; letter-spacing:0px;}
+
+#main-page-body-div li { font-size:12pt; font-family: Quattrocento; 
+  margin-top:35px; font-weight:700}
+
+  
+a b {position:relative;left:4px;padding-left:4px;}
+
+#logo{height:50px;margin-left:10px;margin-top:-1px;margin-bottom:-15px;}
+
+div#top-container-first-row
+{
+ background:rgb(6,36,30); 
+}
+
+span.top-banner-label-group
+{
+ border-top:ridge rgb(179, 0, 0) 3px; margin-left:2px; margin-right:45px;
+}
+
+
+span.top-banner-label
+{
+ margin-left:5px;  padding-left:2px;padding-right:2px;
+ color:rgb(25,22,25);font-family:Quattrocento;font-weight:900;font-variant:small-caps;
+ position:relative;top:-2px;  border-bottom:solid rgb(255, 149, 102) 2px;  
+ border-top:solid rgb(255, 129, 102) 2px;  
+}
+
+span.top-banner-label span
+{
+ padding-left:7px;padding-right:4px;
+ background:rgb(255, 159, 102);
+ border-top:solid rgb(25, 139, 102) 1px; border-bottom:solid rgb(25, 139, 102) 1px;
+}
+
+span.top-banner-segments
+{
+ margin-left:10px;
+}
+
+
+span.top-banner-link
+{
+ background:rgb(40,40,43);color:white;
+ font-family:Podkova;font-weight:800;position:relative;top:-3px;
+ border-bottom: solid rgb(90,90,90) 1px;
+}
+
+span.top-banner-link a
+{
+ background:rgb(40,40,43);color:white;
+ margin-left:5px;margin-right:20px;padding-left:10px;padding-right:10px;
+}
+
+
+span.top-banner-link:hover
+{
+ background:rgb(66, 206, 244);color:rgb(20,20,43);
+}
+
+span.top-banner-link a:hover
+{
+ background:rgb(25, 206, 244);color:rgb(20,20,43);
+}
+
+
+
+
+
+.center-wrap { text-align:center; }
+
+.top-offset-5vh { position:relative;top:5vh; }
+
+div#top-offset { position:relative;top:5vh; }
+
+hl.main-page-title { }
+
+
+
+
+#top-picture {background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRXk4HqTXQiPoab7TkJfF7qpznSSy7I0n66aWYloHAAnDZvsthB");
+#no-repeat center center fixed;
+background-size: 100% 100%;
+height:150vh
+}
+
+#picture-offset { position:relative;top:5vh; }
+
+#text-opacity {background-color:rgba(255,255,255,0.2);
+padding-top:10px;
+padding-bottom:50px;
+}
+
+
+div.top{
+ padding-top:5vh;
+ display:inline-block;
+ text-align:right;width:21%;
+ border-left:ridge rgb(230,230,230) 3px; 
+ border-right:ridge rgb(230,230,230) 3px; 
+ margin:0;
+ padding-bottom:0px;
+ margin-left:0;
+ margin-right:0;
+ padding-left:0;
+ padding-right:2%;
+ font-size:14pt;
+ font-family:Aldrich;
+ font-weight:600;
+ }
+ 
+ div.top span{background:rgba(255,255,255,0.6);padding:20px;padding-top:2px;font-size:12pt;line-height: 2.5em;}
+ 
+ 
+#top-1{background:rgba(210,210,230,0.45);} 
+#top-2{background:rgba(230,210,210,0.45);position:relative;left:-1%;} 
+#top-3{background:rgba(210,230,210,0.45);position:relative;left:-2%;} 
+#top-4{background:rgba(235,210,235,0.45);position:relative;left:-3%;width:25%} 
+
+ 
+#top-offset{line-height:200%;margin:0%;padding:0%;background:"rgba(200,200,200,0.4);"}
+
+#top-container-first-row{width:100%; overflow: hidden;background:rgba(200,200,200,0.4);
+margin:0;padding-bottom:0; padding-top:4px;
+border-top:double rgb(97,122,165) 3px;
+border-bottom:ridge rgb(230,230,230) 3px; 
+}
+
+#top-background {background:rgb(97,122,165);position:absolute;top:-5vh;height:5vh;z-index:-1;width:100%}
+
+#top-container-first-row span.home-wrapper{font-size:8pt;font-weight:900;position:relative;left:-6px;background:white;}
+
+#top-container-second-row{margin-top:1px;width:100%; 
+margin:0;padding-bottom:0;
+overflow: hidden;background:rgba(200,200,200,0.4)}
+ 
+#mmui{margin-top:2vh;position:relative;text-align:center;
+font-weight:900; font-family:Nova Square;
+   letter-spacing: 2px; 
+   font-size:22pt;
+   } 
+
+
+#mmui span {border-bottom:groove rgba(100,100,50,0.5) 5px; color:rgb(66, 44, 5);
+ background:rgb(245,245,245);
+padding-bottom:5px; padding-left:10px;padding-right:10px;}
+
+button {cursor:pointer}
+   
+#overview-list {position:relative; 
+ text-align:left;left:50%;}
+
+
+#overview-list  ul {
+  list-style: inside square;
+  padding-left:0;
+  margin-left:0;
+}
+
+#overview-list  li {background:rgba(245,245,245,0.8);padding-left:10px; }
+#overview-list  li span {font-family:courier;font-size:12pt;font-weight:900; }
+
+
+#overview {position:relative;left:50%;text-align:left;
+ margin-top:1vh;font-family:times;font-size:18pt;}
+ 
+ #overview a {background:rgba(235,235,225, 0.7); border:inset rgb(255, 159, 102) 3px; 
+  font-family:Quattrocento; border-radius:16px; padding-top:4px;padding-bottom:2px;}
+
+#photo-credit span{background-color:rgba(160,0,0,0.8);color:white}
+#photo-credit a{background-color:rgba(255,255,255,0.8)}
+ 
+.raise-button{ position:relative;top:-4px;left:2px; }  
+ 
+</style>
+
+
+<meta http-equiv = "X-UA-Compatible" content = "IE=8,chrome=1">
+
+
+
+
+<link rel = "stylesheet" href = "/sr__css/default-style.css" type = "text/css">
+
+
+<!--[if IE]><link rel = "stylesheet" href = "/sr__css/default-style-ie.css" type = "text/css">
+<![endif]-->
+<!--[if !IE]><!-->
+<!--<![endif]--></link>
+<!--[if IE]></link>
+<![endif]-->
+
+</meta>
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Aldrich" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nova+Square" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Podkova" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quattrocento" />
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script" />
+ 
+
+</head>
+
+<body>
+
+<!-- <div id='top-picture'>
+
+<div id='picture-offset'>
+
+
+-->
+
+<div id='top-offset'>
+
+
+
+<div id='top-background'> 
+</div> 
+
+<div id='top-container-first-row'>
+
+<a href='/web/index.html'>
+<img id='logo' src='/pics/logo.png'/>
+</a>
+
+<span class='home-wrapper'><a href='/web/index.html'>
+(HOME)</a></span>
+
+
+<span class='top-banner-segments'>
+
+<span class='top-banner-label-group'>
+
+<span class='top-banner-label'>
+<span>
+Features:
+</span>
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/gen/hypergraph-database.html'
+onclick="window.open('/web/main-info-pages/gen/hypergraph-database.html','_self'"
+>
+Hypergraph Database
+</a> 
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/gen/binary-apis.html'
+onclick="window.open('/web/main-info-pages/gen/binary-apis.html','_self');"
+>
+Binary APIs
+</a>
+</span>
+
+</span>
+
+
+<span class='top-banner-label-group'>
+<span class='top-banner-label'>
+<span>
+Info:
+</span>
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/resources.html'
+onclick="window.open('/web/main-info-pages/gen/resources.html','_self');"
+>
+Resources and Articles
+</a>
+</span>
+
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/contact.html'
+onclick="window.open('/web/main-info-pages/gen/contact.html','_self');"
+>
+Contact
+</a>
+</span>
+
+</span>
+
+</span>
+
+</div>
+
+
+
+<!-- </div> <!-- picture offset -->
+
+
+</div> <!-- top offset -->
+
+
+<div id='main-page-title-div'>
+
+<div class='center-wrap top-offset-5vh'>
+
+<h1 class='main-page-title'>
+CyberSecurity
+</h1>
+
+</div>
+
+</div>
+
+
+<div id='main-page-body-div'>
+
+<p>
+<span class='acronym-cap'>NDP</span> provides several features which can help programmers develop 
+native applications that are more secure and more respectful of 
+users' privacy than their web-based equivalents.  Security remains 
+something which developers need to take seriously; whatever 
+platform and libraries are being used, developers need to keep 
+security principles in mind while during the planning stage 
+and periodically review code to ensure that best practices remain 
+enforced.  The role of a platform is to facilitate developers' 
+adopting designs and protocols that are most likely to remain secure 
+&mdash; to discourage attempts at creating malware which would 
+inappropriately access data and to add as many roadblocks 
+as possible to prevent potential malware from achieving its objective.  
+Accordingly, <span class='acronym'>NDP</span> applications have security-related features such as:
+</p>
+
+<ul>
+
+<div class='main-image-wrapper'>
+<img src='/pics/sq.jpg' class='main-image' alt='loading...'/>
+</div>
+
+<li>
+Eliminate Browser-Specific Vulnerabilities: Cookies, Cross-Site Scripting (<span class='acronym'>XSS</span>), 
+saved passwords, spoofing, and phishing are all attack vectors which are 
+targeted by many forms or malware because they are so ubiquitous.  
+Because they are isolated from any browser and use quite different methods 
+of user and data management, native applications are not susceptible to 
+the kind of attacks can be generically launched against content on the Web.
+</li>
+
+<li>
+State-of-the-Art Cryptography Support: Based on native-compiled code, 
+<span class='acronym'>NDP</span> applications can directly use advanced cryptographic 
+libraries, including those that leverage mathematical structures such as 
+Quaternions or Elliptical Curves.
+</li>
+
+<div class='main-image-wrapper'>
+<img src='/pics/js-err.png' class='large-image' alt='loading...'/>
+</div>
+
+<li>
+By embedding third-party scripts and content, web developers relinquish control 
+over User Experience.  Poor <span class='acronym'>UX</span> due to third-party content reflects poorly on 
+the originating site.  Moreover, this external content often interrupts the 
+flow of the primary page content and, in particular, causes content to 
+suddenly change position.  JavaScript errors are very common in third-party and 
+commercial content (as can be seen by monitoring JavaScript from an embedded web page).
+Aside from severely degrading user experience, 
+these flaws can open security holes because they increase the likelihood of 
+users will click on a link or button without intending to.
+</li>
+
+<li>
+When a Native Application does choose to show web pages, using an embedded 
+web browser, it can isolated the web pages to prevent unauthorized usage.  
+This ensures that concurrent downloads of ads and other extra content will not 
+disrupt users or interfere with the rest of the application; that layout does not 
+change, except in response to user actions; and that web content is isolated and embedded 
+in Native elements: no more frozen pages or <span class='xquote'>&ldquo;jumps&rdquo;</span>.
+</li>
+
+<li>
+Native applications can connect to a cloud service (such as <span class='acronym'>NDP</span> Cloud) which 
+is specialized for native clients and can adopt extra security measures, such 
+as using nonstandard <span class='acronym'>HTTP</span> methods and protocols.  Since they are 
+not standardized, and can be custom-designed for each project, they are less 
+subject to malware which tends to be targeted at the most popular protocols, 
+since a larger set of potential targets increases the likelihood of malware 
+finding a source it can breach.  
+</li>
+
+<li>
+<span class='acronym'>NDP</span> supports more fine-grained, type-theoretic
+data models where security protocols can be optimized for each data
+type.  Because layout, style, and basic information is often
+precompiled into applications on the client side, the specific data
+shared between server and client is more focused and data-driven,
+which makes it easier to design and audit for extra security.  Also,
+developers have greater control over the code which initiates data
+exchange on the client as well as the server side.  Applications can
+easily be designed such that every package of data sent between server
+and client has a specific data type and rigorously tested security
+protocols.  In other words, advanced security features can be built in
+to every piece of data communicated between server and client, not
+just a fraction of the total data sent
+</li>
+
+
+<li>
+<span class='acronym'>NDP</span>'s commitment to merging Object-Oriented and Functional paradigms 
+(for programming in general and semantic models in particular) 
+have security benefits as well.  One of the technical challenges for cybersecurity is that the most
+secure code tends to be driven by functional-type languages, like
+Haskell, but any <span class='acronym'>GUI</span> framework needs to work with a type system very
+different from pure-functional.  So a security is advanced, at a theoretical 
+and systematic level, by adapting functional type theory as much as possible in a 
+<span class='acronym'>GUI</span>-based environment.  <span class='acronym'>NDP</span> is receptive to the needs of 
+both front-end developers and data modeling experts.  
+</li>
+
+<li>
+<span class='acronym-cap'>NDP</span> supports a variety of server-side runtime environments
+(for example, running servers as standalone <span class='acronym'>Qt</span> applications, as
+local Docker images, and then as Docker images deployed on the cloud), 
+which allows developers to choose the environment that
+best allows them to focus most directly on security &mdash; and also to
+create specialized native client-side components specifically designed
+to simulate and test different user-side environments.
+</li>
+
+<li>
+Operations involving sensitive data can be organized and isolated into 
+separate dialog windows subject to extra testing and layers of 
+authentication.  Because such dialog boxes are build specifically around 
+a well-defined, targeted data model, and are precompiled as part of the native
+application, they need only in order to share a small amount of data 
+(for any single transaction) which can be well
+encrypted.  By contrast, if a transaction is completed via a web
+page in a browser, the server would send an entire page, not just
+the specific financial data.  There's a greater risk for spyware to 
+gain access to that page &mdash; in particular, the unencrypted version 
+of information inserted into the page would be more broadly 
+visible on the user's computer than if the final <span class='xquote'>&ldquo;weaving&rdquo;</span> of 
+decrypted content is performed solely in a native-compiled <span class='acronym'>GUI</span> class.  
+In the latter procedure, there is no distinct file, no text stream, 
+which reveals the secret data.  Browser-based transactions also 
+have a greater risk of being <span class='xquote'>&ldquo;spoofed&rdquo;</span>, because people will rarely study 
+web <span class='acronym'>URL</span>s (which tend to have a lot of extra data
+attached) carefully enough to confirm that they
+come from the proper domain.
+</li>
+
+<li>
+Dialogs for financial transactions (and other transactions 
+involving sensitive content) can be
+designed so that they only work with one specific kind of data &mdash; 
+a transfer between bank accounts, a credit card purchase, a 
+transaction history list, etc.  Each
+dialog is associated with a specific data type that they represent
+&mdash; a funds transfer dialog is a visualization of a funds transfer
+operation, for example.  Because developers and auditors know from the 
+outset that those are the precise and only data types shown and managed by each dialog, they
+can design and test security protocols narrowly crafted for these
+types.  Because the funds transfer dialog only sends and receives data
+which fits into the <span class='xquote'>&ldquo;funds transfer&rdquo;</span> type, developers can build
+security features focused exclusively on encrypting funds transfer
+information.  Compare this to a web application where every
+kind of financial operation is expressed via generic web pages.  In
+that case, testing and auditing data security is more elusive because
+one generic kind of content (web pages) are used to display many
+different kinds of sensitive data, and many different scenarios have
+to be tested all together.  Once the design and protocols for the
+funds transfer dialog and data model are audited and deemed secure,
+that component can be carried over into different applications or new
+versions of the current application.  The data types can be used both
+client-side and server-side &mdash; you don't have to write different code
+for different languages.  The security of the whole application is
+built up from individual components, whose security can be 
+tested and reviewed in isolation.  This guarantees that the best
+security practices are adapted for each kind of operation, and,
+accordingly, that the overall application is as secure as possible.
+</li>
+
+<li>
+Since they use a precompiled layout and only request transaction-specific 
+data from the Web, Native Applications can often have an architecture 
+similar to <span class='xquote'>&ldquo;single-page&rdquo;</span> web applications, that progressively 
+rewrite a single web page via <span class='acronym'>DOM</span> (Document Object Model) manipulation 
+(rather than receiving an entirely new page).  Each application has one single web
+page and all operations are conducted via JavaScript and secondary
+network requests, like <span class='acronym'>AJAX</span> (Asynchronous JavaScript and XML).  
+However, these kinds of web applications depend heavily on
+JavaScript, and because JavaScript is not a strongly-typed language
+you lose the extra security benefits of focusing policies,
+protocols, and testing on individual data types.  Moreover, while 
+JavaScript code can launch an <span class='acronym'>AJAX</span> request it is the browser which
+actually constructs the <span class='acronym'>HTTP</span> or <span class='acronym'>HTTPS</span> data sent over the network, 
+so you are still working within the limitations and vulnerabilities of the 
+browser &mdash; and there have been some high-profile <span class='acronym'>AJAX</span> hacks resulting 
+in the theft of large amounts of sensitive records.  
+By contrast, <span class='acronym'>NDP</span> will create requests similar to <span class='acronym'>AJAX</span> 
+(using <span class='acronym'>C++</span> rather than JavaScript), but developers have complete control over the
+request itself, over the specific HTTP data that is sent, the handlers
+that receive a response from the server, the kinds of encryption used,
+and so forth.  So asynchronous <span class='acronym'>XML</span> requests in <span class='acronym'>NDP</span> are more
+secure than their counterparts in web pages.
+</li>
+
+<li>
+<span class='acronym-cap'>NDP</span> is primarily designed for use with <span class='acronym'>NoSQL</span> database engines rather than 
+<span class='acronym'>SQL</span>, and designed for database access directly from <span class='acronym'>C++</span> code rather than 
+via a Query Language.  This mitigates the risk of <span class='acronym'>SQL</span> injection attacks 
+(or their equivalent for other query forms).  Trying to elude injections by 
+prescreening and <span class='xquote'>&ldquo;escaping&rdquo;</span> user-supplied content is considered to be a 
+poor defense against sophisticated injection hacks.  Solely using 
+precompiled queries is a better strategy, but not one which is widely 
+adopted in the development community.  <span class='acronym-cap'>NDP</span> essentially promoted 
+a model where all database access is via precompiled queries, implemented 
+directly in  <span class='acronym'>C++</span> (therefore without involving any separate query compiler).  
+</li>
+
+</ul>
+
+
+</div> <!-- main page div -->
+</body>
+</html>
+
+

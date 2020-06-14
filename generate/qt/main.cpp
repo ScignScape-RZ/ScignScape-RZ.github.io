@@ -16,6 +16,16 @@
 
 
 
+inline void save_file(QString path, QString text)
+{
+ QFile outfile(path);
+ if (!outfile.open(QIODevice::WriteOnly | QIODevice::Text))
+   return;
+ QTextStream outstream(&outfile);
+ outstream << text;
+ outfile.close();
+}
+
 QString read_file(QString path)
 {
  QString result;
@@ -114,7 +124,7 @@ QMap<QString, QString> read_partials_map()
 }
 
 
-QString complete_partials(QString& result,
+void complete_partials(QString& result,
  QString path, QString default_path)
 {
  static QMap<QString, QString> partials_map = read_partials_map();
@@ -148,6 +158,11 @@ QString complete_partials(QString& result,
       partial_path = QString("%1/%2.htm").arg(dp).arg(code);
      }
     }
+
+    qDebug() << "PP: " << partial_path;
+    qDebug() << "C: " << code;
+
+
     if(!partial_path.isEmpty())
     {
      QFile pinfile(partial_path);
@@ -198,7 +213,7 @@ QString complete_partials(QString& result,
   infile.close();
  }
 
- return QString();
+ //return QString();
 }
 
 
@@ -208,16 +223,40 @@ bool handle(QString requrl, QString method,
 
 }
 
+void process_file(QString path, QString name, 
+  QString folder, QString partials_folder)
+{
+ qDebug() << "P: " << path;
+ qDebug() << "PF: " << partials_folder;
+ QString contents;// = read_file(path);
+
+ complete_partials(contents, path, partials_folder);
+
+ save_file(folder + "/" + name, contents);
+
+
+ //return {};
+}
+
 int main(int argc, char* argv[])
 {
+ QString partials_folder = "../../partials";
+
  QString folder = "../../web/main-info-pages";
 
  QDir qdir(folder);
+ QDir partials_qdir(partials_folder);
 
- qDebug() << qdir.absolutePath();
- 
-// = cmdl.size() > 2? cmdl[2]: DEFAULT_SDI_FOLDER;
- QString file;// = cmdl.size() > 3? cmdl[3]: DEFAULT_SDI_FOLDER
+ QStringList htmls = qdir.entryList(QStringList() << "*.htm" << "*.html", QDir::Files);
+
+ qDebug() << htmls;
+
+ for(QString file : htmls)
+ {
+  QFileInfo qfi(qdir, file);
+  process_file(qfi.absoluteFilePath(), file, 
+    folder + "/gen", partials_qdir.absolutePath() + "/");
+ }
  
  return 0;
 }

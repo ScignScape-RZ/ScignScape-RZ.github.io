@@ -1,0 +1,837 @@
+
+<html>
+
+<head>
+
+
+<!-- situation where the stylsheets are being loaded properly ...
+-->
+
+<style>
+
+div.main-image-wrapper {text-align:center}
+
+img.large-image {width:500px;} 
+
+img.main-image {width:300px;} 
+
+img.li-image {width:200px;float:left;padding-right:25px;padding-top:10px;} 
+
+
+.tterm {font-family:Aldrich;color:rgb(90, 10, 20);font-size:90%}
+.acronym { font-size:88% }
+.acronym-cap { font-size:94% }
+
+#main-page-body-div { border: ridge rgb(254, 157, 4) 20px; padding:40px; padding-left:48px; 
+                      border-top: ridge rgb(254, 157, 4) 2px; 
+
+  margin-top:4vh; margin-left:12vh; margin-right:15vh;  margin-bottom:30vh; } 
+
+#main-page-body-div p { font-size:14pt; font-family:Podkova}
+
+#main-page-body-div p:not(.continue) {text-indent:3em;} 
+
+#main-page-body-div a { font-size:13pt; font-family:Podkova; letter-spacing:0px;}
+
+#main-page-body-div li { font-size:12pt; font-family: Quattrocento; 
+  margin-top:35px; font-weight:700}
+
+  
+a b {position:relative;left:4px;padding-left:4px;}
+
+#logo{height:50px;margin-left:10px;margin-top:-1px;margin-bottom:-15px;}
+
+div#top-container-first-row
+{
+ background:rgb(6,36,30); 
+}
+
+span.top-banner-label-group
+{
+ border-top:ridge rgb(179, 0, 0) 3px; margin-left:2px; margin-right:45px;
+}
+
+
+span.top-banner-label
+{
+ margin-left:5px;  padding-left:2px;padding-right:2px;
+ color:rgb(25,22,25);font-family:Quattrocento;font-weight:900;font-variant:small-caps;
+ position:relative;top:-2px;  border-bottom:solid rgb(255, 149, 102) 2px;  
+ border-top:solid rgb(255, 129, 102) 2px;  
+}
+
+span.top-banner-label span
+{
+ padding-left:7px;padding-right:4px;
+ background:rgb(255, 159, 102);
+ border-top:solid rgb(25, 139, 102) 1px; border-bottom:solid rgb(25, 139, 102) 1px;
+}
+
+span.top-banner-segments
+{
+ margin-left:10px;
+}
+
+
+span.top-banner-link
+{
+ background:rgb(40,40,43);color:white;
+ font-family:Podkova;font-weight:800;position:relative;top:-3px;
+ border-bottom: solid rgb(90,90,90) 1px;
+}
+
+span.top-banner-link a
+{
+ background:rgb(40,40,43);color:white;
+ margin-left:5px;margin-right:20px;padding-left:10px;padding-right:10px;
+}
+
+
+span.top-banner-link:hover
+{
+ background:rgb(66, 206, 244);color:rgb(20,20,43);
+}
+
+span.top-banner-link a:hover
+{
+ background:rgb(25, 206, 244);color:rgb(20,20,43);
+}
+
+
+
+
+
+.center-wrap { text-align:center; }
+
+.top-offset-5vh { position:relative;top:5vh; }
+
+div#top-offset { position:relative;top:5vh; }
+
+hl.main-page-title { }
+
+
+
+
+#top-picture {background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRXk4HqTXQiPoab7TkJfF7qpznSSy7I0n66aWYloHAAnDZvsthB");
+#no-repeat center center fixed;
+background-size: 100% 100%;
+height:150vh
+}
+
+#picture-offset { position:relative;top:5vh; }
+
+#text-opacity {background-color:rgba(255,255,255,0.2);
+padding-top:10px;
+padding-bottom:50px;
+}
+
+
+div.top{
+ padding-top:5vh;
+ display:inline-block;
+ text-align:right;width:21%;
+ border-left:ridge rgb(230,230,230) 3px; 
+ border-right:ridge rgb(230,230,230) 3px; 
+ margin:0;
+ padding-bottom:0px;
+ margin-left:0;
+ margin-right:0;
+ padding-left:0;
+ padding-right:2%;
+ font-size:14pt;
+ font-family:Aldrich;
+ font-weight:600;
+ }
+ 
+ div.top span{background:rgba(255,255,255,0.6);padding:20px;padding-top:2px;font-size:12pt;line-height: 2.5em;}
+ 
+ 
+#top-1{background:rgba(210,210,230,0.45);} 
+#top-2{background:rgba(230,210,210,0.45);position:relative;left:-1%;} 
+#top-3{background:rgba(210,230,210,0.45);position:relative;left:-2%;} 
+#top-4{background:rgba(235,210,235,0.45);position:relative;left:-3%;width:25%} 
+
+ 
+#top-offset{line-height:200%;margin:0%;padding:0%;background:"rgba(200,200,200,0.4);"}
+
+#top-container-first-row{width:100%; overflow: hidden;background:rgba(200,200,200,0.4);
+margin:0;padding-bottom:0; padding-top:4px;
+border-top:double rgb(97,122,165) 3px;
+border-bottom:ridge rgb(230,230,230) 3px; 
+}
+
+#top-background {background:rgb(97,122,165);position:absolute;top:-5vh;height:5vh;z-index:-1;width:100%}
+
+#top-container-first-row span.home-wrapper{font-size:8pt;font-weight:900;position:relative;left:-6px;background:white;}
+
+#top-container-second-row{margin-top:1px;width:100%; 
+margin:0;padding-bottom:0;
+overflow: hidden;background:rgba(200,200,200,0.4)}
+ 
+#mmui{margin-top:2vh;position:relative;text-align:center;
+font-weight:900; font-family:Nova Square;
+   letter-spacing: 2px; 
+   font-size:22pt;
+   } 
+
+
+#mmui span {border-bottom:groove rgba(100,100,50,0.5) 5px; color:rgb(66, 44, 5);
+ background:rgb(245,245,245);
+padding-bottom:5px; padding-left:10px;padding-right:10px;}
+
+button {cursor:pointer}
+   
+#overview-list {position:relative; 
+ text-align:left;left:50%;}
+
+
+#overview-list  ul {
+  list-style: inside square;
+  padding-left:0;
+  margin-left:0;
+}
+
+#overview-list  li {background:rgba(245,245,245,0.8);padding-left:10px; }
+#overview-list  li span {font-family:courier;font-size:12pt;font-weight:900; }
+
+
+#overview {position:relative;left:50%;text-align:left;
+ margin-top:1vh;font-family:times;font-size:18pt;}
+ 
+ #overview a {background:rgba(235,235,225, 0.7); border:inset rgb(255, 159, 102) 3px; 
+  font-family:Quattrocento; border-radius:16px; padding-top:4px;padding-bottom:2px;}
+
+#photo-credit span{background-color:rgba(160,0,0,0.8);color:white}
+#photo-credit a{background-color:rgba(255,255,255,0.8)}
+ 
+.raise-button{ position:relative;top:-4px;left:2px; }  
+ 
+</style>
+
+
+<meta http-equiv = "X-UA-Compatible" content = "IE=8,chrome=1">
+
+
+
+
+<link rel = "stylesheet" href = "/sr__css/default-style.css" type = "text/css">
+
+
+<!--[if IE]><link rel = "stylesheet" href = "/sr__css/default-style-ie.css" type = "text/css">
+<![endif]-->
+<!--[if !IE]><!-->
+<!--<![endif]--></link>
+<!--[if IE]></link>
+<![endif]-->
+
+</meta>
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Aldrich" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nova+Square" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Podkova" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quattrocento" />
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script" />
+ 
+
+</head>
+
+<body>
+
+<!-- <div id='top-picture'>
+
+<div id='picture-offset'>
+
+
+-->
+
+<div id='top-offset'>
+
+
+
+<div id='top-background'> 
+</div> 
+
+<div id='top-container-first-row'>
+
+<a href='/web/index.html'>
+<img id='logo' src='/pics/logo.png'/>
+</a>
+
+<span class='home-wrapper'><a href='/web/index.html'>
+(HOME)</a></span>
+
+
+<span class='top-banner-segments'>
+
+<span class='top-banner-label-group'>
+
+<span class='top-banner-label'>
+<span>
+Features:
+</span>
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/gen/hypergraph-database.html'
+onclick="window.open('/web/main-info-pages/gen/hypergraph-database.html','_self'"
+>
+Hypergraph Database
+</a> 
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/gen/binary-apis.html'
+onclick="window.open('/web/main-info-pages/gen/binary-apis.html','_self');"
+>
+Binary APIs
+</a>
+</span>
+
+</span>
+
+
+<span class='top-banner-label-group'>
+<span class='top-banner-label'>
+<span>
+Info:
+</span>
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/resources.html'
+onclick="window.open('/web/main-info-pages/gen/resources.html','_self');"
+>
+Resources and Articles
+</a>
+</span>
+
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/contact.html'
+onclick="window.open('/web/main-info-pages/gen/contact.html','_self');"
+>
+Contact
+</a>
+</span>
+
+</span>
+
+</span>
+
+</div>
+
+
+
+<!-- </div> <!-- picture offset -->
+
+
+</div> <!-- top offset -->
+
+
+<div id='main-page-title-div'>
+
+<div class='center-wrap top-offset-5vh'>
+
+<h1 class='main-page-title'>
+Mobile Medical User Interface (<span class='acronym'>MMUI</span>)
+</h1>
+
+</div>
+
+</div>
+
+
+<div id='main-page-body-div'>
+
+<p>
+Mobile Medical User Interface (<span class='acronym'>MMUI</span>) is a framework for 
+building <span class='acronym'>GUI</span> classes for medical software front-ends and 
+for creating native applications that share biomedical data.  
+<span class='acronym-cap'>MMUI</span> seeks to adapt the kind of technology one finds in clinics and
+hospitals for use in smaller-scale applications <span class='xquote'>&ldquo;in the field&rdquo;</span>,
+including for researchers and doctors working in poor or remote
+communities with limited resources.  This includes providing quality
+medical imaging and visualization and <span class='acronym'>EHR</span> capabilities without relying
+on a continuous web connection or hosting the application in a web
+browser; sensible patient record and management systems; and 
+flexible peer-to-peer networking.  
+Compared to products from <span class='acronym'>EHR</span> vendors, <span class='acronym'>MMUI</span> 
+is more modular, extensible, packages many
+useful libraries, and (as a standalone program) does not suffer from
+in-browser limitations.  
+</p>
+
+<p>
+<span class='acronym-cap'>MMUI</span> is targeted at research and clinical networks with
+heterogenous endpoints, from well-provisioned labs and
+offices to field locations with more limited computing
+environments.  <span class='acronym-cap'>MMU</span> improves on <span class='acronym'>HIT</span> and <span class='acronym'>EHR</span> 
+solutions in several ways.  First, native-driven front-ends provide a
+superior User Experience (<span class='acronym'>UX</span>) to browser-based front-ends, because they can more
+effectively use context menus; dialogs, wizards, and other
+topic-specific window controls; embedded <span class='acronym'>3D</span> and multimedia; and can
+more aggressively apply strong-typing optimizations to classify and
+manage web-based data.  For example, wrapping web <span class='acronym'>API</span>s in
+strongly-typed client libraries allows each <span class='acronym'>API</span> and its visual
+interface (its model/view pair) to be packaged in modular fashion and
+reused in multiple applications.
+</p>
+
+<p>
+<span class='acronym-cap'>MMUI</span> embraces a philosophy wherein applications are shared among 
+specialists in a single field, rather than shared only within a 
+single provider network or <span class='acronym'>EHR</span> system.  For example, all radiologists 
+have the same requirements when working with diagnostic images.  
+An <span class='acronym'>MMUI</span> application can accordingly be designed 
+specifically for radiologists.  By ensuring that such an application 
+is cross-platform and has few additional dependencies, 
+meaning that no special libraries are required 
+to run the application (such as the <span class='acronym'>VTK</span> &mdash; the 
+<span class='xquote'>&ldquo;Visualization Toolkit&rdquo;</span> &mdash; or similar graphics and/or 
+data management libraries).  Because of this, any radiologists 
+can use such an application regardless of the kind of office they 
+occupy or the kind of computer they have.  Using <span class='acronym'>MMUI</span>, when multiple 
+radiologists need to consult remotely (e.g., via  
+teleconferencing), they will be able to share the same application, 
+inhering the same screens and capabilities.  Applications in this sense 
+are orthogonal (agnostic and independent) to any particular <span class='acronym'>EHR</span> vendor, 
+network, or system: they may draw information from a network, but are 
+installed and used apart from vendor-specific <span class='acronym'>EHR</span> networks.  
+This ensures that there are no restrictions on multiple 
+radiologists (for example) working collaboratively.  In 
+particular, this avoids the all-too-common situation where doctors 
+cannot access out-of-network records or images, because they 
+are not participating doctors in the hospital from which a diagnostic 
+study was initiated.  <span class='acronym-cap'>MMUI</span> eliminates having 
+to resort to primitive methods, such as fax machines, to send 
+data between disparate offices.
+</p>
+
+<p>
+By concentrating applications on individual specialists' netwoks, 
+<span class='acronym'>HIT</span> software also becomes a conduit for innovations in medicine and 
+in bioinformatics to propagate among practitioners.  Whenever a researcher 
+discovers a new computational technique (such as applying Artifical Intelligence 
+to problems in diagnostics, genomics, or predicative analysis), 
+or a doctor develops a new treatment regimen, new data structures 
+emerge that must be handled by medical software.  In fact, each innovation 
+introduces new data models that must be assembled prior to the innovative 
+techniques being applied.  Innovations also generate new kinds of 
+data in the form of result sets generated as their new techniques 
+are applied.  To support such innovations, medical databases 
+need to provide the data required by the innovative components, 
+and information generated by these components must be 
+properly shared and maintained.  A platform like <span class='acronym'>MMUI</span> serves 
+innovators because it becomes possible to create 
+software specifically targeted to innovation-specific data 
+models, or to leverage existing subject-specific 
+application networks to promote the innovations.  For example, 
+innovative methods in the field of radiology can be 
+propagated by adding capabilities to radiology-specific 
+applications.  If these applications are widely used, 
+it empowers a wider set of doctors to adopt and benefit 
+from the innovations.  Properly construction Application 
+Networks eliminate the bureaucratic inertia that 
+can delay new discoveries from benefiting patients.
+</p>
+
+<p>
+Given these considerations, <span class='acronym'>MMUI</span> embraces and advocates 
+for <span class='xquote'>&ldquo;Innovation-Centric Design&rdquo;</span>, meaning that software 
+systems, components, and applications should be designed 
+to facilitate rather than impede the adoption of 
+innovative practices and discoveries in fields like 
+biology and medicine.  Innovation-Centric Design means 
+that application networks are poised to incorporate new 
+data models into their data-sharing capabilities.  This 
+affects design choices on both front-end and back-end 
+components.  On the front end, <span class='acronym'>GUI</span> design needs to 
+be modular, where distinct visual components and dialog 
+classes can be developed in response to innovations and 
+incorporated semi-autonomously into both new and existing 
+software.  For example, a new analytic methodology in the 
+radiology field can be packaged into several <span class='acronym'>MMUI</span> dialog 
+classes and made aviailable for use by existing <span class='acronym'>MMUI</span> 
+applications.  On the other hand, on the back-end, data providers 
+need to deliver data sets packaged into a format directly usable 
+by the front-ends through which innovations are 
+operationalized.  It is a burden on application developers to 
+piece together complex data structures by sending and 
+post-processing multiple requests to a data source.  
+Back-end failure to support type-specific data requests adds complexity 
+and costs to front-end development, even if  
+a data source makes the requisite information available 
+in isolated pieces.  
+</p>
+
+<p>
+Innovation-Centric Design 
+means that a single field value &mdash; for example, one which 
+identifies a single data type &mdash; provides enough information 
+for a data provider to know exactly which information 
+needs to be included in the response to a query.  For example, only 
+certain fields in individual patient records will be relevant for 
+radiologists &mdash; so, to best serve radiologists, data providers 
+should implement response-builders specifically for 
+responding to queries originating from software used by 
+radiologists.  This can be facilitated by implementing data models 
+in autonomous code libraries.  Each libary will carry a distinct 
+signature, to identify the specific kinds of 
+information required by applications requesting data from a 
+provider via that library.  Innovation-Centric Design means that 
+the primary medium for data sharing is library-specific 
+network code, rather than query languages, which unavoidably 
+demand extra initialization and post-processing steps.  
+Accordingly, data providers need to dynamically add new 
+type-specific and library-specific capabilities.    
+This means that data providers need to have the overall capability 
+of incorporating new code libraries that implement new data types.  
+</p>
+
+<p>
+As the prior discussion illustrates, modular design principles apply on the back-end 
+as well as the front-end.  In the same way that front-end modules 
+represent semi-autonomous bodies of code which present specific 
+kinds of visual components in the context of pre-existing 
+<span class='acronym'>GUI</span> applications, back-end modules represent semi-autonomous 
+libraries that enable data to be obtained from a database and 
+packaged according to type-specific protocols.  By continuously 
+adding new libraries, back-ends can efficiently serve the 
+needs of many different data-sharing networks.  
+Current Medical Information Technologies place an emphasis on 
+variegated, heterogeneous data stores, where 
+many kinds of information can coexist without the 
+limitations of Database Schema or other predefined data 
+structures.  These data spaces, such as <span class='xquote'>&ldquo;Semantic Data Lakes&rdquo;</span> 
+(<span class='acronym'>SDL</span>), can store data in many forms, including binary representations 
+specific for individual peer-to-peer networks.  
+The Application Semantic Kernel (<a href='/web/main-info-pages/ask.html'><span class='acronym'>ASK</span></a>) 
+and Multi-Paradigm Semantic Modeling Engine 
+(<a href='/web/main-info-pages/msme.html'><span class='acronym'>MSME</span></a>) are <span class='acronym'>NDP</span> components 
+formulated to help data providers anchor networks 
+designed according to these principles.  In particular, <span class='acronym'>ASK</span> can 
+help developers create <span class='xquote'>&ldquo;kernel&rdquo;</span> libraries that distribute 
+capabilities to share and respond to data with specific types; 
+and <span class='acronym'>MSME</span> provides Semantic Graph models to help 
+develop typed-query capabilities to <span class='acronym'>SDL</span>-style spaces.
+</p>
+
+
+<p>
+<span class='acronym-cap'>MMUI</span> encourages a modular 
+design where new, project-specific components can be added to 
+existing applications, in the form of new dialog boxes, new 
+networking capabilities &mdash; allowing the application to 
+participate in new data-sharing networks &mdash; and/or new 
+features available on the application main window.  
+As such, <span class='acronym'>MMUI</span> can also be used as a plug-in for pre-existing
+software, adding specific capabilities while remaining isolated from
+the host application.  With such a
+modular approach to application design, any
+specific product delivered to a use-community can be assembled from
+just those parts that are needed and customized as necessary.  At 
+the same time, new components can be added later to 
+extend a prior application.  Therefore when developing a new 
+software capability or a new data sharing initiative, different 
+pre-existing applications can help promote new initiatives by 
+serving as a background application within which the new 
+data and capabilities can be accessed.  
+</p>
+
+<p>
+Another area where <span class='acronym'>MMUI</span> offers an advantage is for data modeling and
+runtime data management.  Runtime layers to relational databases are
+familiar via Object-Relational Mapping (like ActiveRecord for Rails or
+<span class='acronym'>LINQ</span> for <span class='acronym'>C#</span>), but there is no analogous "Object Mapping" paradigm for
+working with heterogenous, <span class='acronym'>NoSQL</span> back-ends, especially graph-based
+back ends.  <span class='acronym-cap'>MMUI</span> provides a runtime data management layer first
+through taking advantage of an embedded (and innovative) database
+project called WhiteDB, which is similar to Semantic Graph engines
+&mdash; in that it combines several NoSQL
+models, like document/<span class='acronym'>XML</span>-based, 
+Column-based, and graph-based &mdash; but
+does so as an embedded non-socket-based engine.  In addition, 
+by using the <span class='xquote'>&ldquo;sister&rdquo;</span> project <span class='acronym'>MSME</span>, <span class='acronym'>MMUI</span> applications 
+allow programmers to manipulate runtime data
+obtained from <span class='acronym'>RDF</span> and other semantic graph resources (with a
+convenient programming interface that goes beyond basic <span class='acronym'>SPARQL</span> and
+<span class='xquote'>&ldquo;triple&rdquo;</span> management of the kind you get with conventional triplestore
+managers like Redland).  This kind of multi-paradigm <span class='acronym'>NoSQL</span> foundation
+is increasingly important for <span class='acronym'>HIT</span>, as demonstrated for example by
+large-scale <span class='xquote'>&ldquo;Semantic Data Lake&rdquo;</span> projects.
+</p>
+
+<h2>Overview of <span class='acronym'>MMUI</span> components</h2>
+
+<p>
+By design, the <span class='acronym'>MMUI</span> classes are not complete implementations but are 
+templates and project outlines to be customized for each 
+deployment.  Here are several components that can 
+be incorporated into typical <span class='acronym'>MMUI</span> applications:
+</p>
+
+<ul>
+<li>
+<img src='/pics/te2.jpeg' class='li-image' alt='loading...'>
+Patient Intake Form:  Used to gather patient information when first entered into the system.  
+Many offices still use hard-copy forms for this purpose, but working directly 
+with digitized forms reduces the time needed for subsequent data entry.  
+This is particularly appropriate for medical applications 
+<span class='xquote'>&ldquo;in the field&rdquo;</span>, where community organizations or volunteer groups 
+like <span class='acronym'>MSF</span> are actively involved at the point-of-care, helping 
+new patients who may be unfamiliar with the bureaucratic procedures of 
+Western medicine.  <span class='acronym'>MMUI</span> forms and applications are designed to run on 
+equally well on laptop computers that can be carried to ad-hoc medical 
+settings as on full-featured computers in an office.
+</li>
+
+<li>
+<img src='/pics/combo-box.jpeg' class='li-image' alt='loading...'>
+Surgical and Treatment History:  A Native-Driven Dialog Window 
+has a more sophisticated interactive interface that can be useful 
+when working dates and enumerated lists.  Popup calendars can be 
+fine-tuned for the needs of the application, and text entry areas 
+can be broken down into individual lines or fields for creating 
+lists (such as lists of surgeries).  This allows automatic 
+numbering, insertion, and deletion of lines, and 
+drag-and-drop for reordering lines.  Native dialogs can also 
+do a better job of helping users navigate through the 
+codes and terminologies which are endemic to biomedical data in 
+particular.  
+</li>
+
+
+<li>
+<img src='/pics/pain-markings.jpeg' class='li-image' alt='loading...'>
+Indicating Pain and Symptoms:  <span class='acronym-cap'>MMUI</span> includes a useful 
+dialog class for marking areas of pain, or areas with a presentation 
+of other symptoms for use with different kinds of diagnostic procedures.  
+The default class uses <span class='acronym'>Qt</span>-generated symbols to indicate kinds of 
+pain and <span class='acronym'>SVG</span> backgrounds to focus on different anatomical areas 
+(torso front and back, head and feet left and right); the dialog 
+can then be customized by selecting different <span class='acronym'>SVG</span> backgrounds 
+and/or generating different foreground symbols.  The symbols 
+are annotated with modifiers describing the intensity and 
+duration of the pain (whether the pain is constant, intermittent, or occasional).
+</li>
+
+<li>
+<img src='/pics/pdf-capt.jpeg' class='li-image' alt='loading...'>
+Digitizing <span class='acronym'>PDF</span> Forms:  Another <span class='acronym-cap'>MMUI</span> class is a 
+<span class='acronym'>PDF</span> viewer that includes a feature for converting handwritten 
+forms to digital text.  Instead of converting the entire form, this 
+functionality allows users to <span class='xquote'>&ldquo;prepare&rdquo;</span> a form by creating a 
+<span class='xquote'>&ldquo;stencil&rdquo;</span>: that is, a series of rectangular fields which mark 
+where handwritten entries on a completed form will have 
+info to be digitized.  The viewer can apply the stencil to scanned 
+forms and use an <span class='acronym'>OCR</span> (Optical Character Recognition) library to 
+convert the handwriting found specifically in the saved rectangular 
+areas.  This generates a much more accurate digitization by trying to 
+perform <span class='acronym'>OCR</span> on the entire form, with a mixture of print and 
+handwritten text.
+</li>
+
+
+<li>
+<img src='/pics/local-save.png' class='li-image' alt='loading...'>
+Saving Forms and Sessions:  <span class='acronym-cap'>MMUI</span>'s use of Binary <span class='acronym'>API</span>s 
+&mdash; which simplify the process of sharing data between applications 
+&mdash; is also helpful for users who want to save and restore their 
+session.  <span class='acronym-cap'>MMUI</span> creates a compact, binary representation of 
+all data users have entered since starting the application, as 
+well as user information and preferences.  This information can 
+be shared over a network, or saved on the cloud; it can also be 
+stored locally in a database attached to the <span class='acronym'>MMUI</span> application, 
+or saved as a file on the user's computer.  The latter option 
+gives users the choice of storing their <span class='acronym'>MMUI</span> sessions in 
+locations and according to operations they understand 
+(saving and loading files from their local filesystem).  
+Saving in a local database is another option, which can free 
+users from having to do an explicit save or open, but also 
+is less transparent to users because the database is not 
+found in the ordinary file system, and cannot be directly 
+managed by non-expert users.
+</li>
+
+<li>
+<img src='/pics/checks.jpeg' class='li-image' alt='loading...'>
+Embedded <span class='acronym'>HTML</span> Viewers:  Some kinds of information or data entry 
+is well-suited for <span class='acronym'>HTML</span> pages.  <span class='acronym-cap'>HTML</span> forms, for example, 
+have useful styling options which can make them a good choice 
+for information screens with many radio buttons or check boxes.  
+Enabling embedded presentation of web pages &mdash; where native 
+code intercepts and interprets user actions (such as 
+clicking on a hypertext link) &mdash; allows application developers 
+to take advantage of <span class='acronym'>HTML</span> features when desired but without 
+forcing developers to accept the limitations of browsers and 
+JavaScript.
+</li>
+
+<li>
+<img src='/pics/text.jpeg' class='li-image' alt='loading...'>
+Extended Text Entry:  Rather than having to fit their responses 
+into one-line text fields, user can type multi-line comments 
+into text fields.  Unlike <span class='acronym'>HTML</span> text area, native text areas 
+can be detached into separate windows and <span class='xquote'>&ldquo;float&rdquo;</span> above other 
+text and graphics &mdash; for example, users can see the text where 
+they describe medical symptoms while also looking at their 
+markings on a graphical representation of pain areas.  
+Being able to reposition and enlarge the text entry area helps 
+users feel comfortable with entering as much text as they'd 
+like, giving a more thorough description of their symptoms.
+</li>
+
+
+<li>
+<img src='/pics/infobuttons.png' class='li-image' alt='loading...'>
+Infobuttons:  Context-Aware Knowledge Retrieval (<span class='acronym'>CAKR</span>), also called 
+<span class='xquote'>&ldquo;infobuttons&rdquo;</span>, allows users to research a medical term or code.
+Some hospitals provide complex <span class='acronym'>Infobutton Managers</span> which 
+allow context-sensitive investigations, where the results for a 
+given user query are determined by the users' current task in the 
+context of a predefined treatment protocol.  Outside of 
+hospitals, similar research is possibe using public web services, 
+such as MedLinePlusConnect.  <span class='acronym-cap'>MMUI</span> applications enable Infobuttons 
+by allowing phrases to be selected from dialog windows and <span class='acronym'>PDF</span> 
+or <span class='acronym'>HTML</span> documents, and then (via context menus) selecting an 
+option to activate an Infobutton dialog box including 
+basic search information and <span class='xquote'>&ldquo;refinement&rdquo;</span> terms.
+
+</li>
+
+
+<li>
+<img src='/pics/enl.jpeg' class='li-image' alt='loading...'>
+Supporting <span class='acronym'>PACS</span> Systems:  <span class='acronym-cap'>MMUI</span> allows capabilities of 
+full-featured <span class='acronym'>PACS</span> systems to be adopted for local medical 
+offices and clinics, even if they do not have access to expensive 
+technology.  However, given that some forms of medical images are naturally 
+suited to a context where radiologists and clinicians 
+need to <span class='xquote'>&ldquo;mark up&rdquo;</span> images to point out suspicious findings, 
+they need to have <span class='acronym'>PACS</span> capabilities at their disposal 
+(for example, radiologists will mark up images 
+as with arrows or semi-transparent overlays to 
+indicate findings).  <span class='acronym-cap'>PACS</span> support should be 
+available to all doctors and delivered in ways which are 
+easy to use.  
+<span class='acronym-cap'>MMUI</span> enabe broad-based <span class='acronym'>PACS</span> and also adds or 
+enhanced <span class='acronym'>PACS</span> for optimal User Experience.  
+</li>
+
+<li>
+<img src='/pics/drag-and-drop.jpeg' class='li-image' alt='loading...'>
+Enhancing <span class='acronym'>PACS</span> Systems:  Radiologists need to mark up images, 
+such as with arrows and overlays, to indicate suspicious 
+findings.  For example, it can be difficult or impossibe 
+to modify some aspects of the appearance of arrows, such as their 
+color, rotation angle, and the dimensions of the shaft and the head.  
+<span class='acronym-cap'>MMUI</span> ensures that a full-featured, highly interactive 
+interface is available to all users, so that they can perform 
+intricate editing operations (without needing expensive computers 
+or a well-provisioned office).  At the same time, it delivers functionality 
+in convenient, user-friendly ways, with a priority 
+on features such as: <span class='xquote'>&ldquo;drag-and-drop&rdquo;</span>, 
+<span class='xquote'>&ldquo;drag-and-rotate&rdquo;</span>, context menus, and Multiple-Window 
+Display (<span class='acronym'>MWD</span>) with movable and resizable windows.
+</li>
+
+
+<li>
+<img src='/pics/annotations-dialog.png' class='li-image' alt='loading...'>
+Annotations:  
+<span class='acronym-cap'>MMUI</span> supports image annotations 
+via dialog boxes where a single diagnostic image would occupy a central 
+area alongside buttons to activate different kinds of annotations.  
+For images which are part of a larger study, 
+other miniaturized images may be previewed in a strip from which 
+a focal images is selected.  
+<br>
+<br>
+<b>How Does This Work?</b>
+<br>
+<br>
+First, annotations, such as arrow-markings, 
+are then added to the image by clicking on corresponding buttons 
+representing annotation types, such as arrows, comments, and rules.  
+<br>
+<br>
+Second, annotations such as arrows position and geometry is then 
+controled by a combination of 
+mouse-actions and context menus.  
+<br>
+<br>
+Third, different <span class='xquote'>&ldquo;toggle&rdquo;</span> 
+buttons &mdash; ones which when pressed remain in a 
+<span class='xquote'>&ldquo;down&rdquo;</span> state until released &mdash; are used 
+to determine how mouse movements are linked to 
+operations.  For example, <span class='xquote'>&ldquo;Pan&rdquo;</span> actions move an annotation 
+to different positions against an image; <span class='xquote'>&ldquo;Zoom&rdquo;</span> actions resize an 
+annotation; and <span class='xquote'>&ldquo;Rotate&rdquo;</span> actions change an arrow's 
+pointing direction.
+<br>
+<br>
+<span class='acronym-cap'>MMUI</span> supports a 
+<span class='xquote'>&ldquo;drag-and-rotate&rdquo;</span> operation where arrows are 
+rotated around the central point on the back line 
+of their shaft.  Toggle buttons control whether 
+mouse movements produce pan, zoom, or rotate 
+effects.  In addition, <span class='acronym'>MMUI</span> supports 
+manipulation of groups of arrows: drawing arrows 
+closer to or farther away from a central point, 
+or creating groups of arrows around a center point 
+on the basis of one single arrow.  
+<br>
+<br>
+As such, these 
+are new capabilities that enhance the functionality 
+of <span class='acronym'>PACS</span> systems.
+</li>
+
+
+<li>
+<img src='/pics/tool-tip.jpeg' class='li-image' alt='loading...'>
+Data Updates and Provenance:  Medicine is an area where many 
+contributors may potentially want to edit or 
+correct data, and where data integrity and security 
+can be extremely consequential.  This places 
+extra burdens in <span class='acronym'>HIT</span> technology, since 
+medical software should give qualified users an 
+opportunity to signal when they find data which appears 
+to be incorrect or somehow flawed, but should also 
+carefully monitor who/why/when data is altered.  
+In effect, this suggests a system where users can 
+flag information that they believe needs to be corrected.  
+However, in many cases their edits will need to be reviewed 
+before being incorporated into electronic medical records.  
+Moreover, this needs to supported at a finely granular 
+level &mdash; it is not enough for a doctor to 
+recommend changing a chunk of text or revising a numeric 
+quantity; the specific edit needs to be notated 
+in terms of an underlying data structure.  For example, 
+a numeric quantity 
+can represent a length of time, the dosage of a medicine, 
+a biomedical measurement (heart rate, blood pressure, 
+temperature, and so forth): a proposed edit to 
+each kind of quantity is in essence a data structure which should 
+be considered specifically in relation to the underlying 
+data type.  A proposed edit to a measurement of dosage, 
+for example, is distinct, as a data type, from a proposed 
+edit to a duration of time during which a set of symptoms 
+are present, which is a different data type.  
+Via context menus and strong type-correspondance between front-ends 
+and back-ends, server-side components, <span class='acronym'>MMUI</span> allows medical information 
+systems to be designed with particular emphasis on tracking 
+provenance and double-checking both existing data and 
+edits made with regard to data.
+
+</li>
+
+</ul>
+
+
+</div> <!-- main page div -->
+</body>
+</html>
+
+

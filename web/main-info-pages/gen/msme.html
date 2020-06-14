@@ -1,0 +1,527 @@
+
+<html>
+
+<head>
+
+
+<!-- situation where the stylsheets are being loaded properly ...
+-->
+
+<style>
+
+div.main-image-wrapper {text-align:center}
+
+img.large-image {width:500px;} 
+
+img.main-image {width:300px;} 
+
+img.li-image {width:200px;float:left;padding-right:25px;padding-top:10px;} 
+
+
+.tterm {font-family:Aldrich;color:rgb(90, 10, 20);font-size:90%}
+.acronym { font-size:88% }
+.acronym-cap { font-size:94% }
+
+#main-page-body-div { border: ridge rgb(254, 157, 4) 20px; padding:40px; padding-left:48px; 
+                      border-top: ridge rgb(254, 157, 4) 2px; 
+
+  margin-top:4vh; margin-left:12vh; margin-right:15vh;  margin-bottom:30vh; } 
+
+#main-page-body-div p { font-size:14pt; font-family:Podkova}
+
+#main-page-body-div p:not(.continue) {text-indent:3em;} 
+
+#main-page-body-div a { font-size:13pt; font-family:Podkova; letter-spacing:0px;}
+
+#main-page-body-div li { font-size:12pt; font-family: Quattrocento; 
+  margin-top:35px; font-weight:700}
+
+  
+a b {position:relative;left:4px;padding-left:4px;}
+
+#logo{height:50px;margin-left:10px;margin-top:-1px;margin-bottom:-15px;}
+
+div#top-container-first-row
+{
+ background:rgb(6,36,30); 
+}
+
+span.top-banner-label-group
+{
+ border-top:ridge rgb(179, 0, 0) 3px; margin-left:2px; margin-right:45px;
+}
+
+
+span.top-banner-label
+{
+ margin-left:5px;  padding-left:2px;padding-right:2px;
+ color:rgb(25,22,25);font-family:Quattrocento;font-weight:900;font-variant:small-caps;
+ position:relative;top:-2px;  border-bottom:solid rgb(255, 149, 102) 2px;  
+ border-top:solid rgb(255, 129, 102) 2px;  
+}
+
+span.top-banner-label span
+{
+ padding-left:7px;padding-right:4px;
+ background:rgb(255, 159, 102);
+ border-top:solid rgb(25, 139, 102) 1px; border-bottom:solid rgb(25, 139, 102) 1px;
+}
+
+span.top-banner-segments
+{
+ margin-left:10px;
+}
+
+
+span.top-banner-link
+{
+ background:rgb(40,40,43);color:white;
+ font-family:Podkova;font-weight:800;position:relative;top:-3px;
+ border-bottom: solid rgb(90,90,90) 1px;
+}
+
+span.top-banner-link a
+{
+ background:rgb(40,40,43);color:white;
+ margin-left:5px;margin-right:20px;padding-left:10px;padding-right:10px;
+}
+
+
+span.top-banner-link:hover
+{
+ background:rgb(66, 206, 244);color:rgb(20,20,43);
+}
+
+span.top-banner-link a:hover
+{
+ background:rgb(25, 206, 244);color:rgb(20,20,43);
+}
+
+
+
+
+
+.center-wrap { text-align:center; }
+
+.top-offset-5vh { position:relative;top:5vh; }
+
+div#top-offset { position:relative;top:5vh; }
+
+hl.main-page-title { }
+
+
+
+
+#top-picture {background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRXk4HqTXQiPoab7TkJfF7qpznSSy7I0n66aWYloHAAnDZvsthB");
+#no-repeat center center fixed;
+background-size: 100% 100%;
+height:150vh
+}
+
+#picture-offset { position:relative;top:5vh; }
+
+#text-opacity {background-color:rgba(255,255,255,0.2);
+padding-top:10px;
+padding-bottom:50px;
+}
+
+
+div.top{
+ padding-top:5vh;
+ display:inline-block;
+ text-align:right;width:21%;
+ border-left:ridge rgb(230,230,230) 3px; 
+ border-right:ridge rgb(230,230,230) 3px; 
+ margin:0;
+ padding-bottom:0px;
+ margin-left:0;
+ margin-right:0;
+ padding-left:0;
+ padding-right:2%;
+ font-size:14pt;
+ font-family:Aldrich;
+ font-weight:600;
+ }
+ 
+ div.top span{background:rgba(255,255,255,0.6);padding:20px;padding-top:2px;font-size:12pt;line-height: 2.5em;}
+ 
+ 
+#top-1{background:rgba(210,210,230,0.45);} 
+#top-2{background:rgba(230,210,210,0.45);position:relative;left:-1%;} 
+#top-3{background:rgba(210,230,210,0.45);position:relative;left:-2%;} 
+#top-4{background:rgba(235,210,235,0.45);position:relative;left:-3%;width:25%} 
+
+ 
+#top-offset{line-height:200%;margin:0%;padding:0%;background:"rgba(200,200,200,0.4);"}
+
+#top-container-first-row{width:100%; overflow: hidden;background:rgba(200,200,200,0.4);
+margin:0;padding-bottom:0; padding-top:4px;
+border-top:double rgb(97,122,165) 3px;
+border-bottom:ridge rgb(230,230,230) 3px; 
+}
+
+#top-background {background:rgb(97,122,165);position:absolute;top:-5vh;height:5vh;z-index:-1;width:100%}
+
+#top-container-first-row span.home-wrapper{font-size:8pt;font-weight:900;position:relative;left:-6px;background:white;}
+
+#top-container-second-row{margin-top:1px;width:100%; 
+margin:0;padding-bottom:0;
+overflow: hidden;background:rgba(200,200,200,0.4)}
+ 
+#mmui{margin-top:2vh;position:relative;text-align:center;
+font-weight:900; font-family:Nova Square;
+   letter-spacing: 2px; 
+   font-size:22pt;
+   } 
+
+
+#mmui span {border-bottom:groove rgba(100,100,50,0.5) 5px; color:rgb(66, 44, 5);
+ background:rgb(245,245,245);
+padding-bottom:5px; padding-left:10px;padding-right:10px;}
+
+button {cursor:pointer}
+   
+#overview-list {position:relative; 
+ text-align:left;left:50%;}
+
+
+#overview-list  ul {
+  list-style: inside square;
+  padding-left:0;
+  margin-left:0;
+}
+
+#overview-list  li {background:rgba(245,245,245,0.8);padding-left:10px; }
+#overview-list  li span {font-family:courier;font-size:12pt;font-weight:900; }
+
+
+#overview {position:relative;left:50%;text-align:left;
+ margin-top:1vh;font-family:times;font-size:18pt;}
+ 
+ #overview a {background:rgba(235,235,225, 0.7); border:inset rgb(255, 159, 102) 3px; 
+  font-family:Quattrocento; border-radius:16px; padding-top:4px;padding-bottom:2px;}
+
+#photo-credit span{background-color:rgba(160,0,0,0.8);color:white}
+#photo-credit a{background-color:rgba(255,255,255,0.8)}
+ 
+.raise-button{ position:relative;top:-4px;left:2px; }  
+ 
+</style>
+
+
+<meta http-equiv = "X-UA-Compatible" content = "IE=8,chrome=1">
+
+
+
+
+<link rel = "stylesheet" href = "/sr__css/default-style.css" type = "text/css">
+
+
+<!--[if IE]><link rel = "stylesheet" href = "/sr__css/default-style-ie.css" type = "text/css">
+<![endif]-->
+<!--[if !IE]><!-->
+<!--<![endif]--></link>
+<!--[if IE]></link>
+<![endif]-->
+
+</meta>
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Aldrich" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nova+Square" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Podkova" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quattrocento" />
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script" />
+ 
+
+</head>
+
+<body>
+
+<!-- <div id='top-picture'>
+
+<div id='picture-offset'>
+
+
+-->
+
+<div id='top-offset'>
+
+
+
+<div id='top-background'> 
+</div> 
+
+<div id='top-container-first-row'>
+
+<a href='/web/index.html'>
+<img id='logo' src='/pics/logo.png'/>
+</a>
+
+<span class='home-wrapper'><a href='/web/index.html'>
+(HOME)</a></span>
+
+
+<span class='top-banner-segments'>
+
+<span class='top-banner-label-group'>
+
+<span class='top-banner-label'>
+<span>
+Features:
+</span>
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/gen/hypergraph-database.html'
+onclick="window.open('/web/main-info-pages/gen/hypergraph-database.html','_self'"
+>
+Hypergraph Database
+</a> 
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/gen/binary-apis.html'
+onclick="window.open('/web/main-info-pages/gen/binary-apis.html','_self');"
+>
+Binary APIs
+</a>
+</span>
+
+</span>
+
+
+<span class='top-banner-label-group'>
+<span class='top-banner-label'>
+<span>
+Info:
+</span>
+</span>
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/resources.html'
+onclick="window.open('/web/main-info-pages/gen/resources.html','_self');"
+>
+Resources and Articles
+</a>
+</span>
+
+
+<span class='top-banner-link'>
+<a href='/web/main-info-pages/contact.html'
+onclick="window.open('/web/main-info-pages/gen/contact.html','_self');"
+>
+Contact
+</a>
+</span>
+
+</span>
+
+</span>
+
+</div>
+
+
+
+<!-- </div> <!-- picture offset -->
+
+
+</div> <!-- top offset -->
+
+
+<div id='main-page-title-div'>
+
+<div class='center-wrap top-offset-5vh'>
+
+<h1 class='main-page-title'>
+Multi-Paradigm Semantic Modeling Engine 
+(<span class='acronym'>MSME</span>)
+</h1>
+
+</div>
+
+</div>
+
+
+<div id='main-page-body-div'>
+<p>
+<span class='acronym-cap'>MSME</span> is a semantic modeling engine which reconciles the differences between 
+modeling paradigms found in fields like Natural Language Processing (<span class='acronym'>NLP</span>), 
+formal Ontology, and programming language type systems.  <span class='acronym-cap'>MSME</span>  also 
+anticipates the needs of front-end and application developers, who are responsible for 
+packaging analytic capabilities into visual and interactive components where 
+users configure, refine, and manage analytic results.  
+These two priorities &mdash; application integration and multi-paradigm 
+reconciliation &mdash; are interrelated, considering how human concepts 
+are modeled simultaneously in Natural Language semantics, in formal Ontologies, 
+and in programming language types.  As such, a single concept 
+can engender multiple formal types, which in turn generates inter-type 
+associations that facilitate the engineeering of 
+software systems &mdash; the conversion of 
+operational requirements into implemented 
+capabilities.  Software systems are a boundary between human users, 
+who are disposed to process information visually and linguistically, 
+and complex physical artifacts (often with a large space of controllable 
+states), whether these be sensors and devices on the Internet of Things; 
+robots and other remotely-controled machines; special-purpose 
+machines as may be found in a hospital, factory, battlefield, or 
+in ambient locales like the interior of a building, car, bus, 
+train, or train station; or simultations of physical structures 
+designed for scientific research or for computer-aided engineering.
+</p>
+
+<p>
+Semantic models can be crucial for 
+technologies to succeed: models are guidelines that improve 
+applications' robustness and correctness, simultaneously 
+codifying, first, developers' and stakeholders' expectations, and, second, 
+anticipating concepts which end users will bring to bear <i>as</i> users.  
+Over a period of several decades, various distinct disciplines and 
+many tools and projects have arose, 
+all of which in some manner concerned with 
+wedding conceptual semantics (in the sense of users' ideas 
+<i>a priori</i> to and infuencing their engagement with technology) 
+with formal semantics (in the sense of 
+logically or computationally tractable representations of 
+types, sets, data spaces, and multi-valued relations).  Unfortunately, 
+these disciplines do not precisely overlap, 
+making it hard to integrate disparate semantic models into coherent, 
+multi-paradigm information systems.  Different modeling structures are 
+best suited for different domains, and these differences can inhibit 
+interoperability.  Moreover, many important topic areas have 
+diverse parts which, from modelers' perspectives, point to diverse 
+semantic paradigms.  Precision medicine, for example, depends on 
+integrating genomic, personal history, and medical outcome data, 
+each of which has its own representational and query-resolution practices.  
+The potential of precision medicine lies in part with emerging 
+technologies, like <span class='xquote'>&ldquo;Semantic Data Lakes&rdquo;</span>, that can 
+at least in part reconcile these differences.
+</p>
+
+<p>
+The primary goal of <span class='acronym'>MSME</span> is to provide run-time data representations 
+that are sensitive to cross-disiplinary needs: that enable developers 
+to program functions and classes which can be reused across multiple 
+semantic paradigms, or help reconcile and bridge multiple domains.  
+To support these goals, <span class='acronym'>MSME</span> provides code grouped into three 
+underlying components: 
+
+</p>
+<ul>
+<li>
+A run-time, <span class='acronym'>Qt</span>-based Semantic Graph engine.  This tools allows data networks 
+to be implemented based on the principles of the Semantic Web and 
+Resource Description Format (<span class='acronym'>RDF</span>), though without some <span class='acronym'>RDF</span> restrictions.  
+For example, there is no requirement that values within a graph (within 
+<span class='xquote'>&ldquo;triples&rdquo;</span>, or pairs of graph-nodes linked by an annotated graph-edge) 
+have a unique identifier that can be located from the World Wide Web.  
+The <span class='acronym'>MSME</span> graph run-time uses operator overloading so that graphs 
+can be conveniently modified directly from <span class='acronym'>C++</span> code.  Nodes are 
+also associated with values drawn from a predetermined list of 
+recognized types; therefore, an <span class='acronym'>MSME</span> graph model can be designed 
+specifically for each distinct project, defining a list of relevant 
+data types and of relevant kinds of connections or <span class='xquote'>&ldquo;edges&rdquo;</span> 
+that can be asserted between values with those types.  <span class='acronym-cap'>MSME</span> 
+functions support creating nodes from values, obtaining the 
+value wrapped by a node, adding nodes to graphs, asserting links 
+between nodes, and selecting nodes based on graph contexts.  
+These are similar to the graph-manipulation capabilities 
+provided by the <span class='acronym'>SPARQL</span> query language, but expressed 
+directly in application code rather than via separate query strings.  
+When it is necessary to interoperate with conventional <span class='acronym'>SPARQL</span> 
+and <span class='acronym'>RDF</span>-based data stores, the <span class='acronym'>MSME</span> graph engine can be 
+compiled with <span class='acronym'>RDF</span> support (particularly <span class='tlink'>Redland</span>, the 
+leading <span class='acronym'>C++</span> Semantic Web library), and <span class='acronym'>MSME</span> graphs 
+initialized based on the results of <span class='acronym'>SPARQL</span> queries 
+(so that this engine can be used as for a <span class='acronym'>SPARQL</span> 
+processing model).
+</li>
+
+
+<li>
+A <span class='tlink'>Dependency-Grammar</span>-based parser library.  The <span class='acronym'>MSME</span> parser 
+is an innovative, powerful, and very flexible approach to parser/compiler 
+design, using <span class='acronym'>MSME</span> graphs as a target representation.  <span class='acronym-cap'>MSME</span> Parser 
+allows for rapid development of complex, context-sensitive formal 
+language grammars using Regular Expressions, <span class='acronym'>C++</span> lambda 
+functions, as well as flags and context assertions that can 
+turn grammar rules on or off.  <span class='acronym-cap'>MSME</span> Parser adopts the 
+theory that formal grammars describe element-to-element 
+relations that can be asserted within an input stream, and 
+grammar rules define contexts which in turn define when 
+the relations do in fact apply.  For example, grammars parse 
+computer code according to relations from the semantic 
+domain of Process Algebra: different kinds of token-to-token 
+relations often correspond to different kinds of inter-process 
+relations (such as the result of one computation being passed as a 
+parameter to a subsequent computation).  <span class='acronym-cap'>MSME</span> interprets 
+grammatical relations as more fundamental than hierarchical 
+or phrase structures: in this sense <span class='acronym'>MSME</span> is based on 
+<span class='tlink'>Dependency Grammar</span> as found in Natural Language Processing 
+and Cognitive Linguistics, and is significantly different 
+than most (e.g., <span class='acronym'>BNF</span>) grammars used in Computer Science.  
+<span class='acronym-cap'>MSME</span> adapts Dependency theories to the problem of parsing formal 
+languages.  The result is a tool that can enable 
+application developers to design Domain Specific Languages, 
+Query Languages, and even Scripting Languages which more 
+subtle and intuitive than languages designed with competing tools.
+</li>
+
+
+<li>
+A collection of template classes to support <span class='xquote'>&ldquo;Application Semantic 
+Kernel&rdquo;</span> (<span class='acronym'>ASK</span>) models (see the page on <span class='acronym'>ASK</span> 
+<a href='/web/main-info-pages/ask.html'>here</a>).  <span class='acronym'>ASK</span> models 
+are kernel representations of the semantics of a concept 
+incorporated into computational domains, and implemented 
+directly in code that can be compiled and used in multiple 
+applications.  These models summarize both conceptual details 
+and computational protocols, and demonstrate as well 
+as implement the kernel protocols that are common to 
+how a data type will be used in multiple applications.  
+This kernel can then be extended by different applications 
+or within different points in a data-sharing network.  
+Each of these components can extend the kernel according 
+to their specific role: providing <span class='acronym'>GUI</span>- or web-based 
+views for users; persistence to a database; data sharing, 
+data aggregation; or data analytics.  In general, <span class='acronym'>ASK</span> 
+can be used in consort with <span class='acronym'>MSME</span> graphs: data types 
+represented by <span class='acronym'>ASK</span> models will then be among the 
+types recognized by a graph, and relations between 
+values of these types represented by graph edges.  
+<span class='acronym-cap'>ASK</span> models will typically include the most 
+pertinent, ubiquitous, or internal structures that 
+are semantically fundamental to each type, whereas 
+<span class='acronym'>MSME</span> graphs can assert relations that are 
+more incidental or orthogonal to types' semantics, 
+including relations between instances of different 
+types.  <span class='acronym-cap'>ASK</span> models emphasize detail and verifiability, 
+ensuring that data integrity and protocols are upheld, 
+whereas <span class='acronym'>MSME</span> graphs can be more free-form and 
+unregulated.  For many projects it may be useful 
+to combine these two modeling styles.
+</li>
+
+</ul>
+
+<p>
+<span class='acronym-cap'>MSME</span> and <span class='acronym'>ASK</span> jointly provide sophisticated data modeling 
+and data sharing capabilities for <span class='acronym'>NDP</span> applications.  
+These components will often need to be combined with 
+<span class='acronym'>GUI</span> front-ends for those application layers which 
+interact directly with users; with cloud components 
+to manage data sharing by providing network points that 
+understand these semantic models and can adapt them for 
+various network protocols; or with federations of components 
+implementing a Model-View-Controller system to integrate 
+back-end and front-end, <span class='acronym'>GUI</span> and cloud requirements.  
+An overview of <span class='acronym'>MVC</span> archicture in the <span class='acronym'>NDP</span> context 
+can be read <a href='/web/main-info-pages/learn-more.html'>here</a>.
+</p>
+
+
+</div> <!-- main page div -->
+</body>
+</html>
+
+
