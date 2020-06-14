@@ -11,6 +11,8 @@
 *.log
 *.o
 *.stash
+*Makefile
+
 
 # note: ordinarily from any folder in 
 # cpp/qmake-console/projects the repo 
