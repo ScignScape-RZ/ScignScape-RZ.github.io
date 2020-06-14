@@ -1,0 +1,352 @@
+
+<html>
+
+<head>
+
+
+<!-- situation where the stylsheets are being loaded properly ...
+-->
+
+<style>
+
+div.main-image-wrapper {text-align:center}
+
+img.large-image {width:500px;} 
+
+img.main-image {width:300px;} 
+
+img.li-image {width:200px;float:left;padding-right:25px;padding-top:10px;} 
+
+
+.tterm {font-family:Aldrich;color:rgb(90, 10, 20);font-size:90%}
+.acronym { font-size:88% }
+.acronym-cap { font-size:94% }
+
+#main-page-body-div { border: ridge rgb(254, 157, 4) 20px; padding:40px; padding-left:48px; 
+                      border-top: ridge rgb(254, 157, 4) 2px; 
+
+  margin-top:4vh; margin-left:12vh; margin-right:15vh;  margin-bottom:30vh; } 
+
+#main-page-body-div p { font-size:14pt; font-family:Podkova}
+
+#main-page-body-div p:not(.continue) {text-indent:3em;} 
+
+#main-page-body-div a { font-size:13pt; font-family:Podkova; letter-spacing:0px;}
+
+#main-page-body-div li { font-size:12pt; font-family: Quattrocento; 
+  margin-top:35px; font-weight:700}
+
+  
+a b {position:relative;left:4px;padding-left:4px;}
+
+#logo{height:50px;margin-left:10px;margin-top:-1px;margin-bottom:-15px;}
+
+div#top-container-first-row
+{
+ background:rgb(6,36,30); 
+}
+
+span.top-banner-label-group
+{
+ border-top:ridge rgb(179, 0, 0) 3px; margin-left:2px; margin-right:45px;
+}
+
+
+span.top-banner-label
+{
+ margin-left:5px;  padding-left:2px;padding-right:2px;
+ color:rgb(25,22,25);font-family:Quattrocento;font-weight:900;font-variant:small-caps;
+ position:relative;top:-2px;  border-bottom:solid rgb(255, 149, 102) 2px;  
+ border-top:solid rgb(255, 129, 102) 2px;  
+}
+
+span.top-banner-label span
+{
+ padding-left:7px;padding-right:4px;
+ background:rgb(255, 159, 102);
+ border-top:solid rgb(25, 139, 102) 1px; border-bottom:solid rgb(25, 139, 102) 1px;
+}
+
+span.top-banner-segments
+{
+ margin-left:10px;
+}
+
+
+span.top-banner-link
+{
+ background:rgb(40,40,43);color:white;
+ font-family:Podkova;font-weight:800;position:relative;top:-3px;
+ border-bottom: solid rgb(90,90,90) 1px;
+}
+
+span.top-banner-link a
+{
+ background:rgb(40,40,43);color:white;
+ margin-left:5px;margin-right:20px;padding-left:10px;padding-right:10px;
+}
+
+
+span.top-banner-link:hover
+{
+ background:rgb(66, 206, 244);color:rgb(20,20,43);
+}
+
+span.top-banner-link a:hover
+{
+ background:rgb(25, 206, 244);color:rgb(20,20,43);
+}
+
+
+
+
+
+.center-wrap { text-align:center; }
+
+.top-offset-5vh { position:relative;top:5vh; }
+
+div#top-offset { position:relative;top:5vh; }
+
+hl.main-page-title { }
+
+
+
+
+#top-picture {background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRXk4HqTXQiPoab7TkJfF7qpznSSy7I0n66aWYloHAAnDZvsthB");
+#no-repeat center center fixed;
+background-size: 100% 100%;
+height:150vh
+}
+
+#picture-offset { position:relative;top:5vh; }
+
+#text-opacity {background-color:rgba(255,255,255,0.2);
+padding-top:10px;
+padding-bottom:50px;
+}
+
+
+div.top{
+ padding-top:5vh;
+ display:inline-block;
+ text-align:right;width:21%;
+ border-left:ridge rgb(230,230,230) 3px; 
+ border-right:ridge rgb(230,230,230) 3px; 
+ margin:0;
+ padding-bottom:0px;
+ margin-left:0;
+ margin-right:0;
+ padding-left:0;
+ padding-right:2%;
+ font-size:14pt;
+ font-family:Aldrich;
+ font-weight:600;
+ }
+ 
+ div.top span{background:rgba(255,255,255,0.6);padding:20px;padding-top:2px;font-size:12pt;line-height: 2.5em;}
+ 
+ 
+#top-1{background:rgba(210,210,230,0.45);} 
+#top-2{background:rgba(230,210,210,0.45);position:relative;left:-1%;} 
+#top-3{background:rgba(210,230,210,0.45);position:relative;left:-2%;} 
+#top-4{background:rgba(235,210,235,0.45);position:relative;left:-3%;width:25%} 
+
+ 
+#top-offset{line-height:200%;margin:0%;padding:0%;background:"rgba(200,200,200,0.4);"}
+
+#top-container-first-row{width:100%; overflow: hidden;background:rgba(200,200,200,0.4);
+margin:0;padding-bottom:0; padding-top:4px;
+border-top:double rgb(97,122,165) 3px;
+border-bottom:ridge rgb(230,230,230) 3px; 
+}
+
+#top-background {background:rgb(97,122,165);position:absolute;top:-5vh;height:5vh;z-index:-1;width:100%}
+
+#top-container-first-row span.home-wrapper{font-size:8pt;font-weight:900;position:relative;left:-6px;background:white;}
+
+#top-container-second-row{margin-top:1px;width:100%; 
+margin:0;padding-bottom:0;
+overflow: hidden;background:rgba(200,200,200,0.4)}
+ 
+#mmui{margin-top:2vh;position:relative;text-align:center;
+font-weight:900; font-family:Nova Square;
+   letter-spacing: 2px; 
+   font-size:22pt;
+   } 
+
+
+#mmui span {border-bottom:groove rgba(100,100,50,0.5) 5px; color:rgb(66, 44, 5);
+ background:rgb(245,245,245);
+padding-bottom:5px; padding-left:10px;padding-right:10px;}
+
+button {cursor:pointer}
+   
+#overview-list {position:relative; 
+ text-align:left;left:50%;}
+
+
+#overview-list  ul {
+  list-style: inside square;
+  padding-left:0;
+  margin-left:0;
+}
+
+#overview-list  li {background:rgba(245,245,245,0.8);padding-left:10px; }
+#overview-list  li span {font-family:courier;font-size:12pt;font-weight:900; }
+
+
+#overview {position:relative;left:50%;text-align:left;
+ margin-top:1vh;font-family:times;font-size:18pt;}
+ 
+ #overview a {background:rgba(235,235,225, 0.7); border:inset rgb(255, 159, 102) 3px; 
+  font-family:Quattrocento; border-radius:16px; padding-top:4px;padding-bottom:2px;}
+
+#photo-credit span{background-color:rgba(160,0,0,0.8);color:white}
+#photo-credit a{background-color:rgba(255,255,255,0.8)}
+ 
+.raise-button{ position:relative;top:-4px;left:2px; }  
+ 
+</style>
+
+
+<meta http-equiv = "X-UA-Compatible" content = "IE=8,chrome=1">
+
+
+
+
+<link rel = "stylesheet" href = "/sr__css/default-style.css" type = "text/css">
+
+
+<!--[if IE]><link rel = "stylesheet" href = "/sr__css/default-style-ie.css" type = "text/css">
+<![endif]-->
+<!--[if !IE]><!-->
+<!--<![endif]--></link>
+<!--[if IE]></link>
+<![endif]-->
+
+</meta>
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Aldrich" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nova+Square" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Podkova" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quattrocento" />
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script" />
+ 
+
+</head>
+
+<body>
+
+<!-- <div id='top-picture'>
+
+<div id='picture-offset'>
+
+
+-->
+
+<div id='top-offset'>
+
+
+
+<div id='top-background'> 
+</div> 
+
+<div id='top-container-first-row'>
+
+<a href='../../../index.html'
+>
+<img id='logo' src='/pics/logo.png'/>
+</a>
+
+<span class='home-wrapper'><a href='../../../index.html'
+>
+(HOME)</a></span>
+
+
+<span class='top-banner-segments'>
+
+<span class='top-banner-label-group'>
+
+<span class='top-banner-label'>
+<span>
+Features:
+</span>
+</span>
+
+<span class='top-banner-link'>
+<a href='./hypergraph-database.html'
+>
+Hypergraph Database
+</a> 
+</span>
+
+<span class='top-banner-link'>
+<a href='./binary-apis.html'
+>
+Binary APIs
+</a>
+</span>
+
+</span>
+
+
+<span class='top-banner-label-group'>
+<span class='top-banner-label'>
+<span>
+Info:
+</span>
+</span>
+
+<span class='top-banner-link'>
+<a href='./resources.html'
+>
+Resources and Articles
+</a>
+</span>
+
+
+<span class='top-banner-link'>
+<a href='./contact.html'
+>
+Contact
+</a>
+</span>
+
+</span>
+
+</span>
+
+</div>
+
+
+
+<!-- </div> <!-- picture offset -->
+
+
+</div> <!-- top offset -->
+
+
+<div id='main-page-title-div'>
+
+<div class='center-wrap top-offset-5vh'>
+
+<h1 class='main-page-title'>
+ConceptsDB
+</h1>
+
+</div>
+
+</div>
+
+
+<div id='main-page-body-div'>
+
+<p>
+</p>
+
+</div> <!-- main page div -->
+</body>
+</html>
+
+
