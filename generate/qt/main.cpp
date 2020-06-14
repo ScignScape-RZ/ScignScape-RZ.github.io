@@ -159,10 +159,6 @@ void complete_partials(QString& result,
      }
     }
 
-    qDebug() << "PP: " << partial_path;
-    qDebug() << "C: " << code;
-
-
     if(!partial_path.isEmpty())
     {
      QFile pinfile(partial_path);
@@ -226,8 +222,6 @@ bool handle(QString requrl, QString method,
 void process_file(QString path, QString name, 
   QString folder, QString partials_folder)
 {
- qDebug() << "P: " << path;
- qDebug() << "PF: " << partials_folder;
  QString contents;// = read_file(path);
 
  complete_partials(contents, path, partials_folder);
