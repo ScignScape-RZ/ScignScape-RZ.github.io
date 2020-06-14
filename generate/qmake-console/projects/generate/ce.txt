@@ -1,0 +1,45 @@
+../../../qt/main.cpp:28:34: warning: unused parameter ‘path’ [-Wunused-parameter]
+ QString resolve_web_path(QString path)
+                                  ^
+../../../qt/main.cpp: In function ‘QString pics_base_path()’:
+../../../qt/main.cpp:37:27: warning: no return statement in function returning non-void [-Wreturn-type]
+ QString pics_base_path() {}
+                           ^
+../../../qt/main.cpp: In function ‘QString css_base_path()’:
+../../../qt/main.cpp:38:26: warning: no return statement in function returning non-void [-Wreturn-type]
+ QString css_base_path() {}
+                          ^
+../../../qt/main.cpp: In function ‘QString ngml_base_path()’:
+../../../qt/main.cpp:39:27: warning: no return statement in function returning non-void [-Wreturn-type]
+ QString ngml_base_path() {}
+                           ^
+../../../qt/main.cpp: In function ‘QString pdf_base_path()’:
+../../../qt/main.cpp:40:26: warning: no return statement in function returning non-void [-Wreturn-type]
+ QString pdf_base_path() {}
+                          ^
+../../../qt/main.cpp: At global scope:
+../../../qt/main.cpp:208:1: error: expected identifier before ‘{’ token
+ {
+ ^
+../../../qt/main.cpp:208:1: error: expected ‘)’ before ‘{’ token
+../../../qt/main.cpp: In function ‘bool handle(QString, QString, QString&, int)’:
+../../../qt/main.cpp:210:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../../../qt/main.cpp: At global scope:
+../../../qt/main.cpp:206:21: warning: unused parameter ‘requrl’ [-Wunused-parameter]
+ bool handle(QString requrl, QString method,
+                     ^
+../../../qt/main.cpp:206:37: warning: unused parameter ‘method’ [-Wunused-parameter]
+ bool handle(QString requrl, QString method,
+                                     ^
+../../../qt/main.cpp:207:12: warning: unused parameter ‘response_string’ [-Wunused-parameter]
+   QString& response_string,
+            ^
+../../../qt/main.cpp:212:14: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main(int argc, char* argv[])
+              ^
+../../../qt/main.cpp:212:31: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main(int argc, char* argv[])
+                               ^
+make: *** [main.o] Error 1

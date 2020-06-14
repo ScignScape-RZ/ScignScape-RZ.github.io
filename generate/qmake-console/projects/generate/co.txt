@@ -1,0 +1,2 @@
+g++ -c -pipe -O2 -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -I../../../qt -I. -I/home/nlevisrael/Qt5123/qt/5.12.3/gcc_64/include -I/home/nlevisrael/Qt5123/qt/5.12.3/gcc_64/include/QtGui -I/home/nlevisrael/Qt5123/qt/5.12.3/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I/home/nlevisrael/Qt5123/qt/5.12.3/gcc_64/mkspecs/linux-g++ -o main.o ../../../qt/main.cpp
+Makefile:750: recipe for target 'main.o' failed
