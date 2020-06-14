@@ -4,9 +4,10 @@
 #     (See accompanying file LICENSE_1_0.txt or copy at
 #           http://www.boost.org/LICENSE_1_0.txt)
 
+QT -= GUI
 
 SOURCES += \
   main.cpp \
 
-DESTDIR = ../qmake-console/targets/qmake-console-bin
+DESTDIR = ../../targets/qmake-console-bin
 

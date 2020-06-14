@@ -12,6 +12,8 @@
 #include <QDir>
 #include <QTextStream>
 
+#include <QDebug>
+
 
 
 QString read_file(QString path)
@@ -208,9 +210,16 @@ bool handle(QString requrl, QString method,
 
 int main(int argc, char* argv[])
 {
- QString folder;// = cmdl.size() > 2? cmdl[2]: DEFAULT_SDI_FOLDER;
- QString file;// = cmdl.size() > 3? cmdl[3]: DEFAULT_SDI_FOLDER
+ QString folder = "../../web/main-info-pages";
 
+ QDir qdir(folder);
+
+ qDebug() << qdir.absolutePath();
+ 
+// = cmdl.size() > 2? cmdl[2]: DEFAULT_SDI_FOLDER;
+ QString file;// = cmdl.size() > 3? cmdl[3]: DEFAULT_SDI_FOLDER
+ 
+ return 0;
 }
 
 
