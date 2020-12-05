@@ -332,7 +332,7 @@ Contact
 <div class='center-wrap top-offset-5vh'>
 
 <h1 class='main-page-title'>
-ConceptsDB
+Native Cloud-Native
 </h1>
 
 </div>
@@ -344,6 +344,339 @@ ConceptsDB
 
 <p>
 </p>
+
+<p>
+The typical <span class='acronym'>NDP</span> application will include a Main Window, with a 
+menubar and a broad division of the overall application 
+functionality into several task-areas; and then more specific 
+tasks and data structures are provided by dialog boxes.  
+Often the Main Window can be adapted from other applications; 
+for example, the Mobile Medical User Interface (<span class='acronym'>MMUI</span>) is 
+adapted from the medInria medical visualization platform, 
+adding data-management dialogs to the underlying medInria application 
+windows.  <span class='acronym-cap'>NDP</span> focusing on providing a variety of dialog 
+boxes customized for specific kinds of services and information 
+&mdash; grouping interrelated data and operations into meaningful 
+units, outine in visual displays that can potentially be reused in multiple 
+applications.  Dialogs are visually independent, and can be 
+launched from other dialogs or larger windows, often by 
+selecting options from a context menu, in response to 
+performing a right-click or Control-Plus-Click mouse action, 
+or sometimes in reponse to blocking out a text selection on 
+a web page or <span class='acronym'>PDF</span> file.  Linking dialogs to specific 
+places in other windows (specific text phrases, for example, 
+or specific kinds of graphics) allows the dialog to provide 
+extra context-sensitive information or options to refine 
+some larger task.  Moreover, dialogs can be repositioned interactivity; 
+viewed each other, or alongside other text or graphics, allow 
+side-by-side comparisons of data and/or visuals.  <span class='acronym'>NDP</span> provides a 
+collection of provisional dialog classes that programmers 
+can extend for adoption into various application contexts.  
+This page will overview certain kinds of dialog boxes 
+and some benefits of using many dialogs in an application.
+</p> 
+
+<p>
+<span class='acronym-cap'>NDP</span> applications are cross-platform, native-compiled, modular projects 
+that can be tailored to each user's needs: 
+<span class='xquote'>&ldquo;<a href='/web/main-info-pages/learn-more.html'>Shape the Platform to the Data</a>&rdquo;</span>.  
+In most domains, the majority of available software fails to meet 
+these requirements on one or more levels: they may be cross-platform but 
+browser-based, and therefore offer poorer User Experience and interactivity; 
+or they may provide a native front-end tied to a specific 
+platform (such as Windows, or the Java Virtual Machine); or they may be 
+native and cross-platform but difficult or impossible to extend and adapt 
+for each specific deployment.  <span class='acronym-cap'>NDP</span> assists developers in creating 
+solutions which are cross-platform, native-driven, and adaptable, embracing 
+coding paradigms and, wherever possible, linking in only those libraries 
+which meet similar requirements.  <span class='acronym-cap'>NDP</span> tries to minimize dependencies on 
+components that complicate the process of building and installing deployments, 
+and to verify that linked libraries can be built and used with the same tools 
+as <span class='acronym'>NDP</span> components themselves.  In particular, <span class='acronym'>NDP</span> prefers to avoid 
+complex build processes (where <span class='xquote'>&ldquo;build&rdquo;</span> in this context refers to compiling 
+and linking the application, converting its source code into an executable 
+binary image).  By default, an <span class='acronym'>NDP</span> application should build directly 
+inside an Integrated Development Environment (<span class='acronym'>IDE</span>) such as 
+<span class='tlink'>QtCreator</span>, and leverages the <span class='acronym'>IDE</span> to provide programmers unusually 
+thorough access to the internals of application development.  
+For example, <span class='acronym'>NDP</span> makes low-level processes related to 
+networking (such as processing raw <span class='acronym'>HTTP</span> requests), scripting 
+(such as via the <span class='tlink'>Clasp</span> language), and data persistence 
+(particularly via <span class='acronym'>NoSQL</span> database engines like <span class='tlink'>WhiteDB</span>) 
+transparent for developers: code can be studied in a debugger, 
+and data structures can be wrapped in visual presentation layers.  
+This low-level access allows solutions to be customized for 
+each project while providing default database and networking 
+libraries that are reasonable for development environments 
+and many production environments.  Individual dialog boxes 
+can then utilize this foundation to provide their 
+own networking, scripting, and data persistence capabilities.
+</p> 
+
+
+<h2>Examples of Dialog Windows</h2>
+
+<p>
+Dialog boxes are modeled around the specific groups of data fields, and 
+specific varieties of information, that are most directly relevant 
+to each project.  As a result, each dialog will have its own layout 
+and functionality, so it is difficult to discuss dialogs in general 
+in great detail.  Nevertheless, there are certain familiar kinds of 
+dialog boxes which can be used at specific points in an application 
+(often in conjunction with other dialogs), or can serve as templates 
+for other dialogs.  For example:
+</p>
+
+<ul>
+
+<li>
+<img src='/pics/flower.jpeg' class='li-image' alt='loading...'>
+Image viewers: Sometimes it is helpful to show a single graphic in a single dialog 
+box, with options for adjusting the zoom level.  For example, a Shopping Cart 
+implemented as a native dialog could show miniature versions of product picture, 
+and right-clicking on the smaller pictures could open a separate dialog devoted 
+to just that image.  In this way shoppers could view larger pictures of two or more 
+items they are considering side-by-side.  Moreover, functionality such as 
+removing an item from the cart or reviewing product information could be 
+launched from the secondary item-specific dialogs as well as the Shopping Cart dialog.
+</li>
+
+<li>
+<img src='/pics/map.jpeg' class='li-image' alt='loading...'>
+Web and <span class='acronym'>PDF</span> viewers: A dialog box can show a single web page or <span class='acronym'>PDF</span> file, 
+adding on functionality such as blocking off text (not limited to the clunky 
+<span class='acronym'>HTML</span> range interface) and using the resulting selection as a context menu 
+launch point.  <span class='acronym'>URL</span> links inside the <span class='acronym'>HTML</span> or <span class='acronym'>PDF</span> resources can 
+also be pre-processed before being followed.  Moreover, sometimes embedded 
+web or <span class='acronym'>PDF</span> viewers can take greater advantage of the <span class='acronym'>HTML</span> document tree, 
+or the <span class='acronym'>PDF</span> annotations, which can provide formal semantic information beyond 
+the basic textual content.  Native front-ends embedding web pages, in particular, 
+can take advantage of semantic content in <span class='acronym'>HTML</span> annotations (including but 
+not limited to <span class='acronym'>RDFa</span>, or Resource Description Framework in Attributes) more 
+rigorously than web browsers which treat <span class='acronym'>HTML</span> pages as mostly visual content 
+and tend to ignore their semantic properties.  Such embedding also allows the 
+application to provide a more sophisticated range of graphic-annotation features, 
+both because of a richer visual interface for users to select and place 
+annotations and because of richer capabilities to model the intended semantic 
+interpretation of an annotation.
+</li>
+
+<li>
+<img src='/pics/vest-slide4.png' class='li-image' alt='loading...'>
+Color Selectors: There are several strategies on web pages for allowing users to select a color.  
+While some of these have direct native-driven replacements &mdash; for example, 
+there is an <span class='acronym'>RGB</span> color-picker dialog as part of the standard <span class='acronym'>Qt</span> libraries &mdash; 
+native applications can also take advantage of more nuanced and user-friendly 
+color layouts and formats, such as an <span class='acronym'>HSV</span> (hue-saturation-value) wheel.  
+These dialogs are preferable because they do a better job of showing users 
+contrasts between related colors.  In general, color-selection dialogs are 
+most effective if the various sliders whose position determines the selected 
+color allow for smooth transitions between colors which are similar in appearance; 
+on this basis <span class='acronym'>HSV</span> is considered to be a superior color model to alternatives like <span class='acronym'>RGB</span>. 
+</li>
+
+<li>
+<img src='/pics/conv.png' class='li-image' alt='loading...'>
+<span class='xquote'>&ldquo;Native Driven Forms&rdquo;</span>: Native-compiled dialog windows can be a template 
+for data entry similar to <span class='acronym'>HTML</span> forms, providing users labeled areas for 
+entering in needed pieces of informaton.  A Native Form ties together the 
+fields that need to be unified for a given purpose.  Compared to Web forms, 
+native forms can be more user-friendly: they can use a wider range 
+of layout styes, take better advantage of mouse events and keyboard 
+shortcuts, use virtual keyboards (to support multiple human langauges and 
+alphabets), and use secondary dialogs such as calendars and text entry boxes.  
+Native forms can also be saved locally, in case users want to suspend and then 
+resume completing the form.  
+</li>
+
+<li>
+<img src='/pics/te.png' class='li-image' alt='loading...'>
+<span class='xquote'>&ldquo;Text Entry Dialog&rdquo;</span>: For longer text extry, it is sometimes desirable to 
+build the text entry process into a distinct dialog, which can be open and 
+closed on its own.  Typically the text entry will be tied to a larger dialog, 
+with the first few lines of the text shown in the prior dialog and a button 
+to raise the separate text-entry dialog; on the latter dialog are 
+buttons to either commit the longer text or discard changes.  Text entries 
+can also be linked to virtual keyboards for foreign languages.
+</li>
+
+<li>
+<img src='/pics/convert.png' class='li-image' alt='loading...'>
+Digitized Hard-Copy Forms: <span class='acronym-cap'>NDP</span> includes code which can help 
+with digitizing hard-copy forms and employing <span class='acronym'>Optical Character Recognition</span> 
+(<span class='acronym'>OCR</span>), so that existing resources (including those not yet digitized) 
+can be integrated into new computer-driven systems.  Paper-based forms are 
+useful to developers because they indicate the data models which have been 
+used prior to a decision to switch to electronic records, and it is 
+often correct to preserve the basic structure of this data and to 
+ensure data integrity both before and after the transition.  
+</li>
+
+
+<li>
+<img src='/pics/calendar.jpeg' class='li-image' alt='loading...' style='width:60px'>
+Calendars: Native Calendar dialogs can add styling and information details 
+more sophisticated than <span class='acronym'>HTML</span> calendars.  For example, cells representing 
+individual days can be annotated with reminders that are launch points for 
+context-specific menus.  
+</li>
+
+
+<li>
+<img src='/pics/bl-chart.jpeg' class='li-image' alt='loading...'>
+Charts and Graphics: When information is best viewed in graphical formats, it can be 
+much better to show the graphics in a floating window that users can position 
+above or alongside the textual or itemized descriptions which explain the 
+graphical data.  Usually charts on web pages are displayed as images flush to 
+the side of corresponding text, but without users having the option to reposition or 
+<span class='xquote'>&ldquo;float&rdquo;</span> the image.  
+</li>
+
+<li>
+<img src='/pics/news-api.jpeg' class='li-image' alt='loading...'>
+<span class='acronym-cap'>API</span> access: A good use-case for custom dialogs is to wrap access to a particular 
+external <span class='acronym'>API</span>, where one or two text fields visible to the user configure a 
+request to the <span class='acronym'>API</span>. Sometimes these fields can be automatically populated 
+from the context where the dialog is launched; for example, the dialog might be 
+triggered by selecting a phrase from a web or <span class='acronym'>PDF</span> file, or another dialog, 
+with a context menu providing a list of <span class='acronym'>APIs</span> which may be consulted for 
+more information pertaining to that phrase as a keyword.  The <span class='acronym'>API</span> dialog 
+should then take responsibility for formulating a query and interpreting 
+the response, perhaps as part of a reusable code package combining the front-end 
+code with a processing layer.  The <span class='acronym'>API</span> responses or <span class='xquote'>&ldquo;hits&rdquo;</span> can then be 
+shown to users, often with their choosing a specific response to look at in more 
+detail leading to a different dialog being opened which &mdash; showing the 
+response as an aggregate data structure rendered through a native layout, or 
+as a web page or single file rendered through an embedded web viewer or viewer 
+for the appropriate file format.  
+</li>
+
+<li>
+<img src='/pics/arabic.jpeg' class='li-image' alt='loading...'>
+Foreign-Language Keyboards: While keyboards with alphabets that differ from users'  
+physical keyboard can be integrated with other dialogs (such as those devoted to 
+text entry), it can also be useful to have a separate dialog supporting orthography 
+for a particular writing system, which can be activated whenever users need to enter 
+text.  Such <span class='xquote'>&ldquo;virtual keyboards&rdquo;</span> are often made available by Operating Systems 
+directly, and keyboards for some language can be directly activated by the 
+<span class='acronym'>Qt</span> system, but these built-in defaults are uncomfortable to use.  
+For example, the <span class='acronym'>Qt</span> implementation of virtual keyboards tends to yield 
+keyboards that do not <span class='xquote'>&ldquo;float&rdquo;</span> autonomous from other windows, and that are fixed to a 
+single screen position (they are not true dialog boxes).  Encapsulating virtual 
+keyboards in dialog windows makes them easier to use alongside the rest of the 
+application, and also allows each keyboard to be more rigorously customized for the 
+specific human language it is intended to support.  In particular, most alphabets are 
+more complex than just lists of letters: in many cases a letter's shape is influenced 
+by a following vowel, or (in a pictographic system) users need to select a desired 
+glyph via a two- or multi-stage process.  Designing custom dialogs for each language 
+ensures that layout and multi-letter interaction rules are optimized for each language.  
+
+</li>
+
+</ul>
+
+<p class='continue'>
+While many other dialog roles and layouts are possible, this list is a summary 
+of the kinds of components that can be assembled together to form a larger 
+application with a wide range of capabilities.
+</p> 
+
+<h2>Benefits of Dialog Windows</h2>
+
+<p>
+Dialog windows are almost exclusive to Native-Driven applications, being discouraged 
+in web platforms based on the principle that web pages should not open new browser 
+windows (a restriction which is reasonable in that context because a web page 
+relies on a larger browser environment which serves many web sites).  A native 
+application, however, has much greater control over its overall application 
+environment, because typically the application is a single desktop software 
+unit developed by a single organization for a specific purpose.  Native applications 
+therefore can and should divide their functionality into distinct windows, 
+which can be minimized and restored as well as viewed side-by-side.  The 
+benefits of this design include: 
+</p> 
+
+<ul>
+<li>
+Gathering pertinent, related information into a dialog window makes it more accessible 
+than the same information scattered in different parts of an application; or 
+than the information unified, but in such a fashion that it resides in a window or 
+page that can only be viewed on its own, forcing users to switch back and forth 
+between looking at that content and then looking at other, potentially related content.
+</li>
+
+<li>
+Multiple dialog windows can be open at the same time, allowing them to be compared with 
+one another.  Also, dialogs can <span class='xquote'>&ldquo;float&rdquo;</span> above main application windows, providing more 
+detailed information corresponding to something presented more succinctly in the main window.
+</li>
+
+<li>
+Dialogs can be activated in response to user actions, and sensitive to the context where 
+the actions are performed.  For example, a right-click mouse action raises a context 
+menu whose list of options is determined by the specific context &mdash; whether the mouse 
+is positioned over text, graphics, a descriptive label, a data field, an item in a list, 
+and so forth.  This context then determines which sorts of dialog boxes are possible 
+at that location, each dialog providing a specific kind of additional information, usually 
+information which supplements and extends the data currently visible.  The application data 
+models can therefore manage different layers of data specificity, providing a 
+convenient framework for both developers and end-users to navigate between 
+layers and between broader but less-detailed <span class='xquote'>&ldquo;birds-eye&rdquo;</span> views and views which are narrower 
+but more thorough and fine-grained.
+</li>
+
+<li>
+Dialogs can seamlessly integrate text and graphics: combining descriptions and charts, maps, diagrams, 
+and other images generated from visualization libraries.  Native programming can allow 
+visuals to be adopted, and rendered interactive, more fluently than their web-based counterparts.  
+<span class='acronym-cap'>Qt</span>, for examples, provides an extensive suite of charts, <span class='acronym'>SVG</span> (Scalar Graphics Vectors), 
+<span class='acronym'>2D</span> graphics scenes and <span class='acronym'>3D</span> OpenGL-based graphics viewers.  Using a native-compiled language 
+like <span class='acronym'>C++</span> makes available a vast array of analytics and scientific-computing libraries for 
+preparing visuals, including some of the most sophisticated software used for the most cutting-edge 
+scientific research, such as the <span class='acronym'>ROOT</span> libraries developed at <span class='acronym'>CERN</span> for particle physics.  
+This computing power enables creative and mathematically sophisticated visualization strategies. 
+Also, data visualization within native front-ends provides a User Interface that facilitates 
+moving from visual to non-visual presentations; for example, from charts to their underlying 
+data sets, or context-specific information on invididual data points, axes, labels, and 
+other visual elements for which a user may want to request more information or explanation.
+</li>
+
+<li>
+Dialogs can package specific kinds of information into reusable components that can be 
+shared between applications.  A particular dialog box can therefore encapsulate a 
+particular topic area, research achievement, methodology, technological innovation, 
+or computational capability which can be useful in a variety of applications.  
+For example, organizations focused on supporting refugees, or on maternal health, 
+or on microfinance and microentrepreneurship, etc., can design 
+visual and/or data models that reflect the kind of information which 
+the relevant domain experts are most likely to find useful and want to share.  
+The dialogs then provide a conduit for expertise-driven innovation and 
+<span class='xquote'>&ldquo;best practices&rdquo;</span> to be adopted by a larger community.
+</li>
+
+<li>
+Native-Driven dialogs help users enter information or complete forms more quickly and easily.  For example, 
+information which naturally takes on a list form &mdash; different ways to contact a client; 
+a patient's list of surgeries; a list of books assigned for homework assignments &mdash; can be 
+grouped so that each entry is on one line or row, with new lines automatically added as needed.  
+Convenient user actions &mdash; like opening a context menu to delete rows, or drag-and-drop to rearrange rows 
+&mdash; help users structures their entries as desired.
+</li>
+
+<li>
+Native-Driven representation of text content, including web pages and <span class='acronym'>PDF</span> files, offer a 
+superior interface for finding, selecting, and researching text.  Selecting text from a web 
+page is especially frustrating, as users have to match the cursor position to the exact letter 
+boundary of their desired selection.  Embedded web pages make text selection easier, 
+providing a broader range of programming options for matching text ranges to word boundaries 
+or lexicons.  The <span class='acronym'>PDF</span> format also offers a useful interface for text selection which 
+can be more effectively leveraged by native applications compared to 
+in-browser <span class='acronym'>PDF</span> plugins.  
+</li>
+
+</ul>
+
+
 
 </div> <!-- main page div -->
 </body>
