@@ -343,8 +343,107 @@ Software Language Engineering
 <div id='main-page-body-div'>
 
 <p>
-The Semantic Bioimaging Toolkit provides a framework for 
+&ldquo;Software Language Engineering&rdquo; is the scientific 
+term for the design and implementation of computer programming 
+languages.  As a discipline, Semantic Language Engineering 
+belongs both to the humanities and to natural (or 
+&ldquo;computational&rdquo;) sciences.  This duality reflects 
+the dual nature of programming languages: on the one hand, these 
+languages are used to create source code which is composed by humans, 
+and must be understood by other humans.  As such, writing computer 
+code is easiest and most efficient when the programming language 
+naturally mimics how programmers think about the software 
+they wish to create.  On the other hand, source code is 
+not (primarily) a communicative device; rather, it is a machine 
+which compiles to a different, lower-level digital machine that 
+can be executed on a computer.  Therefore, the design of 
+programming languages is constrained by the need to produce 
+unambiguous computational expressions that a computer 
+can understand and execute. 
 </p>
+
+<p>
+The science of creating programming languages, therefore, is not 
+only to design languages which programmers want to use &mdash; 
+it is also to implement those languages, that is, to 
+create the compilers and runtime engines which allow the 
+source code to be executed.  These implementations will have different 
+requirements depending on which kind of programming language 
+is involved.  In general, programming languages come 
+in three flavors (though many languages have aspects of 
+all three):
+
+<ul>
+<li> Markup Languages:  Used to create human-readable text documents 
+and/or textual serializations of data structures to be 
+shared between computer applications
+<li> Query Languages:  Used to modify and/or extract 
+information from a database
+<li> General-Purpose Programming Languages: Used to write 
+software applications themselves
+</ul>
+
+Each of these distinct kinds of languages present distinct 
+implementational challenges. 
+</p>
+
+<p>
+To briefly review LTS's new techniques or technologies which 
+facilitate software language engineering within these three 
+varieties of programming languages:
+
+
+<li> With respect to markup languages, LTS proposes a 
+novel hypergraph-based text encoding protocol which can 
+improve the ability of digital resources to 
+store and model natural language documents as computational 
+objects.  A key feature of this protocol is a common 
+bit length (e.g. one byte) for each character &mdash; 
+which simplifies standoff annotation &mdash; along with a 
+mechanism for externally marking points in the character 
+stream where a non-default character set is employed 
+(thereby expanding the collection of available characters 
+beyond the bitlength size restriction).  A further important 
+feature is the use of separate glyphs for visually identical 
+but discursively distinct symbols, such as the period as a 
+punctuation as well as an abbreviation mark &mdash; consistently 
+employing discourse-appropriate character encoding simplifies 
+certain Natural-Language Processing tasks, such as 
+sentence-boundary detection.<br><br>  Another feature of this 
+new protocol involves what we call &ldquo;grounding&rdquo;, or 
+specifying within markup-serializtion the type structure of the 
+data types which are encoded by the relevant markup sections.
+
+<li> With respect to database queries, LTS proposes a 
+&ldquo;transparent&rdquo; query model, which (for example) 
+can take the form of a Qt-based parsing and query execution 
+engine (Qt is a leading cross-platform application development 
+framework).  Transparent query processing means that query 
+logic can be provided via source code files that can be 
+plugged in directly to new or existing applications, 
+where the source code may be directly studied (in the 
+Qt Creator <span class='acronym'>IDE</span>, for example) and 
+examined during a debugging sessions.  Architecturally, LTS 
+proposes a hybrid property/hypergraph data metamodel which 
+integrates several different paradigms for graph-oriented 
+data modeling that have been developed in contemporary 
+<span class='acronym'>NoSQL</span> database engines.
+
+<li> For general-purpose scripting languages, LTS provides a 
+new Qt-based parsing framework whose general execution model 
+combines regular-expression parse event connected to lambda callbacks, 
+which (by design) operate on graph or hypergraph-structured 
+source code representations.  Parse structure graphs 
+may be compiled to a hypergraph-based Virtual Machine 
+permitting runtime dispatch of scripting function-symbols to 
+existing native-compiled procedures.  This scripting framework 
+also leverages the Qt meta-object protocol to support 
+calling procedures associated with Qt objects and &ldquo;slots&rdquo; 
+(in short, to integrate with Qt reactive programming).
+
+
+
+</P
 
 </div> <!-- main page div -->
 </body>
