@@ -19,8 +19,8 @@ img.li-image {width:200px;float:left;padding-right:25px;padding-top:10px;}
 
 
 .tterm {font-family:Aldrich;color:rgb(90, 10, 20);font-size:90%}
-.acronym { font-size:88% }
-.acronym-cap { font-size:94% }
+.acronym { font-size:88%; color:rgb(10, 80, 40); }
+.acronym-cap { font-size:94%; color:rgb(10, 80, 40); }
 
 #main-page-body-div { border: ridge rgb(254, 157, 4) 20px; padding:40px; padding-left:48px; 
                       border-top: ridge rgb(254, 157, 4) 2px; 
@@ -346,37 +346,29 @@ Native Cloud-Native
 </p>
 
 <p>
-The typical <span class='acronym'>NDP</span> application will include a Main Window, with a 
-menubar and a broad division of the overall application 
-functionality into several task-areas; and then more specific 
-tasks and data structures are provided by dialog boxes.  
-Often the Main Window can be adapted from other applications; 
-for example, the Mobile Medical User Interface (<span class='acronym'>MMUI</span>) is 
-adapted from the medInria medical visualization platform, 
-adding data-management dialogs to the underlying medInria application 
-windows.  <span class='acronym-cap'>NDP</span> focusing on providing a variety of dialog 
-boxes customized for specific kinds of services and information 
-&mdash; grouping interrelated data and operations into meaningful 
-units, outine in visual displays that can potentially be reused in multiple 
-applications.  Dialogs are visually independent, and can be 
-launched from other dialogs or larger windows, often by 
-selecting options from a context menu, in response to 
-performing a right-click or Control-Plus-Click mouse action, 
-or sometimes in reponse to blocking out a text selection on 
-a web page or <span class='acronym'>PDF</span> file.  Linking dialogs to specific 
-places in other windows (specific text phrases, for example, 
-or specific kinds of graphics) allows the dialog to provide 
-extra context-sensitive information or options to refine 
-some larger task.  Moreover, dialogs can be repositioned interactivity; 
-viewed each other, or alongside other text or graphics, allow 
-side-by-side comparisons of data and/or visuals.  <span class='acronym'>NDP</span> provides a 
-collection of provisional dialog classes that programmers 
-can extend for adoption into various application contexts.  
-This page will overview certain kinds of dialog boxes 
-and some benefits of using many dialogs in an application.
-</p> 
+&ldquo;Native Cloud Native&rdquo; (<span class='acronym'>NCN</span>) 
+is LTS's term for cloud services that supplement native (desktop-style) 
+<span class='acronym'>GUI</span> applications with cloud backup,
+user session management, and other cloud-facilitated features, and 
+where cloud components are implemented using paradigms associated 
+with desltop applications rather than conventional web servers.  
+A canonical example of <span class='acronym'>NCN</span> 
+methodology involves employing Qt-based code on a server/cloud 
+service as well as a client-side front end.  While Qt is not a 
+conventional framework for web development, one significant 
+benefit of pursuing a Qt-oriented code base on both server and 
+client sides is the possibility of common data types and 
+representations, eliminating the need for marshaling data between 
+distinct formats for communication between client and server.  
+As an example, data structures may be serialized via 
+Qt algorithms (such as <span class='tterm'>QTextStream</span> or 
+<span class='tterm'>QDataStream</span>) and passed between libraries 
+which are included on both client and server simultaneously. </p> 
 
 <p>
+<span class='acronym-cap'>NCN</span> servers facilitate the implementation of 
+software according to a design pattern which LTS informally refers to a a 
+&ldquo;native-driven&rdquo; platform (<span class='acronym'>NDP</span>).
 <span class='acronym-cap'>NDP</span> applications are cross-platform, native-compiled, modular projects 
 that can be tailored to each user's needs: 
 <span class='xquote'>&ldquo;<a href='/web/main-info-pages/learn-more.html'>Shape the Platform to the Data</a>&rdquo;</span>.  
